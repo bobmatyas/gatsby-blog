@@ -8,6 +8,7 @@ module.exports = {
   siteMetadata: {
     title: `Title from siteMetadata`,
   },
+
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -41,5 +42,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://www.bobmatyas.com`,
+      },
+    },
+    `gatsby-plugin-sitemap`,
   ]
 }
