@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 
 export default () => (
   <nav>
-    <ul>
+    <ul class="main__menu">
       <li>
         <Link
           to={`/about/`}

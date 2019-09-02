@@ -2,6 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Gradient from "../components/gradient"
 
 export default ({ data }) => {
   return (
@@ -11,6 +12,10 @@ export default ({ data }) => {
       title="Blog"
       description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
+    
+    <Gradient />
+    
+    <div className="main__content">
 
     <div>
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
@@ -30,6 +35,7 @@ export default ({ data }) => {
             <p>{node.frontmatter.description}</p>
           </div>
         ))}
+      </div>
       </div>
     </Layout>
   )

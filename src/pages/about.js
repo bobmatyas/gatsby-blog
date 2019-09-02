@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Gradient from "../components/gradient"
 
 export default ({ data }) => (
   <Layout>
@@ -11,11 +12,15 @@ export default ({ data }) => (
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <h1>About</h1>
-    <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
-    </p>
+    <Gradient />
+
+    <div className="main__content">
+      <h1>About</h1>
+      <p>
+        We're the only site running on your computer dedicated to showing the best
+        photos and videos of pandas eating lots of food.
+      </p>
+    </div>
   </Layout>
 )
 

@@ -1,14 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import Logo from "../components/logo"
 import Menu from "../components/menu"
 
 export default ({ children }) => (
   <div>
-    <header>
-      <Link to={`/`}>
-        <h3>Bob Matyas</h3>
-      </Link>
-    
+    <header class="header">
+      <Logo /> 
       <Menu />
     </header>
     <main>

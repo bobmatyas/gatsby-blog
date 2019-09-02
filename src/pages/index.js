@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -10,24 +10,8 @@ export default ({ data }) => {
         title="Web Developer"
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
-      <div>
-        <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
-            <Link
-              to={node.fields.slug}>
-                <h3
-            >
-              {node.frontmatter.title}{" "}
-              <span
-              >
-                — {node.frontmatter.date}
-              </span>
-            </h3>
-            </Link>
-            <p>{node.frontmatter.description}</p>
-          </div>
-        ))}
+      <div className="home__splash">
+        <p className="home__splash__text">Hi, I'm Bob Matyas. I'm a web developer. </p>
       </div>
     </Layout>
   )
