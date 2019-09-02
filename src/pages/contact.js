@@ -7,11 +7,11 @@ export default ({ data }) => (
   <Layout>
     
     <SEO 
-      title="About"
-      description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
+      title="Contact"
+      description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <h1>About</h1>
+    <h1>Contact</h1>
     <p>
       We're the only site running on your computer dedicated to showing the best
       photos and videos of pandas eating lots of food.

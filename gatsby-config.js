@@ -6,7 +6,13 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Title from siteMetadata`,
+    title: `Bob Matyas`,
+    titleTemplate: "%s | Bob Matyas",
+    siteUrl: `https://www.bobmatyas.com`,
+    description: `Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript`,
+    url: `https://www.bobmatyas.com`,
+    image: `/images/social.jpg`,
+    twitterUsername: `@bobmatyas`
   },
 
   plugins: [
@@ -49,5 +55,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-react-helmet`
   ]
 }

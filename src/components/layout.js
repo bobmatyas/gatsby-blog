@@ -1,21 +1,19 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Menu from "../components/menu"
 
 export default ({ children }) => (
-  <div
-  >
-    <Link to={`/`}>
-      <h3
-      >
-        Page Title
-      </h3>
-    </Link>
-    <Link
-      to={`/about/`}
-    >
-      About
-    </Link>
-    {children}
+  <div>
+    <header>
+      <Link to={`/`}>
+        <h3>Bob Matyas</h3>
+      </Link>
+    
+      <Menu />
+    </header>
+    <main>
+      {children}
+    </main>
+    <footer></footer>
   </div>
 )
