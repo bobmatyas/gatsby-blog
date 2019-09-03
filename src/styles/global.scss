@@ -5,6 +5,8 @@ $font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue"
 $background-main: #f5f5f5;
 $background-border: #f1eeee;
 
+$body-text-color: #4B4453;
+
 
 body {
   background-color: $background-main;
@@ -31,13 +33,19 @@ body {
 .home__splash {
   background-image: linear-gradient(to right, #845ec2, #e65faa, #ff8080, #ffbb61, #f9f871);
   height: 100vh;
-
 }
 
 .home__splash__text {
+  border-bottom: 3px dotted #fff;
+  font-family: 'Raleway', sans-serif;
   font-size: 3.2rem;
+  font-weight: 900;
   margin: 0 auto;
   padding: 0 5%;
+  max-width: 50%;
+  color: rgba(255,255,255,1.0);
+  text-shadow: 2px 5px 6px rgba(0,0,0,0.4),
+                 0px -5px 35px rgba(255,255,255,0.5);
 }
 
 

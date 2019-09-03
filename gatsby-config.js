@@ -66,7 +66,15 @@ module.exports = {
         path: `${__dirname}/src/images`,
       }
     },
-
-
+      {
+        resolve: `gatsby-plugin-google-fonts`,
+        options: {
+          fonts: [
+            `merriweather`,
+            `raleway\:700,900` // you can also specify font weights and styles
+          ],
+          display: 'swap'
+        }
+      }
   ]
 }
