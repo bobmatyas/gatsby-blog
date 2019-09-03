@@ -57,6 +57,16 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-netlify`
+    `gatsby-plugin-netlify`,
+    `gatsby-transformer-sharp`, 
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images`,
+      }
+    },
+
+
   ]
 }
