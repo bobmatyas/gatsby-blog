@@ -4,7 +4,7 @@ import Menu from "../components/menu"
 
 export default ({ children }) => (
   <div>
-    <header class="header">
+    <header className="header">
       <Logo /> 
       <Menu />
     </header>

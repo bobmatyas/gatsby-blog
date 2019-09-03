@@ -48,6 +48,25 @@ body {
                  0px -5px 35px rgba(255,255,255,0.5);
 }
 
+.main__menu__holder {
+  bottom: 0;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 89;
+}
+
+.main__menu__overlay--open {
+  background-color: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  transition: all .3s ease-in;
+  z-index: 99;
+}
 
 .main__menu {
   display: flex;
@@ -122,4 +141,16 @@ body {
   -webkit-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
   -moz-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
   box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
+}
+
+
+@media only screen and (min-width: 600px)  {
+  
+  .main__menu__holder {
+    background-color: transparent;
+    border-top: none;
+    position: relative;
+    width: auto;
+  }
+
 }
