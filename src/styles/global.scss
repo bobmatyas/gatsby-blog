@@ -36,7 +36,6 @@ body {
 }
 
 .home__splash__text {
-  border-bottom: 3px dotted #fff;
   font-family: 'Raleway', sans-serif;
   font-size: 3.2rem;
   font-weight: 900;
@@ -46,6 +45,11 @@ body {
   color: rgba(255,255,255,1.0);
   text-shadow: 2px 5px 6px rgba(0,0,0,0.4),
                  0px -5px 35px rgba(255,255,255,0.5);
+}
+
+.home__splash__text__inner {
+  border-bottom: 3px dotted #fff;
+  padding: 0 5px;
 }
 
 .main__menu__holder {
@@ -60,12 +64,17 @@ body {
 
 .main__menu__overlay--open {
   background-color: red;
+  left: 0;
+  height: 80%;
+  width: 100%;
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100vh;
   transition: all .3s ease-in;
   z-index: 99;
+}
+
+.main__menu__overlay--closed {
+  display: none;
 }
 
 .main__menu {
