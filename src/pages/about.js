@@ -12,7 +12,7 @@ export default ({ data }) => (
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient />
+    <Gradient color="dark" />
 
     <div className="main__content">
       <h1>About</h1>

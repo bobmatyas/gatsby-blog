@@ -8,6 +8,8 @@ $background-border: #f1eeee;
 $body-text-color: #4B4453;
 
 
+$pink-color: #FF6F91;
+
 body {
   background-color: $background-main;
   font-family: $font-stack;
@@ -84,13 +86,16 @@ body {
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .main__menu * {
   box-sizing: border-box;
 }
+
 .main__menu li {
   margin: 0 1.5em;
   padding: 10px;
 }
+
 .main__menu a {
   display: inline-block;
   padding: 0.5em 0;
@@ -111,7 +116,7 @@ body {
   height: 3px;
   width: 0%;
   content: "";
-  background-color: #2980b9;
+  background-color: $pink-color;
 }
 .main__menu a:after {
   left: 0;
@@ -135,8 +140,11 @@ body {
 }
 
 .gradient {
-  background-color: yellow;
   height: 150px;
+}
+
+.gradient--dark {
+  background-image: linear-gradient(to right bottom, #845ec2, #0077d0, #0085bf, #008a9a, #008b74);
 }
 
 .main__content {
