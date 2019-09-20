@@ -8,6 +8,7 @@ export default () => {
   const [open, setOpen] = useState(false);
 
   return (
+    <div>
     <nav className="main__menu__holder">
       <p className="main__menu__toggle" onClick={() => setOpen(!open)}>menu</p>
 
@@ -44,5 +45,6 @@ export default () => {
         </ul>
       </div>
     </nav>
+    </div>
   )
 }

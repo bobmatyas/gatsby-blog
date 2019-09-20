@@ -28,7 +28,19 @@ export default ({ data }) => (
       
       <h3 classname="projects__header">Projects</h3>
 
+      <div className="projects__holder">
       <p>For my most recent work, <a href="https://github.com/bobmatyas">check out my GitHub</a></p>
+
+      <div className="projects__card">
+        <h3>John Ball Area Neighbors</h3>
+        <p>View: <a href="">Online</a> | <a href="">Code</a></p>
+        <p>A custom WordPress theme for a neighborhood organization. </p>
+        <h4>Technologies</h4>
+          <ul>
+            <li>WordPress</li>
+            <li>HTML/CSS</li>
+          </ul>
+      </div>
 
       <div style={styles}>
         <Img
@@ -51,6 +63,7 @@ export default ({ data }) => (
         />
       </div>
 
+      </div>
     </div>
   </Layout>
 )

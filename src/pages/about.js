@@ -15,11 +15,9 @@ export default ({ data }) => (
     <Gradient color="dark" />
 
     <div className="main__content">
-      <h1>About</h1>
-      <p>
-        We're the only site running on your computer dedicated to showing the best
-        photos and videos of pandas eating lots of food.
-      </p>
+      <h2 className="main__content__header">About</h2>
+      
+      <p>This will be a simple dimple bio.</p>
     </div>
   </Layout>
 )

@@ -11,7 +11,7 @@ export default ({ data }) => {
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
       <div className="home__splash">
-        <h1 className="home__splash__text"><span className="home__splash__text__inner">Hi, I'm Bob Matyas. I'm a web developer.</span></h1>
+        <h2 className="home__splash__text"><span className="home__splash__text__inner">Hi, I'm Bob Matyas. I'm a web developer.</span></h2>
       </div>
     </Layout>
   )

@@ -1,36 +1,53 @@
 @import 'normalize';
 
 $font-stack: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+$font-sans-serif: 'Raleway', Verdana, sans-serif;
+$font-serif: 'Merriweather', Georgia, serif;
+
+$root-font-size: 10px;
+
 
 $background-main: #f5f5f5;
 $background-border: #f1eeee;
 
 $body-text-color: #4B4453;
 
-
 $pink-color: #FF6F91;
+$purple-color: #845EC2;
+
+
+
+html {
+  font-size: $root-font-size;
+}
 
 body {
   background-color: $background-main;
   font-family: $font-stack;
-  font-size: 10px;
 }
 
 .header {
   align-items: center;
-  background: #152331;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(45deg, #000000, #152331);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(45deg, #000000, #152331);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #030507;
+  border-top: 4px solid #845EC2;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 15px;
 }
 
 .header__logo {
-  margin: 0;
+  color: #fff;
+  font-size: 2.9rem;
+  letter-spacing: -2px;
+  margin: 9px 0 0 0;
+  padding: 10px 5%;
 }
+
+.header__logo a:link, .header__logo a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
 
 .home__splash {
   background-image: linear-gradient(to right, #845ec2, #e65faa, #ff8080, #ffbb61, #f9f871);
@@ -38,7 +55,7 @@ body {
 }
 
 .home__splash__text {
-  font-family: 'Raleway', sans-serif;
+  font-family: $font-sans-serif;
   font-size: 3.2rem;
   font-weight: 900;
   margin: 0 auto;
@@ -71,12 +88,12 @@ body {
   width: 100%;
   position: fixed;
   top: 0;
-  transition: all .3s ease-in;
+  transition: all .2s ease-in;
   z-index: 99;
 }
 
 .main__menu__overlay--closed {
-  display: none;
+  transition: all .2s ease-out;
 }
 
 .main__menu {
@@ -85,6 +102,8 @@ body {
   list-style-type: none;
   text-transform: uppercase;
   font-weight: 500;
+  padding: 0 5% 0 0;
+  margin: 0;
 }
 
 .main__menu * {
@@ -92,13 +111,14 @@ body {
 }
 
 .main__menu li {
-  margin: 0 1.5em;
+  margin: 0 1em;
   padding: 10px;
 }
 
 .main__menu a {
   display: inline-block;
-  padding: 0.5em 0;
+  font-size: 1.2rem;
+  padding: 0 0 0.5em 0;
   color: rgba(255, 255, 255, 0.8);
   position: relative;
   letter-spacing: 1px;
@@ -121,7 +141,7 @@ body {
 .main__menu a:after {
   left: 0;
   top: 0;
-  padding: 0.5em 0;
+  padding: 0 0 0.5em 0;
   position: absolute;
   content: attr(data-hover);
   color: #ffffff;
@@ -152,6 +172,9 @@ body {
   border: 1px solid $background-border;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+  font-size: 1.6rem;
+  font-family: $font-serif;
+  line-height: 2;
   min-height: 50vh;
   margin: -50px 5% 100px 5%;
   padding: 5%;
@@ -160,6 +183,41 @@ body {
   box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
 }
 
+.main__content__header, .main__content h2 {
+  color: rgb(34, 32, 36);
+  font-family: $font-sans-serif;
+  font-size: 2.3rem;
+}
+
+.main__content h2 {
+  margin-top: 50px;
+}
+
+.skills__blob {
+  display: flex;
+  font-family: $font-stack;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.skills__blob__item {
+  color: #eee;
+  background-color: #4B4453;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.projects__holder {
+  background-color: #f6f6f6;
+}
+
+.projects__card {
+  background-color: #fff;
+  max-width: 300px;
+}
 
 @media only screen and (min-width: 600px)  {
   
