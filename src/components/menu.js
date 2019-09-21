@@ -8,11 +8,11 @@ export default () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <div className="main__menu__right">
     <nav className="main__menu__holder">
       <p className="main__menu__toggle" onClick={() => setOpen(!open)}>menu</p>
 
-      <div className={open ? "main__menu__overlay--open" : ""}>
+      <div className={open ? "main__menu__overlay--open" : "main__menu__overlay"}>
         <ul className="main__menu">
           <li>
             <Link
