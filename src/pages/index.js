@@ -19,7 +19,7 @@ export default ({ data }) => {
           
           <h2 className="home__splash__text"><span className="home__splash__text__inner">Hi, I'm Bob Matyas.</span></h2>      
           
-          <p class="home__splash__text__intro">I make modern websites using HTML, CSS, and JavaScript.</p>
+          <p className="home__splash__text__intro">I make modern websites using HTML, CSS, and JavaScript.</p>
 
           <HomeLinks />
   

@@ -15,7 +15,7 @@ export default ({ data }) => (
     />
 
 
-    <Gradient />
+    <Gradient color="purple" />
     
     <div className="main__content">
     
@@ -96,7 +96,7 @@ export default ({ data }) => (
 
 export const pageQuery = graphql`
   query {
-    imageLilySpa: file(relativePath: { eq: "portfolio-lily_spa.jpg" }) {
+    imageLilySpa: file(relativePath: { eq: "images/portfolio-lily_spa.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -124,7 +124,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    imageDrumMachine: file(relativePath: { eq: "portfolio-drum_machine.jpg" }) {
+    imageDrumMachine: file(relativePath: { eq: "images/portfolio-drum_machine.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

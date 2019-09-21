@@ -14,11 +14,11 @@ export default ({ data }) => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient />
+    <Gradient color="yellow" />
 
     <div className="main__content">
 
-      <h2>Contact</h2>
+      <h2 className="main__content__header">Contact</h2>
 
       <div className="contact__page">
 
@@ -29,31 +29,28 @@ export default ({ data }) => (
           <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="bot-field" />
             <input type="hidden" name="form-name" value="contact" />
-            <div className="field half first">
-              <label htmlFor="name">Name</label>
-              <input type="text" name="name" id="name" required />
-            </div>
-            <div className="field half">
-              <label htmlFor="email">Email</label>
-              <input type="email" name="email" id="email" required />
-            </div>
-            <div className="field">
-              <label htmlFor="message">Message</label>
-              <textarea name="message" id="message" rows="6" required />
-            </div>
-            <ul className="actions">
+            <label htmlFor="name" className="contact__form__label">Name</label>
+            <input type="text" name="name" id="name" required className="contact__form__input" />
+            
+            <label htmlFor="email" className="contact__form__label">Email</label>
+            <input type="email" name="email" id="email" required className="contact__form__input" />
+            
+            <label htmlFor="message" className="contact__form__label">Message</label>
+              <textarea name="message" id="message" rows="6" className="contact__form__input" required />
+           
+            <ul className="contact__form__actions">
               <li>
-                <input type="submit" value="Send Message" className="special" />
+                <input type="submit" value="Send Message" className="contact__form__button" />
               </li>
               <li>
-                <input type="reset" value="Clear" />
+                <input type="reset" value="Clear" className="contact__form__button" />
               </li>
             </ul>
           </form>
 
         </div>
         <div className="contact__page__social__holder">
-          <h3>Social</h3>
+          <h3>Connect on Social Media</h3>
 
           <Social />
         </div>

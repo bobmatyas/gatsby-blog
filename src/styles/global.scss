@@ -11,6 +11,7 @@ $background-main: #f5f5f5;
 $background-border: #f1eeee;
 
 $body-text-color: #4B4453;
+$body-heading-color: #333333;
 
 $pink-color: #FF6F91;
 $purple-color: #845EC2;
@@ -188,7 +189,7 @@ body {
 .main__menu__overlay--open {
   background-color: red;
   left: 0;
-  height: 80%;
+  height: 96%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -271,31 +272,67 @@ body {
   background-image: linear-gradient(to right bottom, #845ec2, #0077d0, #0085bf, #008a9a, #008b74);
 }
 
+.gradient--purple {
+  background-image: linear-gradient(to right top, #845ec2, #8b69be, #9174bb, #967eb7, #9b89b3);
+}
+
+.gradient--blue {
+  background-image: linear-gradient(to right bottom, #2c73d2, #007ecc, #0086be, #008bad, #008e9b);
+}
+
+.gradient--pink {
+  background-image: linear-gradient(to right bottom, #ff6f91, #ff7887, #ff817e, #ff8c76, #ff9671);
+}
+
+.gradient--yellow {
+  background-image: linear-gradient(to right bottom, #ff9671, #ffa16b, #ffad65, #ffba61, #ffc75f);
+}
+
 .main__content {
   background-color: #fff;
   border: 1px solid $background-border;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
-  font-size: 1.6rem;
+  color: $body-text-color;
+  font-size: 1.8rem;
   font-family: $font-stack;
-  line-height: 2;
+  line-height: 1.9;
   min-height: 50vh;
   margin: -50px 5% 100px 5%;
-  padding: 5%;
+  padding: 0 5% 5% 5%;
   -webkit-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
   -moz-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
   box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
 }
 
-.main__content__header, .main__content h2 {
-  color: rgb(34, 32, 36);
-  font-family: $font-sans-serif;
-  font-size: 2.9rem;
+
+.blog__holder {
+  font-size: 1.9rem;
 }
 
-.main__content h2 {
-  margin-top: 50px;
+.blog__holder h2 {
+  color: $body-heading-color;
+  font-family: $font-sans-serif;
+  font-size: 2.9rem;
+  padding: 0;
+  margin-top: 55px;
+  margin-bottom: -5px;
 }
+
+.blog__holder a:link, .blog__holder a:visited {
+  color: #845EC2;
+}
+
+.blog__holder a:hover, .blog__holder a:active {
+  color: #845EC2;
+}
+
+.main__content__header {
+  color: $body-heading-color;
+  font-family: $font-sans-serif;
+  font-size: 4.9rem;
+} 
+
 
 .skills__blob {
   display: flex;
@@ -405,28 +442,110 @@ body {
 
 .social__icons {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .social__icons__item {
   align-items: center; 
-  color: red;
+  color: #2b2525;
   display: flex;
+  margin: 7px 0;
 }
 
 .social__icons__item__holder {
   height: 20px;
   width: 20px;
+  color: #3d3636;
 }
 
 .social__icons__item__text {
-  margin-left: 10px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  margin-left: 20px;
+  padding-top: 2px;
 }
 
+.social__icons__item a:link, .social__icons__item a:visited {
+  text-decoration: underline;
+}
+
+.social__icons__item:hover, .social__icons__item:active {
+  text-decoration: none;
+}
 
 .contact__page {
+  align-items: top;
   display: flex;
+  justify-content: space-between;
 }
 
+.contact__page__form__holder {
+  width: 65%;
+}
+
+.contact__form__input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: -1px 3px 7px 1px rgba(102,102,102,0.2);
+  font-size: 16px;
+  color: #666666;
+  padding: 10px;
+  margin: 0 0 25px 0;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact__form__label {
+  color: #666666;
+  display: block;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.contact__form__actions {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__form__actions li:last-of-type {
+  margin-left: 15px;
+}
+
+.contact__form__button {
+  background-color: #685757;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+}
+
+.contact__form__button:active {
+  transform: translateY(2px);
+}
+
+.contact__form__button:hover {
+  cursor: pointer;
+}
+
+.blog__title {
+  font-size: 5.4rem;
+  line-height: 1.2;
+  margin: 35px 0 0 0;
+}
+
+.blog__meta {
+  color: gray;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
 
 @media only screen and (min-width: 720px)  {
   

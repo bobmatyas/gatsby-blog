@@ -13,11 +13,14 @@ export default ({ data }) => {
       description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
     
-    <Gradient />
+    <Gradient color="blue" />
     
     <div className="main__content">
 
+
     <div>
+    <h2 className="main__content__header">Blog</h2>
+
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
@@ -50,7 +53,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MMMM DD, YYYY")
             description
           }
           fields {
