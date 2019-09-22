@@ -25,9 +25,11 @@ export default ({ data }) => (
       
       <h3 className="projects__header">Projects</h3>
 
+      <p className="projects__git">For my most recent work, <a href="https://github.com/bobmatyas">check out my GitHub</a></p>
+      
       <div className="projects__holder">
       
-        <p>For my most recent work, <a href="https://github.com/bobmatyas">check out my GitHub</a></p>
+        
 
       <Card 
         screenshot={data.imagePicturePalette.childImageSharp.fluid}

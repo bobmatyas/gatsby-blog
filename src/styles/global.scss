@@ -73,26 +73,28 @@ body {
 
 .home__splash {
   align-items: center;
-  background-image: linear-gradient(to right, #845ec2, #e65faa, #ff8080, #ffbb61, #f9f871);
+  background-image: linear-gradient(to right, #845ec2, #e65faa, #ff8080);
   display: flex;
-  height: 88.7vh;
+  height: 82vh;
   justify-content: center;
-  padding: 0 5%;
+  padding: 0 10%;
   text-align: center;
 }
 
 .home__splash__bike {
   color: #fff;
-  height: 135px;
+  height: 115px;
   margin: 0;
   padding: 0; 
-  width: 125px;
+  width: 105px;
 }
+
 .home__splash__text {
   color: rgba(255,255,255,1.0);
   font-family: $font-sans-serif;
-  font-size: 6.2rem;
+  font-size: 4.8rem;
   font-weight: 900;
+  line-height: 1.3;
   margin: 0;
   padding: 0;
   text-shadow: 2px 5px 6px rgba(0,0,0,0.4),
@@ -107,7 +109,7 @@ body {
 
 .home__splash__text__intro {
   color: #fff;
-  font-size: 3.3rem;
+  font-size: 1.9rem;
   font-weight: 600;
   margin: 20px 0;
   padding: 0 0 0 5px;
@@ -205,8 +207,10 @@ body {
 }
 
 .main__menu__toggle {
-  height: 7vh;
+  background-color: #FDF7FF;
+  height: 8vh;
   margin: 0 auto;
+  padding: 3px;
 }
 
 
@@ -216,7 +220,7 @@ body {
   background: #030507;
   border-top: 4px solid #845EC2;
   left: 0;
-  height: 93vh;
+  height: 91vh;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -238,6 +242,17 @@ body {
   padding: 0;
   transition: all .1s ease-in;
 }
+
+.main__menu__overlay--open .main__menu li {
+  margin: 25px 0;
+}
+
+.main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
+  font-family: $font-sans-serif;
+  font-size: 2.8rem;
+  color: #FDF7FF;
+}
+
 
 
 .gradient {
@@ -310,24 +325,59 @@ body {
 } 
 
 
+.skills__header {
+  font-size: 3.1rem;
+  margin: 0 0 50px 0;
+}
+
+.skills__header__sub {
+  border-bottom: 1px solid #eee;
+  font-size: 1.9rem;
+  margin: 0 0 5px 0;
+}
+
 .skills__blob {
   display: flex;
   font-family: $font-stack;
   flex-wrap: wrap;
   list-style-type: none;
-  margin: 0;
+  margin: 0 0 25px 0;
   padding: 0;
 }
 
 .skills__blob__item {
-  color: #eee;
-  background-color: #4B4453;
+  color: #1d1b1b;
+  background-color: #F3C5FF;
   border-radius: 5px;
-  padding: 5px 10px;
+  font-size: 1.3rem;
   margin: 5px;
+  padding: 5px 10px;
+  text-transform: uppercase;
 }
 
 
+.projects__header {
+  font-size: 3.1rem;
+  margin: 75px 0 0 0;
+}
+
+.projects__git {
+  color: #faf8f8;
+  background-color: #00C9A7;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.projects__holder {
+  align-items: top;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  max-width: 900px;
+}
 
 .projects__card {
   background-color: #fff;
@@ -335,8 +385,8 @@ body {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
   font-family: $font-stack;
-  margin-bottom: 25px;
-  max-width: 400px;
+  margin: 0 0 50px 0;
+  max-width: 375px;
   -webkit-box-shadow: 0 8px 6px -6px rgb(27, 27, 27);
   -moz-box-shadow: 0 8px 6px -6px rgb(27, 27, 27);
        box-shadow: 0 8px 6px -6px rgb(27, 27, 27);
@@ -347,13 +397,13 @@ body {
 }
 
 .projects__card__heading {
-  background-color: #eee;
-  border-bottom: 1px solid #eee;
+  background-color: rgba(75,68,83,.95);
   border-top-right-radius: 5px;
-  color: #333333;
-  font-size: 1.9rem;
+  color: #fff;
+  font-size: 2.3rem;
   font-variant: small-caps;
-  margin: -50px 0 0 0;
+  font-weight: 500;
+  margin: -52px 0 0 0;
   padding: 5px 10px;
   position: absolute;
   text-transform: lowercase;
@@ -367,10 +417,10 @@ body {
 }
 
 .projects__card__technologies__icon, .projects__card__view__icon {
-  color: #eee;
+  color: #fff;
   width: 15px;
   height: 15px;
-  border: 1px solid #eee;
+  border: 1px solid #fff;
   border-radius: 50%;
   padding: 5px;
   text-align: center;
@@ -378,15 +428,49 @@ body {
     vertical-align: middle;
 }
 
+.projects__card__view__icon {
+  color: #eee;
+  border: 1px solid #eee;
+}
+
 .projects__card__view {
   align-items: center;
+  background-color: rgba(75,68,83,.95);
+  color: #fff;
   display: flex;
+  font-size: 1.6rem;
+  font-weight: bold;
   padding: 5px 10px;
+  text-transform: uppercase;
+}
+
+.projects__card__view a:link, .projects__card__view a:visited {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.projects__card__view a:hover, .projects__card__view a:active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.projects__card__view a:link:last-of-type {
+  margin-left: 5px;
+}
+
+.projects__card__view a:link:last-of-type::before {
+  content: "|";
+  margin-right: 10px;
 }
 
 .projects__card__view__inner {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
   margin-left: 10px;
+  width: 100%;
 }
+
 
 .projects__card__technologies {
   align-items: center;
@@ -525,98 +609,6 @@ body {
 
 @media only screen and (min-width: 720px)  {
   
-  .main__menu__toggle {
-    display: none;
-  }
-  
-  .main__menu__holder {
-    background-color: transparent;
-    border-top: none;
-    margin: 0;
-    min-width: 400px;
-    padding: 0;
-    position: relative;
-  }
-
-  .main__menu__right {
-    padding: 15px 0 0 0;
-    margin: -15px 0 0 0;
-  }
-
-  .main__menu {
-    display: flex;
-    font-weight: 500;
-    justify-content: flex-end;
-    list-style-type: none;
-    margin: 0;
-    padding: 0 3% 0 0;
-    text-transform: uppercase;
-  }
-  
-  .main__menu__icon, .main__menu__text {
-    display: none;
-  }
-
-  .main__menu * {
-    box-sizing: border-box;
-  }
-  
-  .main__menu li {
-    margin: 0 5px;
-    padding: 10px;
-  }
-  
-  .main__menu a {
-    display: inline-block;
-    font-size: 1.2rem;
-    padding: 0 0 0.5em 0;
-    color: rgba(255, 255, 255, 0.8);
-    position: relative;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-  .main__menu a:before,
-  .main__menu a:after {
-    position: absolute;
-    -webkit-transition: all 0.25s ease;
-    transition: all 0.25s ease;
-  }
-  .main__menu a:before {
-    bottom: 0;
-    display: block;
-    height: 3px;
-    width: 0%;
-    content: "";
-    background-color: $pink-color;
-  }
-  .main__menu a:after {
-    left: 0;
-    top: 0;
-    padding: 0 0 0.5em 0;
-    position: absolute;
-    content: attr(data-hover);
-    color: #ffffff;
-    white-space: nowrap;
-    max-width: 0%;
-    overflow: hidden;
-  }
-  .main__menu a:hover:before,
-  .main__menu .current a:before {
-    opacity: 1;
-    width: 100%;
-  }
-  .main__menu a:hover:after,
-  .main__menu .current a:after {
-    max-width: 100%;
-  }
-
-  .main__menu__overlay--open {
-    background-color: transparent;
-  }
-
-  .main__menu--hidden {
-    display: flex;
-  }  
-
+  @import 'desktop';
 
 }

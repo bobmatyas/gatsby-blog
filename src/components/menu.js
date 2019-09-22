@@ -3,9 +3,22 @@ import { Link } from "gatsby"
 
 
 
+
 export default () => {
 
+
   const [open, setOpen] = useState(false);
+
+  const updateDimensions = ()=> {
+    if(window.innerWidth > 700) {
+      console.log(`big window`);
+      const removeMenu = document.getElementsByClassName('main__menu__overlay--open');
+      console.log(removeMenu);
+      // removeMenu.classList.remove("main__menu__overlay--open");
+      // removeMenu.classList.add("main__menu__overlay");
+    }
+  }
+  window.addEventListener("resize", updateDimensions());
 
   return (
     <div className="main__menu__right">
