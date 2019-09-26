@@ -17,28 +17,30 @@ export default ({ data }) => {
     
     <div className="main__content">
 
-
-    <div>
     <h2 className="main__content__header">Blog</h2>
 
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <div key={node.id}>
+
+        { data.allMarkdownRemark.edges.map(({ node }) => (
+          <div className="blog__card" key={node.id}>
             <Link
               to={node.fields.slug}>
-                <h3
-            >
-              {node.frontmatter.title}{" "}
-              <span
-              >
-                — {node.frontmatter.date}
-              </span>
-            </h3>
+
+              <p className="blog__card__date">
+                {node.frontmatter.date}
+              </p>
+              
+              <h3 className="blog__card__header">
+                {node.frontmatter.title}{" "}
+              </h3>
+            
+              <p>
+                {node.frontmatter.description}
+              </p>
+              
             </Link>
-            <p>{node.frontmatter.description}</p>
           </div>
         ))}
-      </div>
       </div>
     </Layout>
   )
