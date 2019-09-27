@@ -1,35 +1,10 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
-
-
-
 
 export default () => {
 
 
   const [open, setOpen] = useState(open);
-
-  const [width, setWidth] = useState(window.innerWidth);  
-  
-  let [styles, setStyles] = useState('main__menu__overlay');
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWidth(window.innerWidth)
-      console.log(width);
-      if (width > 700) {
-        setStyles = 'main__menu__overlay';
-      } else if (width < 699) {
-        setStyles = 'main__menu__overlay--open';
-      }
-    };
-
-    window.addEventListener('resize', handleResize);
-    console.log(width);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
 
 
   return (
