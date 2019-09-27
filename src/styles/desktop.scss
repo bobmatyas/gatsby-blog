@@ -1,3 +1,5 @@
+
+
   .main__menu__toggle {
     display: none;
   }
@@ -85,6 +87,34 @@
 
   .main__menu__overlay--open {
     background-color: transparent;
+    align-items: center;
+    display: flex;
+    border-top: none;
+    left: 0;
+    height: 50px;
+    justify-content: flex-end;
+    position: static;
+    top: 0;
+    transition: all .1s ease-in;
+    width: auto;
+    z-index: 0;
+    font-weight: 500;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 3% 0 0;
+    text-transform: uppercase;
+  }
+
+  .main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
+    display: inline-block;
+    font-family: $font-stack;
+    font-size: 1.2rem;
+    padding: 0 0 0.5em 0;
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    letter-spacing: 1px;
+    text-decoration: none;
   }
 
   .main__menu--hidden {

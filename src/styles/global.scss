@@ -542,12 +542,6 @@ body {
   text-decoration: none;
 }
 
-.contact__page {
-  align-items: top;
-  display: flex;
-  justify-content: space-between;
-}
-
 .contact__page__form__holder {
   width: 65%;
 }
@@ -599,6 +593,10 @@ body {
 
 .contact__form__button:hover {
   cursor: pointer;
+}
+
+.contact__page__social__holder {
+  margin-top: 75px;
 }
 
 .blog__title {
@@ -660,5 +658,19 @@ body {
 @media only screen and (min-width: 720px)  {
   
   @import 'desktop';
+
+}
+
+@media only screen and (min-width: 1065px)  {
+  
+  .contact__page {
+    align-items: top;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .contact__page__social__holder {
+    margin: 0;
+  }
 
 }
