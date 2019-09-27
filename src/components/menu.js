@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 export default () => {
 
 
-  const [open, setOpen] = useState(open);
+  const [open, setOpen] = useState(false);
 
 
   return (
