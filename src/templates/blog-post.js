@@ -7,6 +7,12 @@ import Gradient from "../components/gradient"
 export default ({ data }) => {
   let post = data.markdownRemark
 
+  const dateFormat = (dateToFormat) => {
+    const date = new Date(dateToFormat);
+    const options = {year: 'numeric', month: 'long', day: 'numeric'}
+    return date.toLocaleDateString('en-us', options);
+  }
+
   return (
     <Layout>
       <SEO 
@@ -17,11 +23,11 @@ export default ({ data }) => {
       <Gradient />
 
       <div className="main__content">
-        <div>
+        <article>
           <h1 className="blog__title">{post.frontmatter.title}</h1>
-          <p className="blog__meta">{post.frontmatter.date}</p>
+          <time dateTime={post.frontmatter.dateTime} className="blog__meta">{dateFormat(post.frontmatter.date)}</time>
           <div className="blog__holder" dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+        </article>
       </div>
     </Layout>
   )
@@ -34,7 +40,7 @@ export const query = graphql`
       frontmatter {
         title
         description
-        date(formatString: "MMMM DD, YYYY")
+        date
       }
     }
   }
