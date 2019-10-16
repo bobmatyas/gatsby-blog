@@ -30,6 +30,16 @@ export default ({ data }) => (
       <div className="projects__holder">
       
         
+      <Card 
+        screenshot={data.imageFoodFight.childImageSharp.fluid}
+        title='Food Fight'
+        viewOnline='https://bobmatyas.github.io/recipe-app/'
+        viewCode='https://github.com/bobmatyas/recipe-app'
+        description= {
+          ['Food Fight is a recipe finder app built using ReactJS. It queries an API to provide the recipes and another to power the random food trivia featured on the main page. It was designed to be mobile first and makes use of styled components to provide component-based styling.']
+        }
+        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'SASS', 'API', 'STYLED COMPONENTS']}
+      />
 
       <Card 
         screenshot={data.imagePicturePalette.childImageSharp.fluid}
@@ -71,6 +81,18 @@ export default ({ data }) => (
         technologies= {['HTML', 'SASS', 'CSS', 'JAVASCRIPT', 'GULP']}
       />
 
+
+      <Card 
+        screenshot={data.imagePomodoroClock.childImageSharp.fluid}
+        title='Pomodoro Clock'
+        viewOnline='https://codepen.io/bobmatyas/full/BXRpMv'
+        viewCode='https://codepen.io/bobmatyas/pen/BXRpMv'
+        description= {[
+          'I built this Pomodoro Clock as one of the final projects for the freeCodeCamp Front End Libraries certification. I built it from scratch using ReactJS to satisfy the project requirements and to pass the automated tests conducted by freeCodeCamp.',
+          'It allows a user to start and pause a timer, adjust the length of the work and break periods, and plays a sound upon completion.'
+        ]}
+        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS']}
+      />
 
       <Card 
         screenshot={data.imageDrumMachine.childImageSharp.fluid}
@@ -134,6 +156,20 @@ export const pageQuery = graphql`
       }
     }
     imageBookmark: file(relativePath: { eq: "images/portfolio-bookmark.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    imageFoodFight: file(relativePath: { eq: "images/portfolio-food_fight.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    imagePomodoroClock: file(relativePath: { eq: "images/portfolio-pomodoro_clock.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
