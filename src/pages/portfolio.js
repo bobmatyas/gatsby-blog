@@ -58,7 +58,7 @@ export default ({ data }) => (
         title='Where in the World?'
         viewOnline='https://bobmatyas.github.io/fem-rest-countries-api/'
         viewCode='https://github.com/bobmatyas/fem-rest-countries-api'
-        description= {['Where in the World is a mobile-first web app that presents information about the countries of the world. It queries the Rest Countries API for the data and dynamically searches and filters based on user input. It makes uses of routing so that each country has a unique URL. There is also a night mode toggle. The layout was done using CSS Grid.']}
+        description= {['Where in the World is a mobile-first web app that presents information about the countries of the world. It queries the Rest Countries API for the data and dynamically searches and filters based on user input. It makes use of routing so that each country has a unique URL. There is also a night mode toggle. The layout was done using CSS Grid.']}
         technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'ANGULARJS', 'API']}
       />
 
