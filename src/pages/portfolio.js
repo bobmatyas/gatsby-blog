@@ -63,6 +63,15 @@ export default ({ data }) => (
       />
 
       <Card 
+        screenshot={data.imageMovieDb.childImageSharp.fluid}
+        title='MovieFinder'
+        viewOnline='https://bobmatyas.github.io/AngularJS-Movies/'
+        viewCode='https://github.com/bobmatyas/AngularJS-Movies'
+        description= {['MovieFinder is an app that allows a user to find a movie to watch. It uses The Movie Database API to search for movies based on a search term and then allows a user to fine tune the results with a variety of sorting options. It includes pagination and the ability to "favorite" movies to watch later.']}
+        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'ANGULARJS', 'API']}
+      />  
+
+      <Card 
         screenshot={data.imageLilySpa.childImageSharp.fluid}
         title='Lily Spa'
         viewOnline='https://bobmatyas.github.io/lily-spa-pos/'
@@ -170,6 +179,13 @@ export const pageQuery = graphql`
       }
     }
     imagePomodoroClock: file(relativePath: { eq: "images/portfolio-pomodoro_clock.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    imageMovieDb: file(relativePath: { eq: "images/portfolio-moviedb.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
