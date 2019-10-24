@@ -69,6 +69,7 @@ body {
 
 .home__splash__holder {
   margin: 0 auto;
+  max-width: 90%;
 }
 
 .home__splash {
@@ -77,22 +78,22 @@ body {
   display: flex;
   height: 82vh;
   justify-content: center;
-  padding: 0 10%;
+  padding: 0;
   text-align: center;
 }
 
 .home__splash__bike {
   color: #fff;
-  height: 115px;
+  height: 95px;
   margin: 0;
   padding: 0; 
-  width: 105px;
+  width: 75px;
 }
 
 .home__splash__text {
   color: rgba(255,255,255,1.0);
   font-family: $font-sans-serif;
-  font-size: 4.8rem;
+  font-size: 3.2rem;
   font-weight: 900;
   line-height: 1.3;
   margin: 0;
@@ -104,7 +105,7 @@ body {
 
 .home__splash__text__inner {
   border-bottom: 3px dotted #fff;
-  padding: 0 5px;
+  padding: 0;
 }
 
 .home__splash__text__intro {
@@ -112,7 +113,7 @@ body {
   font-size: 1.9rem;
   font-weight: 600;
   margin: 20px 0;
-  padding: 0 0 0 5px;
+  padding: 0;
   text-align: left;
   text-shadow: 2px 5px 6px rgba(0,0,0,0.3),
                  0px -5px 35px rgba(255,255,255,0.3);
@@ -128,7 +129,15 @@ body {
 }
 
 .home__splash__menu__item {
-  padding: 0 10px;
+  padding: 0 5px;
+}
+
+.home__splash__menu li:first-of-type {
+  padding: 0 5px 0 0;
+}
+
+.home__splash__menu li:last-of-type {
+  padding: 0 0 0 5px;
 }
 
 .home__splash__menu__icon {
@@ -179,9 +188,13 @@ body {
 }
 
 .main__menu__holder {
+  align-items: center;
   bottom: 0;
   background-color: #fff;
   border-top: 1px solid #eee;
+  display: flex;
+  height: 8.4vh;
+  justify-content: center;
   left: 0;
   position: fixed;
   width: 100%;
@@ -194,9 +207,8 @@ body {
 
 .main__menu__icon {
   color: #666666;
-  height: 15px;
   margin: 0 auto;
-  padding: 15px 0 0 0;
+  padding: 0;
   text-align: center;
   width: 15px;
 }
@@ -207,12 +219,13 @@ body {
 }
 
 .main__menu__toggle {
-  background-color: #FDF7FF;
-  height: 8vh;
   margin: 0 auto;
-  padding: 3px;
+  padding: 10px;
 }
 
+.main__menu__toggle:hover {
+  cursor: pointer;
+}
 
 .main__menu__overlay--open {
   align-items: center;
