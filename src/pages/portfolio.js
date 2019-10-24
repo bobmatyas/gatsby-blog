@@ -109,7 +109,7 @@ export default ({ data }) => (
         viewOnline='https://codepen.io/bobmatyas/full/mNENyP'
         viewCode='https://codepen.io/bobmatyas/pen/mNENyP'
         description= {['I built this JavaScript "drum machine" using ReactJS. I created it as one of the freeCodeCamp Front End Libraries projects. It allows for keyboard and mouse based input and dynamically plays a sound based on user input. I themed it based on the old 8-bit Nintendo “sound test” modes that were found in some games. I used the NesCSS library to give it an 8-bit aesthetic.']}
-        technologies= {['HTML', 'CSS', 'REACTJS']}
+        technologies= {['HTML', 'CSS', 'REACTJS', 'JAVASCRIPT']}
       />
 
       <Card 

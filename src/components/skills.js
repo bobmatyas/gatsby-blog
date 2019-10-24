@@ -6,7 +6,7 @@ export default () => (
  
     <h3 className="skills__header">Skills</h3>
 
-    <h4 className="skills__header__sub">Technical</h4>
+    <h4 className="skills__header__sub">Web Development</h4>
 
     <ul className="skills__blob">
       <li className="skills__blob__item">HTML</li>
@@ -22,8 +22,6 @@ export default () => (
       <li className="skills__blob__item">PHP</li>
       <li className="skills__blob__item">NodeJS</li>
       <li className="skills__blob__item">Gulp</li>
-      <li className="skills__blob__item">BEM</li>
-      <li className="skills__blob__item">WordPress</li>
       <li className="skills__blob__item">Adobe CC</li>
     </ul>
   
