@@ -34,7 +34,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
               </h3>
             
-              <p>
+              <p className="blog__card__text">
                 {node.frontmatter.description}
               </p>
               
