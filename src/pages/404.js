@@ -5,8 +5,6 @@ import SEO from "../components/seo"
 import Gradient from "../components/gradient"
 import UfoImage from '../images/404.svg';
 
-console.log(UfoImage);
-
 export default ({ data }) => (
   <Layout>
     

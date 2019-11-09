@@ -39,9 +39,11 @@ export default (props) => (
         <div className="projects__card__view__inner__title">
           View:
         </div> 
-        <div class="projects__card__view__links">
-          <a href={props.viewOnline}>Online</a> {props.viewCode ? <a href={props.viewCode}>Code</a> : ""}
+        <div className="projects__card__view__links">
+          {props.viewOnline ? <a href={props.viewOnline}>Online</a> : "" } {props.viewCode ? <a href={props.viewCode}>Code</a> : ""}
         </div>
+
+        { !props.viewOnline && !props.viewCode ? <div className="projects__card__view__links">Internal Project</div> : "" }
       </div>
 
     </div>
