@@ -29,7 +29,16 @@ export default ({ data }) => (
       
       <div className="projects__holder">
       
-        
+
+      <Card 
+        screenshot={data.imageMomentumCenter.childImageSharp.fluid}
+        title='Momentum Center'
+        description= {
+          ['I worked on a software team to build a web-based user check-in app for the Momentum Center for Social Engagement. The app allows visitors to sign-in and fill out required surveys while giving the organization the ability to better collect data.', 'The application was built using Angular 8 for the front-end with a NodeJS/Express backend. It is hosted on Heroku. I contributed to the front-end team.']
+        }
+        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'ANGULAR', 'SASS', 'GOOGLE MATERIAL']}
+      />
+
       <Card 
         screenshot={data.imageFoodFight.childImageSharp.fluid}
         title='Food Fight'
@@ -186,6 +195,13 @@ export const pageQuery = graphql`
       }
     }
     imageMovieDb: file(relativePath: { eq: "images/portfolio-moviedb.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    imageMomentumCenter: file(relativePath: { eq: "images/portfolio-momentum_center.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
