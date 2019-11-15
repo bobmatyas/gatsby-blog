@@ -686,6 +686,15 @@ body {
   width: 80%;
 }
 
+pre {
+  background-color: rgb(250, 249, 249);
+  border: 1px solid #eee;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 25px;
+  margin: 3rem 0;
+}
+
 @media only screen and (min-width: 720px)  {
   
   @import 'desktop';
