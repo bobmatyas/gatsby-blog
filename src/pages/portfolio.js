@@ -24,11 +24,20 @@ export default ({ data }) => (
       <Skills />
       
       <h3 className="projects__header">Projects</h3>
-
-      <p className="projects__git">For my most recent work, <a href="https://github.com/bobmatyas" className="projects__git__link">check out my GitHub</a></p>
       
       <div className="projects__holder">
       
+
+      <Card 
+        screenshot={data.imageShortly.childImageSharp.fluid}
+        title='Shortly'
+        viewOnline='https://bobmatyas.github.io/fm-shortly/'
+        viewCode='https://github.com/bobmatyas/fm-shortly'
+        description= {
+          ['A landing page that uses React JS and the rel.ink API to provide a URL shortening service. It uses local storage to store previously shortened URLs. The mobile-first design was created from a Sketch file provided by a designer.']
+        }
+        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'SASS', 'STYLED COMPONENTS', 'API']}
+      />
 
       <Card 
         screenshot={data.imageMomentumCenter.childImageSharp.fluid}
@@ -202,6 +211,13 @@ export const pageQuery = graphql`
       }
     }
     imageMomentumCenter: file(relativePath: { eq: "images/portfolio-momentum_center.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    imageShortly: file(relativePath: { eq: "images/portfolio-shortly.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
