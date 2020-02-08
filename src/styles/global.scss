@@ -302,8 +302,9 @@ body {
   font-size: 1.8rem;
   font-family: $font-stack;
   line-height: 1.9;
+  max-width: 1000px;
   min-height: 50vh;
-  margin: -50px 5% 100px 5%;
+  margin: -50px auto 100px auto;
   padding: 0 5% 5% 5%;
   -webkit-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
   -moz-box-shadow: -1px 12px 22px -1px rgba(230,209,230,1);
