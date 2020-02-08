@@ -22,7 +22,7 @@ export default ({ data }) => {
     <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
 
         { data.allMarkdownRemark.edges.map(({ node }) => (
-          <div className="blog__card" key={node.id}>
+          <article className="blog__card" key={node.id}>
             <Link
               to={node.fields.slug}>
 
@@ -39,7 +39,7 @@ export default ({ data }) => {
               </p>
               
             </Link>
-          </div>
+          </article>
         ))}
       </div>
     </Layout>
