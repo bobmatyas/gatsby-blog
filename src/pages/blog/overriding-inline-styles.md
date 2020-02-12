@@ -1,5 +1,5 @@
 ---
-title:  "Overriding Inline Styes"
+title:  "Overriding Inline Styles"
 date:   "2020-01-20"
 description: "A short bit about overriding inline styles in third party scripts."
 ---
