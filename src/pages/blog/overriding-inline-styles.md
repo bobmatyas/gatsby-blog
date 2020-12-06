@@ -12,7 +12,7 @@ Unfortunately, in the land of third party integrations, things get messy – fas
 
 I’ve recently started to come across another scenario where scripts inject HTML onto the page with a bunch of inline styles in the form of:
 
-```
+```css
 <div style="font-size: 12px; color: red;">
   <!-- third party widget here -->
 </div>
@@ -20,7 +20,7 @@ I’ve recently started to come across another scenario where scripts inject HTM
 
 Regular CSS rules won’t override this, but you can do it by targeting the style attribute:
 
-```
+```css
 .div[style] { font-size: 20px !important; }
 ```
 

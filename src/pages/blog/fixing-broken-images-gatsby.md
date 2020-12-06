@@ -12,7 +12,7 @@ Still, as I was developing the site, I had an issue where if I changed one of th
 
 As I thought about it more, I realized that the images seemed to be cached somehow and that the cache was not being rebuilt when the local image files changed. There had to be a way to delete that cache and rebuild it – thereby fixing the broken images. A few minutes of searching and I came across the command:
 
-```
+```shell
 gatsby clean
 ```
 
