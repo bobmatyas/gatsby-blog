@@ -25,6 +25,8 @@ export default ({ data }) => (
       
       <h3 className="projects__header">Projects</h3>
       
+      <p className="projects__note">For additional projects, please check out my <a href="https://github.com/bobmatyas" target="_blank" rel="noopener noreferrer">Github</a> and <a href="https://codepen.io/bobmatyas"  target="_blank" rel="noopener noreferrer">CodePen</a>.</p>
+     
       <div className="projects__holder">
       
 
