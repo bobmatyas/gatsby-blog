@@ -26,15 +26,19 @@ export default ({ data }) => (
 
           <p>I'm currently available for web development projects. If you have a great idea that you are looking to implement, don't hesitate to get in touch.</p>
 
-          <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
-            <input type="hidden" name="bot-field" />
-            <input type="hidden" name="form-name" value="contact" />
+          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true" >
+            <div class="hidden">
+            <label>Humanity?
+              <input name="bot-field" />
+            </label>
+            </div>
+            
             <label htmlFor="name" className="contact__form__label">Name</label>
             <input type="text" name="name" id="name" required className="contact__form__input" />
             
             <label htmlFor="email" className="contact__form__label">Email</label>
             <input type="email" name="email" id="email" required className="contact__form__input" />
-            
+
             <label htmlFor="message" className="contact__form__label">Message</label>
               <textarea name="message" id="message" rows="6" className="contact__form__input" required />
            
