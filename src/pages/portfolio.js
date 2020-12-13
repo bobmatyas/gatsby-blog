@@ -31,12 +31,12 @@ export default ({ data }) => (
       
 
       <Card 
-        screenshot={data.imageShortly.childImageSharp.fluid}
-        title='Shortly'
-        viewOnline='https://bobmatyas.github.io/fm-shortly/'
-        viewCode='https://github.com/bobmatyas/fm-shortly'
+        screenshot={data.imagePicturePalette.childImageSharp.fluid}
+        title='PicturePalette'
+        viewOnline='https://picturepalette2.netlify.app/'
+        viewCode='https://github.com/bobmatyas/picturepalette'
         description= {
-          ['A landing page that uses React JS and the rel.ink API to provide a URL shortening service. It uses local storage to store previously shortened URLs. The mobile-first design was created from a Sketch file provided by a designer.']
+          ['PicturePalette is an image-based color palette discovery tool written in ReactJS.', 'It allows users to search for stock photography based on color and then generates a complimentary color scheme.']
         }
         technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'SASS', 'STYLED COMPONENTS', 'API']}
       />
@@ -59,18 +59,6 @@ export default ({ data }) => (
           ['Food Fight is a recipe finder app built using ReactJS. It queries an API to provide the recipes and another to power the random food trivia featured on the main page. It was designed to be mobile first and makes use of styled components to provide component-based styling.']
         }
         technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS', 'SASS', 'API', 'STYLED COMPONENTS']}
-      />
-
-      <Card 
-        screenshot={data.imagePicturePalette.childImageSharp.fluid}
-        title='PicturePalette'
-        viewOnline='https://picturepalette.netlify.com'
-        viewCode='https://github.com/bobmatyas/gc-final-project'
-        description= {
-          ['PicturePalette allows creatives to search quality, free stock photography by color - a rarity in the marketing world. This curative app is perfect for creatives looking for photography that compliments their brand colors.',
-          'It queries two different APIs to provide the functionality: PixaBay and ColorTag. I wrote the JavaScript that interfaces with the PixaBay API, participated in the overall architecting of the app, and contributed bug fixes. I also implemented the CSS and JavaScript that allows for toggling between light and dark mode.']
-        }
-        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'ANGULARJS', 'SASS', 'API']}
       />
 
       <Card 
@@ -108,19 +96,6 @@ export default ({ data }) => (
         viewCode='https://github.com/bobmatyas/fem-bookmark-landing'
         description= {['A landing page for Bookmark. It features a mobile-first layout built with HTML5 and CSS based on static mock-ups. JavaScript is used to dynamically change content and validate the email form. A production build was setup using Gulp.']}
         technologies= {['HTML', 'SASS', 'CSS', 'JAVASCRIPT', 'GULP']}
-      />
-
-
-      <Card 
-        screenshot={data.imagePomodoroClock.childImageSharp.fluid}
-        title='Pomodoro Clock'
-        viewOnline='https://codepen.io/bobmatyas/full/BXRpMv'
-        viewCode='https://codepen.io/bobmatyas/pen/BXRpMv'
-        description= {[
-          'I built this Pomodoro Clock as one of the final projects for the freeCodeCamp Front End Libraries certification. I built it from scratch using ReactJS to satisfy the project requirements and to pass the automated tests conducted by freeCodeCamp.',
-          'It allows a user to start and pause a timer, adjust the length of the work and break periods, and plays a sound upon completion.'
-        ]}
-        technologies= {['HTML', 'CSS', 'JAVASCRIPT', 'REACTJS']}
       />
 
       <Card 
@@ -163,7 +138,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    imagePicturePalette: file(relativePath: { eq: "images/portfolio-picture_palette.jpg" }) {
+    imagePicturePalette: file(relativePath: { eq: "images/portfolio-picture_palette2.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -213,13 +188,6 @@ export const pageQuery = graphql`
       }
     }
     imageMomentumCenter: file(relativePath: { eq: "images/portfolio-momentum_center.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageShortly: file(relativePath: { eq: "images/portfolio-shortly.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
