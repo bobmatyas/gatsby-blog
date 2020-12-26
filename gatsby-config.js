@@ -90,22 +90,12 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: `gatsby-remark-images`,
+            resolve:"@weknow/gatsby-remark-codepen",
             options: {
-              // It's important to specify the maxWidth (in pixels) of
-              // the content container as this plugin uses this as the
-              // base for generating different widths of each image.
-              maxWidth: 900,
-              withWebp: true,
-            },
+              theme: "dark",
+              height: 400
+            }
           },
-        ],
-      },
-    },
-    {
-      resolve: `gatsby-transformer-remark`,    
-   options: {
-        plugins: [
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -166,23 +156,18 @@ module.exports = {
               escapeEntities: {},
             },
           },
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              // It's important to specify the maxWidth (in pixels) of
+              // the content container as this plugin uses this as the
+              // base for generating different widths of each image.
+              maxWidth: 900,
+              withWebp: true,
+            },
+          },
         ],
       },
-    },
-
-    {
-      resolve: "gatsby-transformer-remark",
-      options: {
-        plugins: [
-          {
-            resolve:"@weknow/gatsby-remark-codepen",
-            options: {
-              theme: "dark",
-              height: 400
-            }
-          }
-        ]
-      }
     },
     {
       resolve: `gatsby-plugin-canonical-urls`,
