@@ -3,12 +3,12 @@ import Logo from "../components/logo"
 import Menu from "../components/menu"
 
 export default ({ children }) => (
-  <div>
+  <div id="page">
+          <Menu pageWrapId={"page-wrap"} outerContainerId={"page"}/>
     <header className="header">
       <Logo /> 
-      <Menu />
     </header>
-    <main>
+    <main id="page-wrap">
       {children}
     </main>
     <footer></footer>

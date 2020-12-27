@@ -5,7 +5,7 @@ import './BurgerMenu.css'
 
 const BurgerMenu = () => {
     return (
-      <Menu noOverlay isOpen={ false } right>
+      <Menu isOpen={ false } right>
         <ul style={{color: 'white'}}> 
           <li>
             <Link
