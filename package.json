@@ -17,7 +17,6 @@
     "gatsby": "^2.29.1",
     "gatsby-image": "^2.8.0",
     "gatsby-plugin-canonical-urls": "^2.7.0",
-    "gatsby-plugin-clicky": "^1.0.0",
     "gatsby-plugin-feed": "^2.10.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-netlify": "^2.8.0",
