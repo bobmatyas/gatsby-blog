@@ -195,12 +195,6 @@ module.exports = {
           ],
           display: 'swap'
         }
-      },
-      {
-        resolve: `gatsby-plugin-clicky`,
-        options: {
-          siteId: '101257845'
-        }
       }
   ]
 }
