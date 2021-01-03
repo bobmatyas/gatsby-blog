@@ -10,7 +10,7 @@ Last month, Cloudflare opened up the beta version of their new [Web Analytics pl
 
 I have always been interested in lessening my reliance on Google’s data-mining products, so this new offering immediately appealed to me. I decided to install Cloudflare Analytics on my personal web site to see how it works. I haven’t used Google Analytics on this site, but I am familiar with it from other projects. One will immediately notice that Cloudflare Analytics offers considerably less detail and no capacity for events, campaigns, etc, but that’s fine for my use case. Additionally, it does some nice things like not tracking IP addresses. They explain this:
 
-Cloudflare Web Analytics does not use any client-side state, such as cookies or localStorage, to collect usage metrics. We also don’t “fingerprint” individuals via their IP address, User Agent string, or any other data for the purpose of displaying analytics. 
+> Cloudflare Web Analytics does not use any client-side state, such as cookies or localStorage, to collect usage metrics. We also don’t “fingerprint” individuals via their IP address, User Agent string, or any other data for the purpose of displaying analytics. 
 
 This goes along with other pro-privacy policies, such as [keeping minimal logs](https://blog.cloudflare.com/what-cloudflare-logs/), removing its reliance on [Google’s ReCaptcha](https://www.bleepingcomputer.com/news/technology/cloudflare-drops-googles-recaptcha-due-to-privacy-concerns/), and interest in [building more privacy into DNS services](https://blog.cloudflare.com/oblivious-dns/). 
  
