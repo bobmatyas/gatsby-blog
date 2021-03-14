@@ -1,8 +1,23 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Gradient from "../components/gradient"
+import HomeBox from "../components/home-box";
+import BlogLink from "../components/home-blog-link"
+import Social from "../components/social-links"
+
+const Box = styled.div`
+  border: 1px solid #eee;
+  border-radius: 5px;
+  margin: 50px 0 75px 0;
+  padding: 5px 25px 10px;
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
+  box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
+  border-top: 4px solid #845EC2;
+`;
 
 const Index = ({ data }) => {
   return (
@@ -15,31 +30,28 @@ const Index = ({ data }) => {
     <Gradient color="purple" />
 
     <div className="main__content">
+      <HomeBox
+        title="About"
+        content="My name is Bob Matyas. I am a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
+      /> 
 
-      <h2>About</h2>
-      <p>My name is Bob Matyas. I am a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript.</p> 
+    <Box>
+      <h2>Recent Blog Posts</h2>
 
-{ data.allMarkdownRemark.edges.map(({ node }) => (
-  <article className="blog__card" key={node.id}>
-    <Link
-      to={node.fields.slug}>
-
-      <p className="blog__card__date">
-        {node.frontmatter.date}
-      </p>
+      { data.allMarkdownRemark.edges.map(({ node }) => (
       
-      <h3 className="blog__card__header">
-        {node.frontmatter.title}{" "}
-      </h3>
-    
-      <p className="blog__card__text">
-        {node.frontmatter.description}
-      </p>
-      
-    </Link>
-  </article>
-))}
+        <BlogLink 
+          link={node.fields.slug}
+          date={node.frontmatter.date}
+          title={node.frontmatter.title}
+        />
+      ))}
 
+</Box>
+    <Box>
+      <h3>Connect with Me</h3>
+      <Social />
+    </Box>
     </div>
     </Layout>
   )
@@ -54,7 +66,7 @@ export const query = graphql`
           id
           frontmatter {
             title
-            date(formatString: "DD MMMM, YYYY")
+            date(formatString: "MM/DD/YY")
             description
           }
           fields {
