@@ -1,6 +1,8 @@
 import React from "react"
 
 
-export default (props) => (
+const Gradient = (props) => (
   <div className={`gradient gradient--${ props.color || 'dark' }` } />
 )
+
+export default Gradient; 

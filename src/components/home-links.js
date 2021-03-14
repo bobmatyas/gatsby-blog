@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 
-export default (props) => (
+const HomeLinks = (props) => (
 
         <ul className="home__splash__menu">
             <li className="home__splash__menu__item">
@@ -51,3 +51,5 @@ export default (props) => (
             </li>
           </ul>
 )
+
+export default HomeLinks; 

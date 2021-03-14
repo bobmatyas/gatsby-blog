@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default () => (
+const Skills = () => (
   <div className="skills">
  
     <h3 className="skills__header">Skills</h3>
@@ -50,3 +50,5 @@ export default () => (
 
   </div>
 )
+
+export default Skills;

@@ -6,7 +6,7 @@ import Gradient from "../components/gradient"
 import Social from "../components/social-links"
 
 
-export default ({ data }) => (
+const Contact = ({ data }) => (
   <Layout>
 
     <SEO
@@ -76,3 +76,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Contact; 

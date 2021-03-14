@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Gradient from "../components/gradient"
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
   return (
   <Layout>
     
@@ -67,3 +67,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Blog; 

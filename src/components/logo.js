@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 
 
-export default () => (
+const Logo = () => (
   <div className="header__logo__holder">
   <Link to={`/`} className="header__logo__link">
     <h1 className="header__logo">
@@ -21,3 +21,5 @@ export default () => (
   </Link>
   </div>
 )
+
+export default Logo;

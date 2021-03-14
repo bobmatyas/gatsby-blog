@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import HomeLinks from "../components/home-links"
 
-export default ({ data }) => {
+const Index = ({ data }) => {
   return (
     <Layout>
       <SEO 
@@ -50,3 +50,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Index; 

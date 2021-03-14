@@ -2,7 +2,7 @@ import React from "react"
 import Logo from "../components/logo"
 import Menu from "../components/menu"
 
-export default ({ children }) => (
+const Layout = ({ children }) => (
   <div>
     <header className="header">
       <Logo /> 
@@ -14,3 +14,5 @@ export default ({ children }) => (
     <footer></footer>
   </div>
 )
+
+export default Layout;

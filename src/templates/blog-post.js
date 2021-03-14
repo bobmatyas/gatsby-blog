@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Gradient from "../components/gradient"
 
-export default ({ data }) => {
+const BlogPost = ({ data }) => {
   let post = data.markdownRemark
 
   const dateFormat = (dateToFormat) => {
@@ -45,3 +45,5 @@ export const query = graphql`
     }
   }
 `
+
+export default BlogPost; 

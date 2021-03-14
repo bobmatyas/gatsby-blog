@@ -1,7 +1,7 @@
 import React from "react"
 
 
-export default (props) => (
+const SocialLinks = (props) => (
 
   <ul className="social__icons">
     <li>
@@ -47,3 +47,5 @@ export default (props) => (
   </ul>
   
 )
+
+export default SocialLinks; 

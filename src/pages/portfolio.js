@@ -7,7 +7,7 @@ import Skills from "../components/skills"
 import Card from "../components/portfolio-card"
 
 
-export default ({ data }) => (
+const Portfolio = ({ data }) => (
   <Layout>
     <SEO 
       title="Portfolio"
@@ -196,3 +196,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+export default Portfolio; 
