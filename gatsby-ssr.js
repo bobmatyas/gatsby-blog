@@ -2,8 +2,9 @@ import React from "react";
 export function onRenderBody( { setPostBodyComponents } ) {
     setPostBodyComponents([
         <script 
-        defer 
         src="https://static.cloudflareinsights.com/beacon.min.js"
-        data-cf-beacon='{"token": "9c46957e3f89451a8c879dc672753cfa"}'></script>,
+        data-cf-beacon="{'token': '9c46957e3f89451a8c879dc672753cfa'}"
+        defer 
+        ></script>,
     ]);
 }
