@@ -13,7 +13,7 @@ const PageNotFound = ({ data }) => (
       description="Page not found"
     />
 
-    <Gradient color="pink" />
+    <Gradient color="purple" />
 
     <div className="main__content">
       

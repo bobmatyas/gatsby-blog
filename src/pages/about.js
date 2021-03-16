@@ -13,7 +13,7 @@ const About = ({ data }) => (
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient color="pink" />
+    <Gradient color="purple" />
 
     <div className="main__content">
       <h2 className="main__content__header">About</h2>

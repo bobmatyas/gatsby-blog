@@ -14,7 +14,7 @@ const Contact = ({ data }) => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient color="yellow" />
+    <Gradient color="purple" />
 
     <div className="main__content">
 

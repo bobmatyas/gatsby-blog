@@ -13,7 +13,7 @@ const Blog = ({ data }) => {
       description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
     
-    <Gradient color="blue" />
+    <Gradient color="purple" />
     
     <div className="main__content">
 
