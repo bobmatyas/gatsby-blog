@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,11 +12,13 @@ const Box = styled.div`
   border: 1px solid #eee;
   border-radius: 5px;
   margin: 50px 0 75px 0;
-  padding: 5px 25px 10px;
+  padding: 10px 25px 25px 25px;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   border-top: 4px solid #845EC2;
+
+  h2 { margin-bottom: 0; }
 `;
 
 const Index = ({ data }) => {
@@ -30,10 +32,6 @@ const Index = ({ data }) => {
     <Gradient color="purple" />
 
     <div className="main__content">
-      <HomeBox
-        title="About"
-        content="My name is Bob Matyas. I am a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
-      /> 
 
     <Box>
       <h2>Recent Blog Posts</h2>
@@ -46,8 +44,13 @@ const Index = ({ data }) => {
           title={node.frontmatter.title}
         />
       ))}
+    </Box>
+    
+    <HomeBox
+        title="About Bob Matyas"
+        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
+      /> 
 
-</Box>
     <Box>
       <h3>Connect with Me</h3>
       <Social />
