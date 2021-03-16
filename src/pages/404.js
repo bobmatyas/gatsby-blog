@@ -5,7 +5,7 @@ import SEO from "../components/seo"
 import Gradient from "../components/gradient"
 import UfoImage from '../images/404.svg';
 
-export default ({ data }) => (
+const PageNotFound = ({ data }) => (
   <Layout>
     
     <SEO 
@@ -13,7 +13,7 @@ export default ({ data }) => (
       description="Page not found"
     />
 
-    <Gradient color="pink" />
+    <Gradient color="purple" />
 
     <div className="main__content">
       
@@ -43,3 +43,5 @@ export const query = graphql`
     }
   }
 `
+
+export default PageNotFound; 

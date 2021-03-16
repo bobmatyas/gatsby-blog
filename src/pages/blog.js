@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Gradient from "../components/gradient"
 
-export default ({ data }) => {
+const Blog = ({ data }) => {
   return (
   <Layout>
     
@@ -13,7 +13,7 @@ export default ({ data }) => {
       description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
     
-    <Gradient color="blue" />
+    <Gradient color="purple" />
     
     <div className="main__content">
 
@@ -67,3 +67,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Blog; 

@@ -15,7 +15,7 @@ function ParagraphItem(props) {
   return <p className="projects__card__description">{props.value}</p>;
 }
 
-export default (props) => (
+const Projects = (props) => (
 
   
   <div className="projects__card">
@@ -70,3 +70,5 @@ export default (props) => (
     </ul>
   </div>
 )
+
+export default Projects; 

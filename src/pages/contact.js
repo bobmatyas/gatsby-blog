@@ -6,7 +6,7 @@ import Gradient from "../components/gradient"
 import Social from "../components/social-links"
 
 
-export default ({ data }) => (
+const Contact = ({ data }) => (
   <Layout>
 
     <SEO
@@ -14,7 +14,7 @@ export default ({ data }) => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient color="yellow" />
+    <Gradient color="purple" />
 
     <div className="main__content">
 
@@ -76,3 +76,5 @@ export const query = graphql`
     }
   }
 `
+
+export default Contact; 

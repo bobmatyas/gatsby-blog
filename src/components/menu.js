@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
 
-export default () => {
+const Menu = () => {
 
 
   const [open, setOpen] = useState(false);
@@ -54,3 +54,5 @@ export default () => {
     </div>
   )
 }
+
+export default Menu; 
