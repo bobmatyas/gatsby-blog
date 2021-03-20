@@ -656,6 +656,12 @@ body {
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
 }
 
+.blog__card:hover {
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0, 0.5);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+}
+
 .blog__card__date {
   color: #999999;
   font-size: 1.4rem;
@@ -688,7 +694,7 @@ body {
 }
 
 .blog__card:hover {
-  border: 1px solid #ccc;
+  border: 1px solid #999;
   cursor: pointer;
 }
 
