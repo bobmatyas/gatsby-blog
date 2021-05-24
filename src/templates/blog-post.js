@@ -20,7 +20,7 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
       />
 
-      <Gradient />
+      <Gradient color="purple" />
 
       <div className="main__content">
         <article>
