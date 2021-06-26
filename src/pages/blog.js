@@ -1,14 +1,14 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 
 const Blog = ({ data }) => {
   return (
   <Layout>
     
-    <SEO 
+    <Seo 
       title="Blog"
       description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
     />

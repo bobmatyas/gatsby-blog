@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import Social from "../components/social-links"
 
 const About = ({ data }) => (
   <Layout>
     
-    <SEO 
+    <Seo 
       title="About"
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />

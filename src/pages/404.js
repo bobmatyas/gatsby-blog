@@ -1,14 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import UfoImage from '../images/404.svg';
 
 const PageNotFound = ({ data }) => (
   <Layout>
     
-    <SEO 
+    <Seo 
       title="404 - Page Not Found"
       description="Page not found"
     />

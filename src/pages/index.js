@@ -2,7 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import HomeBox from "../components/home-box";
 import BlogLink from "../components/home-blog-link"
@@ -24,7 +24,7 @@ const Box = styled.div`
 const Index = ({ data }) => {
   return (
     <Layout>
-      <SEO 
+      <Seo 
         title="Web Developer"
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
