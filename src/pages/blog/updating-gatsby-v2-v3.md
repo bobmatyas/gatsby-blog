@@ -4,7 +4,7 @@ date:   "2021-03-20"
 description: "A quick overview of how I updated from Gatsby v2 to v3."
 ---
 
-![GatsbyJS](./../../gatsbyjs.png)
+![GatsbyJS](./../../images/gatsbyjs.png)
 
 I recently updated my site from Gatsby v2 to v3. For the most part, it was a surprisingly painless transition. I followed along with [the guide in the Gatsby docs](https://www.gatsbyjs.com/docs/reference/release-notes/migrating-from-v2-to-v3/) which got me most of the way there, but there were a few issues not covered in the docs that I had to address.
 

@@ -190,7 +190,7 @@ body {
 .main__menu__holder {
   align-items: center;
   bottom: 0;
-  background-color: #fff;
+  background-color: #000;
   border-top: 1px solid #eee;
   display: flex;
   height: 8.4vh;
@@ -206,7 +206,8 @@ body {
 }
 
 .main__menu__icon {
-  color: #666666;
+  background-color: #000;
+  color: #fff;
   margin: 0 auto;
   padding: 0;
   text-align: center;
@@ -217,7 +218,7 @@ body {
 }
 
 .main__menu__toggle {
-  background-color: #fff;
+  background-color: #000;
   border: none;
   margin: 0 auto;
   padding: 5px 10px;
@@ -259,6 +260,7 @@ body {
 
 .main__menu__overlay--open .main__menu li {
   margin: 25px 0;
+  text-align: center;
 }
 
 .main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
