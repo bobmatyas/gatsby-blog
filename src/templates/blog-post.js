@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 
 const BlogPost = ({ data }) => {
@@ -15,7 +15,7 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <SEO 
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />

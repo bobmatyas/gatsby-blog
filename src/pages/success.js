@@ -1,12 +1,12 @@
 import React from 'react';
 import Layout from '../components/layout';
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 
 const Success = props => (
   <Layout>
 
-    <SEO
+    <Seo
       title="Contact"
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />

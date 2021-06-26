@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import Skills from "../components/skills"
 import Card from "../components/portfolio-card"
@@ -9,7 +9,7 @@ import Card from "../components/portfolio-card"
 
 const Portfolio = ({ data }) => (
   <Layout>
-    <SEO 
+    <Seo 
       title="Portfolio"
       description="The web development portfolio of Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
@@ -112,7 +112,7 @@ const Portfolio = ({ data }) => (
         title='John Ball Area Neighbors'
         viewOnline='https://jbangr.org'
         viewCode=''
-        description= {['I helped John Ball Area Neighbors move from an out-of-date platform onto a custom WordPress setup that added a responsive layout and the ability for staff to update the site. The site integrates their Facebook feed and Google calendar into the layout. I also helped with their SEO and assisted them with setting up their Google Business profile for increased visibility.']}
+        description= {['I helped John Ball Area Neighbors move from an out-of-date platform onto a custom WordPress setup that added a responsive layout and the ability for staff to update the site. The site integrates their Facebook feed and Google calendar into the layout. I also helped with their Seo and assisted them with setting up their Google Business profile for increased visibility.']}
         technologies= {['WORDPRESS', 'HTML', 'CSS', 'PHP']}
       />
 
