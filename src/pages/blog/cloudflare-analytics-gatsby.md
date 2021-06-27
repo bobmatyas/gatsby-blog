@@ -4,7 +4,7 @@ date:   "2021-01-03"
 description: "An overview of how I added Cloudflare's analytics offering to this site."
 ---
 
-![Screenshot of Cloudflare Web Analytics Dashboard](./../../cloudflare-analytics.jpg)
+![Screenshot of Cloudflare Web Analytics Dashboard](./../../images/cloudflare-analytics.jpg)
 
 Last month, Cloudflare opened up the beta version of their new [Web Analytics platform](https://www.cloudflare.com/web-analytics/). The new offering caught my eye when it was initially [announced earlier in the fall](https://www.searchenginejournal.com/cloudflare-web-analytics/382498/) with Cloudflare promoting the service as “privacy-first” alternative to other analytics products such as Google.
 

@@ -19,8 +19,6 @@ const Blog = ({ data }) => {
 
     <h2 className="main__content__header">Blog</h2>
 
-    <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
-
         { data.allMarkdownRemark.edges.map(({ node }) => (
           <article className="blog__card" key={node.id}>
             <Link
