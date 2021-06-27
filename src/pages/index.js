@@ -11,14 +11,13 @@ import Social from "../components/social-links"
 const Box = styled.div`
   border: 1px solid #eee;
   border-radius: 5px;
-  margin: 50px 0 75px 0;
+  margin: 25px 0 50px 0;
   padding: 10px 25px 25px 25px;
   -webkit-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   border-top: 4px solid #845EC2;
 
-  h2 { margin-bottom: 0; }
 `;
 
 const Index = ({ data }) => {
@@ -52,7 +51,7 @@ const Index = ({ data }) => {
       /> 
 
     <Box>
-      <h3>Connect with Me</h3>
+      <h2>Connect with Me</h2>
       <Social />
     </Box>
     </div>

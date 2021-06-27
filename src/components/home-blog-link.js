@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Post = styled.h3`
-  font-size: 90%;
+  font-size: 95%;
 
   margin: 0;
 
@@ -11,7 +11,7 @@ const Post = styled.h3`
 
   a:link, a:visited { 
     color: #00896f;
-    padding: 10px;
+    padding: 10px 0;
   }
 
   a:hover, a:active { 
