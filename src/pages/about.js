@@ -9,22 +9,24 @@ const About = ({ data }) => (
   <Layout>
     
     <Seo 
-      title="About"
+      title="About Bob Matyas"
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
     <Gradient color="purple" />
 
     <div className="main__content">
-      <h2 className="main__content__header">About</h2>
+      <h2 className="main__content__header">About Bob Matyas</h2>
 
-      <p>My name is Bob Matyas. I am a web developer living in Grand Rapids, Michigan.</p> 
+      <h3>👋 Howdy! I’m Bob Matyas, an experienced web developer living in Grand Rapids, Michigan. I like moving pixels around using HTML, CSS, and JavaScript. </h3> 
 
-      <p>I like to make designs come to life using a combination of HTML, CSS, and JavaScript. I have experience building and deploying websites using WordPress as well as using custom solutions. I’m passionate about creating a web that is usable for everyone and I place a lot of value on user experience, accessibility, and performance. I’m interested in the intersection of humans/machines and believe that we build better software when we keep in mind the people using our products.</p>
+      <p>I work as a Happiness Engineer at Automattic where I help folks using self-hosted WordPress succeed using Jetpack. I have past experience as a web designer and web developer at companies, non-profits, and as a freelancer. My job allows me to combine all of my skills from previous positions and draw on them to help people succeed with their own web projects.</p>
 
-      <p>When I’m not building websites, you’d probably find me in the woods, riding my bike, foraging for wild plants, or otherwise trying to maintain a connection to the land.</p> 
+      <p>Outside of my job duties, I’m passionate about accessibility, user experience, web performance, and the open web. I have been building websites since the late 1990s. I remember the days – and pain – of folks making sites using strange hacks and table-based layouts. We’ve come a long way since then and I love learning the new things coming to the web platform. </p>
 
-      <p>You can learn more about what I do:</p>
+      <p>When I’m not working online, I’m most likely to be found in probably in the woods, riding a bike, foraging for wild plants, or cooking (hopefully) tasty vegan food.</p>
+
+      <h2>Follow Bob Matyas on Social Media</h2>
 
       <Social />
       
