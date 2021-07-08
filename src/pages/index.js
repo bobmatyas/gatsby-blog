@@ -17,8 +17,14 @@ const Box = styled.div`
   -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   border-top: 4px solid #845EC2;
-
 `;
+
+const PostList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
+
 
 const Index = ({ data }) => {
   return (
@@ -35,6 +41,7 @@ const Index = ({ data }) => {
     <Box>
       <h2>Recent Blog Posts</h2>
 
+      <PostList>
       { data.allMarkdownRemark.edges.map(({ node }) => (
       
         <BlogLink 
@@ -43,6 +50,7 @@ const Index = ({ data }) => {
           title={node.frontmatter.title}
         />
       ))}
+      </PostList>
     </Box>
     
     <HomeBox

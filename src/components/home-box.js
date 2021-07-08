@@ -17,11 +17,12 @@ const Box = styled.div`
   img { display: none; }
 
   a:link, a:visited { 
-    color: #00896f;
+    color: #00614F;
+    text-decoration: underline;
   }
   
   a:hover, a:active { 
-    color: #00896f;
+    color: #00614F;
     text-decoration: none;
   }
 
