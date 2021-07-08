@@ -17,8 +17,14 @@ const Box = styled.div`
   -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   border-top: 4px solid #845EC2;
-
 `;
+
+const PostList = styled.ul`
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+`;
+
 
 const Index = ({ data }) => {
   return (
@@ -32,24 +38,28 @@ const Index = ({ data }) => {
 
     <div className="main__content">
 
+    <HomeBox
+        title="About Bob Matyas"
+        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
+      /> 
+
+
     <Box>
       <h2>Recent Blog Posts</h2>
 
+      <PostList>
       { data.allMarkdownRemark.edges.map(({ node }) => (
       
         <BlogLink 
           link={node.fields.slug}
           date={node.frontmatter.date}
           title={node.frontmatter.title}
+          key={node.frontmatter.date}
         />
       ))}
+      </PostList>
     </Box>
     
-    <HomeBox
-        title="About Bob Matyas"
-        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
-      /> 
-
     <Box>
       <h2>Connect with Me</h2>
       <Social />

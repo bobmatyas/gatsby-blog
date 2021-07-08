@@ -3,6 +3,15 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Gradient from "../components/gradient"
+import styled from "styled-components"
+
+const Meta = styled.time`
+  color: #757575;
+  display: block;
+  font-weight: 400;
+  margin: 0 0 25px;
+  padding: 0;
+`;
 
 const BlogPost = ({ data }) => {
   let post = data.markdownRemark
@@ -24,8 +33,8 @@ const BlogPost = ({ data }) => {
 
       <div className="main__content">
         <article>
-          <h1 className="blog__title">{post.frontmatter.title}</h1>
-          <time dateTime={post.frontmatter.dateTime} className="blog__meta">{dateFormat(post.frontmatter.date)}</time>
+          <h2 className="blog__title">{post.frontmatter.title}</h2>
+          <Meta dateTime={post.frontmatter.dateTime}>{dateFormat(post.frontmatter.date)}</Meta>
           <div className="blog__holder" dangerouslySetInnerHTML={{ __html: post.html }} />
         </article>
       </div>

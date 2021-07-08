@@ -2,22 +2,32 @@ import React from "react"
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const Post = styled.h3`
+const Post = styled.li`
   font-size: 95%;
-
   margin: 0;
+  padding: 0;
 
-  a { display: block; }
+  :hover {
+    background-color: #F1F7F9;
+    border-radius: 5px;
+    padding: 0;
+  }
+
+  a { 
+    display: block; 
+    margin: 0;
+    padding: 10px;
+  }
 
   a:link, a:visited { 
-    color: #00896f;
-    padding: 10px 0;
+    color: #00614F;
   }
 
   a:hover, a:active { 
-    background-color: #e7f3f8;
-    border-radius: 5px;
-    text-decoration: none; }
+    color: #006653;
+    text-decoration: none;
+  }
+
 `;
 
 
