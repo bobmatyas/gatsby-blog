@@ -38,6 +38,12 @@ const Index = ({ data }) => {
 
     <div className="main__content">
 
+    <HomeBox
+        title="About Bob Matyas"
+        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
+      /> 
+
+
     <Box>
       <h2>Recent Blog Posts</h2>
 
@@ -48,16 +54,12 @@ const Index = ({ data }) => {
           link={node.fields.slug}
           date={node.frontmatter.date}
           title={node.frontmatter.title}
+          key={node.frontmatter.date}
         />
       ))}
       </PostList>
     </Box>
     
-    <HomeBox
-        title="About Bob Matyas"
-        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
-      /> 
-
     <Box>
       <h2>Connect with Me</h2>
       <Social />
