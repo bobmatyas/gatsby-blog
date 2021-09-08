@@ -36,7 +36,7 @@ You will also need to download the files [amonet-douglas-v1.2.zip](https://forum
 
     1. Select Factory Reset then Wipe Cache
     2. Reboot to Bootloader
-    3. You will see the balck screen with “Fastboot” in the lower corner.
+    3. You will see the black screen with “Fastboot” in the lower corner.
     4. Open Terminal from “brick-douglas” folder and type `sudo ./brick.sh` 
     5. Check Display output for the “Disconnect USB and Powerdown” Message and do so when prompted
     6. Open Terminal from “amonet-douglas-v1.2” folder.
