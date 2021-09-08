@@ -7,6 +7,7 @@ import Gradient from "../components/gradient"
 import HomeBox from "../components/home-box";
 import BlogLink from "../components/home-blog-link"
 import Social from "../components/social-links"
+import Hcard from "../components/hcard"
 
 const Box = styled.div`
   border: 1px solid #eee;
@@ -29,42 +30,43 @@ const PostList = styled.ul`
 const Index = ({ data }) => {
   return (
     <Layout>
-      <Seo 
+      <Seo
         title="Web Developer"
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
 
-    <Gradient color="purple" />
+      <Gradient color="purple" />
 
-    <div className="main__content">
+      <div className="main__content">
 
-    <HomeBox
-        title="About Bob Matyas"
-        content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
-      /> 
-
-
-    <Box>
-      <h2>Recent Blog Posts</h2>
-
-      <PostList>
-      { data.allMarkdownRemark.edges.map(({ node }) => (
-      
-        <BlogLink 
-          link={node.fields.slug}
-          date={node.frontmatter.date}
-          title={node.frontmatter.title}
-          key={node.frontmatter.date}
+        <HomeBox
+          title="About Bob Matyas"
+          content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
         />
-      ))}
-      </PostList>
-    </Box>
-    
-    <Box>
-      <h2>Connect with Me</h2>
-      <Social />
-    </Box>
-    </div>
+
+        <Hcard />
+
+        <Box>
+          <h2>Recent Blog Posts</h2>
+
+          <PostList>
+            {data.allMarkdownRemark.edges.map(({ node }) => (
+
+              <BlogLink
+                link={node.fields.slug}
+                date={node.frontmatter.date}
+                title={node.frontmatter.title}
+                key={node.frontmatter.date}
+              />
+            ))}
+          </PostList>
+        </Box>
+
+        <Box>
+          <h2>Connect with Me</h2>
+          <Social />
+        </Box>
+      </div>
     </Layout>
   )
 }
@@ -91,4 +93,4 @@ export const query = graphql`
   }
 `
 
-export default Index; 
+export default Index;
