@@ -186,6 +186,7 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`, 
     `gatsby-plugin-sharp`,
     {
@@ -193,15 +194,6 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
       }
-    },
-      {
-        resolve: `gatsby-plugin-google-fonts`,
-        options: {
-          fonts: [
-            `raleway\:700,900` // you can also specify font weights and styles
-          ],
-          display: 'swap'
-        }
-      }
+    }
   ]
 }
