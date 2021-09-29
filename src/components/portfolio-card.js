@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 
 
 const styles = {
@@ -20,10 +20,7 @@ const Projects = (props) => (
   
   <div className="projects__card">
     <div className="projects__card__image">
-      <Img style={styles}
-        fluid={props.screenshot}
-        alt={props.title}
-      />
+      <GatsbyImage image={props.screenshot} style={styles} alt={props.title} />
     </div>
 
     <h4 className="projects__card__heading">

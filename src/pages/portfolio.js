@@ -31,7 +31,7 @@ const Portfolio = ({ data }) => (
       
 
       <Card 
-        screenshot={data.imagePicturePalette.childImageSharp.fluid}
+        screenshot={data.imagePicturePalette.childImageSharp.gatsbyImageData}
         title='PicturePalette'
         viewOnline='https://picturepalette2.netlify.app/'
         viewCode='https://github.com/bobmatyas/picturepalette'
@@ -42,7 +42,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageMomentumCenter.childImageSharp.fluid}
+        screenshot={data.imageMomentumCenter.childImageSharp.gatsbyImageData}
         title='Momentum Center'
         description= {
           ['I worked on a software team to build a web-based user check-in app for the Momentum Center for Social Engagement. The app allows visitors to sign-in and fill out required surveys while giving the organization the ability to better collect data.', 'The application was built using Angular 8 for the front-end with a NodeJS/Express backend. It is hosted on Heroku. I contributed to the front-end team.']
@@ -51,7 +51,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageFoodFight.childImageSharp.fluid}
+        screenshot={data.imageFoodFight.childImageSharp.gatsbyImageData}
         title='Food Fight'
         viewOnline='https://bobmatyas.github.io/recipe-app/'
         viewCode='https://github.com/bobmatyas/recipe-app'
@@ -62,7 +62,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageWhereWorld.childImageSharp.fluid}
+        screenshot={data.imageWhereWorld.childImageSharp.gatsbyImageData}
         title='Where in the World?'
         viewOnline='https://bobmatyas.github.io/fem-rest-countries-api/'
         viewCode='https://github.com/bobmatyas/fem-rest-countries-api'
@@ -71,7 +71,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageMovieDb.childImageSharp.fluid}
+        screenshot={data.imageMovieDb.childImageSharp.gatsbyImageData}
         title='MovieFinder'
         viewOnline='https://bobmatyas.github.io/AngularJS-Movies/'
         viewCode='https://github.com/bobmatyas/AngularJS-Movies'
@@ -80,7 +80,7 @@ const Portfolio = ({ data }) => (
       />  
 
       <Card 
-        screenshot={data.imageLilySpa.childImageSharp.fluid}
+        screenshot={data.imageLilySpa.childImageSharp.gatsbyImageData}
         title='Lily Spa'
         viewOnline='https://bobmatyas.github.io/lily-spa-pos/'
         viewCode='https://github.com/bobmatyas/lily-spa-pos'
@@ -90,7 +90,7 @@ const Portfolio = ({ data }) => (
 
 
       <Card 
-        screenshot={data.imageBookmark.childImageSharp.fluid}
+        screenshot={data.imageBookmark.childImageSharp.gatsbyImageData}
         title='Bookmark'
         viewOnline='https://bobmatyas.github.io/fem-bookmark-landing/'
         viewCode='https://github.com/bobmatyas/fem-bookmark-landing'
@@ -99,7 +99,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageDrumMachine.childImageSharp.fluid}
+        screenshot={data.imageDrumMachine.childImageSharp.gatsbyImageData}
         title='Drum Machine'
         viewOnline='https://codepen.io/bobmatyas/full/mNENyP'
         viewCode='https://codepen.io/bobmatyas/pen/mNENyP'
@@ -108,7 +108,7 @@ const Portfolio = ({ data }) => (
       />
 
       <Card 
-        screenshot={data.imageJban.childImageSharp.fluid}
+        screenshot={data.imageJban.childImageSharp.gatsbyImageData}
         title='John Ball Area Neighbors'
         viewOnline='https://jbangr.org'
         viewCode=''
@@ -122,79 +122,64 @@ const Portfolio = ({ data }) => (
   </Layout>
 )
 
-export const pageQuery = graphql`
-  query {
-    imageLilySpa: file(relativePath: { eq: "images/portfolio-lily_spa.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageWhereWorld: file(relativePath: { eq: "images/portfolio-where_world.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imagePicturePalette: file(relativePath: { eq: "images/portfolio-picture_palette2.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageJban: file(relativePath: { eq: "images/portfolio-jban.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageDrumMachine: file(relativePath: { eq: "images/portfolio-drum_machine.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageBookmark: file(relativePath: { eq: "images/portfolio-bookmark.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageFoodFight: file(relativePath: { eq: "images/portfolio-food_fight.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imagePomodoroClock: file(relativePath: { eq: "images/portfolio-pomodoro_clock.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageMovieDb: file(relativePath: { eq: "images/portfolio-moviedb.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    imageMomentumCenter: file(relativePath: { eq: "images/portfolio-momentum_center.jpg" }) {
-      childImageSharp {
-        fluid(maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
+export const pageQuery = graphql`{
+  imageLilySpa: file(relativePath: {eq: "images/portfolio-lily_spa.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
     }
   }
+  imageWhereWorld: file(relativePath: {eq: "images/portfolio-where_world.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imagePicturePalette: file(
+    relativePath: {eq: "images/portfolio-picture_palette2.jpg"}
+  ) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageJban: file(relativePath: {eq: "images/portfolio-jban.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageDrumMachine: file(relativePath: {eq: "images/portfolio-drum_machine.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageBookmark: file(relativePath: {eq: "images/portfolio-bookmark.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageFoodFight: file(relativePath: {eq: "images/portfolio-food_fight.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imagePomodoroClock: file(
+    relativePath: {eq: "images/portfolio-pomodoro_clock.jpg"}
+  ) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageMovieDb: file(relativePath: {eq: "images/portfolio-moviedb.jpg"}) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+  imageMomentumCenter: file(
+    relativePath: {eq: "images/portfolio-momentum_center.jpg"}
+  ) {
+    childImageSharp {
+      gatsbyImageData(width: 600, layout: CONSTRAINED)
+    }
+  }
+}
 `;
 
 export default Portfolio; 
