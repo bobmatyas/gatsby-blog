@@ -26,12 +26,7 @@ const Contact = ({ data }) => (
 
           <p>I'm currently available for web development projects. If you have a great idea that you are looking to implement, don't hesitate to get in touch.</p>
 
-          <form name="contact" method="post" data-netlify-honeypot="bot-field" data-netlify="true" >
-            <div class="hidden">
-            <label>Humanity?
-              <input name="bot-field" />
-            </label>
-            </div>
+          <form name="contact" method="post" data-netlify-recaptcha="true" data-netlify="true" >
             
             <label htmlFor="name" className="contact__form__label">Name</label>
             <input type="text" name="name" id="name" required className="contact__form__input" />
@@ -42,6 +37,8 @@ const Contact = ({ data }) => (
             <label htmlFor="message" className="contact__form__label">Message</label>
               <textarea name="message" id="message" rows="6" className="contact__form__input" required />
            
+            <div data-netlify-recaptcha="true"></div>
+
             <ul className="contact__form__actions">
               <li>
                 <input type="submit" value="Send Message" className="contact__form__button" />
