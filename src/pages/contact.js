@@ -26,10 +26,11 @@ const Contact = ({ data }) => (
 
           <p>I'm currently available for web development projects. If you have a great idea that you are looking to implement, don't hesitate to get in touch.</p>
 
-          <form name="contact" netlify-honeypot="good-luck" data-netlify="true" >
+          <form name="contact" data-netlify="true" netlify-honeypot="goodluck" >
             
+            <input type="hidden" name="form-name" value="contact" />
             <p class="hidden">
-              <label>Don’t fill this out if you’re human: <input name="good-luck" /></label>
+              <label>Don’t fill this out if you’re human: <input name="goodluck" /></label>
             </p>
 
             <label htmlFor="name" className="contact__form__label">Name</label>
