@@ -20,19 +20,19 @@ const Blog = ({ data }) => {
     <h2 className="main__content__header">Blog</h2>
 
         { data.allMarkdownRemark.edges.map(({ node }) => (
-          <article className="blog__card" key={node.id}>
+          <article className="blog__card h-entry" key={node.id}>
             <Link
-              to={node.fields.slug}>
+              to={node.fields.slug} className="u-uid u-url">
 
               <p className="blog__card__date">
                 {node.frontmatter.date}
               </p>
               
-              <h3 className="blog__card__header">
+              <h3 className="blog__card__header p-name">
                 {node.frontmatter.title}{" "}
               </h3>
             
-              <p className="blog__card__text">
+              <p className="blog__card__text p-summary">
                 {node.frontmatter.description}
               </p>
               
