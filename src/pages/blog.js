@@ -24,7 +24,7 @@ const Blog = ({ data }) => {
             <Link
               to={node.fields.slug} className="u-uid u-url">
 
-              <p className="blog__card__date">
+              <p className="blog__card__date dt-published">
                 {node.frontmatter.date}
               </p>
               
