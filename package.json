@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@weknow/gatsby-remark-codepen": "^0.1.0",
-    "babel-plugin-styled-components": "^1.13.3",
+    "babel-plugin-styled-components": "^2.0.2",
     "gatsby": "^4.2.0",
     "gatsby-cli": "^4.2.0",
     "gatsby-image": "^3.5.0",

@@ -2,25 +2,12 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import HcardPost from "../components/hcard-post"
 import Gradient from "../components/gradient"
 import styled from "styled-components"
 
-const Meta = styled.time`
-  color: #757575;
-  display: block;
-  font-weight: 400;
-  margin: 0 0 25px;
-  padding: 0;
-`;
-
 const BlogPost = ({ data }) => {
   let post = data.markdownRemark
-
-  const dateFormat = (dateToFormat) => {
-    const date = new Date(dateToFormat);
-    const options = {year: 'numeric', month: 'long', day: 'numeric'}
-    return date.toLocaleDateString('en-us', options);
-  }
 
   return (
     <Layout>
@@ -32,10 +19,14 @@ const BlogPost = ({ data }) => {
       <Gradient color="purple" />
 
       <div className="main__content">
-        <article>
-          <h2 className="blog__title">{post.frontmatter.title}</h2>
-          <Meta dateTime={post.frontmatter.dateTime}>{dateFormat(post.frontmatter.date)}</Meta>
-          <div className="blog__holder" dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article class="h-entry">
+          <h2 className="blog__title p-name">{post.frontmatter.title}</h2>
+          <HcardPost 
+            slug={post.fields.slug} 
+            date={post.frontmatter.date}  
+          />
+          <div className="blog__holder e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+
         </article>
       </div>
     </Layout>
@@ -50,6 +41,9 @@ export const query = graphql`
         title
         description
         date
+      }
+      fields {
+        slug
       }
     }
   }
