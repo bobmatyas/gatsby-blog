@@ -42,7 +42,8 @@
     "react-typography": "^0.16.20",
     "styled-components": "^5.3.3",
     "typography": "^0.16.21",
-    "typography-theme-github": "^0.16.19"
+    "typography-theme-github": "^0.16.19",
+    "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
     "prettier": "^2.5.1"
