@@ -1,13 +1,9 @@
 import React from "react"
-import Logo from "../components/logo"
-import Menu from "../components/menu"
+import Header from "../components/header"
 
 const Layout = ({ children }) => (
   <>
-    <header className="header">
-      <Logo /> 
-      <Menu />
-    </header>
+    <Header />
     <main>
       {children}
     </main>
