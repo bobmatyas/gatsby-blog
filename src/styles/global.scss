@@ -16,43 +16,6 @@ $body-heading-color: #333333;
 $pink-color: #FF6F91;
 $purple-color: #845EC2;
 
-
-
-
-.header {
-  align-items: center;
-  background: #030507;
-  border-top: 4px solid #845EC2;
-  display: flex;
-  justify-content: space-between;
-  padding-top: 15px;
-  padding-bottom: 15px;
-}
-
-.header__logo__holder {
-  min-width: 275px;
-  padding-left: 3%;
-}
-
-.header__logo {
-  align-items: center;
-  display: flex;
-  margin: 0;
-}
-
-.header__logo__graphic {
-  color: #fbf7f7;
-  height: 55px;
-  width: 60px;
-}
-
-.header__logo__text {
-  color: #fff;
-  letter-spacing: -2px;
-  margin: 0;
-  padding-left: 10px;
-}
-
 .header__logo__link {
   color: #fff;
   text-decoration: none;
