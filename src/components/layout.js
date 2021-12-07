@@ -3,7 +3,7 @@ import Logo from "../components/logo"
 import Menu from "../components/menu"
 
 const Layout = ({ children }) => (
-  <div>
+  <>
     <header className="header">
       <Logo /> 
       <Menu />
@@ -12,7 +12,7 @@ const Layout = ({ children }) => (
       {children}
     </main>
     <footer></footer>
-  </div>
+  </>
 )
 
 export default Layout;
