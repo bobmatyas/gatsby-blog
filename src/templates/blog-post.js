@@ -19,7 +19,7 @@ const BlogPost = ({ data }) => {
       <Gradient color="purple" />
 
       <div className="main__content">
-        <article class="h-entry">
+        <article className="h-entry">
           <h2 className="blog__title p-name">{post.frontmatter.title}</h2>
           <HcardPost 
             slug={post.fields.slug} 

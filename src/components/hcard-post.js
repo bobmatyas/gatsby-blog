@@ -23,7 +23,7 @@ const HcardPost = (props) => {
         <a className="u-url" href={permaLink}>
             <time 
                 className="dt-published" 
-                datetime={props.date}
+                dateTime={props.date}
             >
                 {dateFormat(props.date)}
             </time>
