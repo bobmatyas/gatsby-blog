@@ -17,6 +17,12 @@ const PostContent = styled.div`
   rgba(0,0,0,0.3);
 `;
 
+const BlogHolder = styled.div`
+  a:link, a:visited, a:hover, a:active {
+    color: #845EC2;
+  }
+`;
+
 const BlogPost = ({ data }) => {
   let post = data.markdownRemark
 
@@ -31,12 +37,15 @@ const BlogPost = ({ data }) => {
 
       <PostContent>
         <article className="h-entry">
-          <h2 className="blog__title p-name">{post.frontmatter.title}</h2>
+          <h2 className="p-name">{post.frontmatter.title}</h2>
           <HcardPost 
             slug={post.fields.slug} 
             date={post.frontmatter.date}  
           />
-          <div className="blog__holder e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <BlogHolder 
+            className="e-content" 
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
 
         </article>
       </PostContent>
