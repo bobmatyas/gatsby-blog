@@ -420,65 +420,6 @@ $purple-color: #845EC2;
 
 
 
-
-
-.contact__page__form__holder {
-  width: 65%;
-}
-
-.contact__form__input {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: -1px 3px 7px 1px rgba(102,102,102,0.2);
-  font-size: 16px;
-  color: #666666;
-  padding: 10px;
-  margin: 0 0 25px 0;
-  max-width: 500px;
-  width: 100%;
-}
-
-.contact__form__label {
-  color: #666666;
-  display: block;
-  font-weight: bold;
-  padding: 0;
-  margin: 0 0 5px 0;
-}
-
-.contact__form__actions {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.contact__form__actions li:last-of-type {
-  margin-left: 15px;
-}
-
-.contact__form__button {
-  background-color: #685757;
-  border-radius: 5px;
-  border: 1px solid #eee;
-  color: #fff;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 15px;
-}
-
-.contact__form__button:active {
-  transform: translateY(2px);
-}
-
-.contact__form__button:hover {
-  cursor: pointer;
-}
-
-.contact__page__social__holder {
-  margin-top: 75px;
-}
-
 .blog__title {
   margin: 35px 0 0 0;
 }
