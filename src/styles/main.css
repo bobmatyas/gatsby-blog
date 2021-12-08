@@ -17,3 +17,73 @@ main {
 }
 
 .hidden { display: none; }
+
+
+.main__menu__toggle {
+    background-color: #000;
+    border: none;
+    margin: 0 auto;
+    padding: 5px 10px;
+    text-align: center;
+  }
+  
+  .main__menu__toggle:hover {
+    cursor: pointer;
+  }
+
+  
+.main__menu--hidden {
+    display: none;
+  }
+  
+  .main__menu__icon {
+    background-color: #000;
+    color: #fff;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .main__menu__text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+  
+  .main__menu__overlay--open {
+    align-items: center;
+    display: flex;
+    background: #030507;
+    border-top: 4px solid #845EC2;
+    left: 0;
+    height: 92vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    transition: all .1s ease-in;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  .main__menu__overlay {
+    transition: all .1s ease-out;
+  }
+  
+  
+  .main__menu {
+    color: #fff;
+    font-size: 2.9rem;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    transition: all .1s ease-in;
+  }
+  
+  .main__menu__overlay--open .main__menu li {
+    margin: 25px 0;
+    text-align: center;
+  }
+  
+  .main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
+    font-size: 2.2rem;
+    color: #FDF7FF;
+  }
