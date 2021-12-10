@@ -33,6 +33,10 @@ main {
   }
 }
 
+.gatsby-highlight {
+  margin-bottom: 25px;
+}
+
 .hidden { display: none; }
 
 
