@@ -23,6 +23,11 @@ const LogoText = styled.span`
   letter-spacing: -2px;
   margin: 0;
   padding-left: 10px;
+
+  @media (max-width: 550px) {
+    font-size: 75%;
+  }
+  
 `;
 
 const Logo = () => (
