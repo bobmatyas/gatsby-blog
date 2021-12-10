@@ -4,7 +4,6 @@ import styled from "styled-components";
 
 const LogoHolder = styled.div`
   min-width: 275px;
-  padding-left: 3%;
 `;
 
 const LogoHeader = styled.h1`
