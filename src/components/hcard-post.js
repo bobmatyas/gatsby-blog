@@ -3,9 +3,15 @@ import styled from "styled-components"
 
 const Meta = styled.p`
   color: #757575;
+  font-family: var(--system-fonts);
+  font-size: 90%;
   font-weight: 400;
   margin: 0 0 25px;
   padding: 0;
+
+  a {
+    color: var(--purple-color);
+  }
 `;
 
 const HcardPost = (props) => {

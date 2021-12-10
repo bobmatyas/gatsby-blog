@@ -26,7 +26,7 @@ const About = () => (
 
       <WelcomeLine>👋 Howdy! I’m Bob Matyas, an experienced web developer living in Grand Rapids, Michigan. I like moving pixels around using HTML, CSS, and JavaScript. </WelcomeLine> 
 
-      <p>I work as a Happiness Engineer at Automattic where I help folks using self-hosted WordPress succeed using Jetpack.</p>
+      <p>I work at Automattic where I help make the web a better place.</p>
 
       <p>Outside of my job duties, I’m passionate about accessibility, user experience, web performance, and the open web. I have been building websites since the late 1990s. I remember the days – and pain – of folks making sites using strange hacks and table-based layouts. We’ve come a long way since then and I love learning the new things coming to the web platform. </p>
 
