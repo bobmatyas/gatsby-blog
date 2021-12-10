@@ -1,6 +1,107 @@
 import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image";
+import styled from "styled-components";
 
+
+const Card = styled.div`
+  font-family: var(--system-fonts);
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin: 0 0 50px 0;
+  max-width: 375px;
+  -webkit-box-shadow: -1px 3px 14px -6px rgba(120,111,120,0.48);
+  -moz-box-shadow: -1px 3px 14px -6px rgba(120,111,120,0.48);
+  box-shadow: -1px 3px 14px -6px rgba(120,111,120,0.48);
+  
+  @media screen and (max-width: 719px) {
+    max-width: 400px;
+  }
+
+`;
+
+const CardHeading= styled.h4`
+  font-family: var(--system-fonts);
+  background-color: rgba(75,68,83,.95);
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 15px;
+  font-size: 1.2rem;
+  margin: 0;
+`;
+
+const CardDescription = styled.p`
+  line-height: 1.5;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: justify;
+`;
+
+const CardView = styled.div`
+  align-items: center;
+  display: flex;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-bottom: 1px solid #eee;
+  margin: 0 0 25px 0;
+  padding: 10px 15px;
+
+  a:link, a:visited {
+    font-weight: 400;
+    text-decoration: underline;
+  }
+
+  a:hover, a:active {
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  a:link:last-of-type {
+    margin-left: 15px;
+  }
+`;
+
+const CardViewInner = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 100%;
+`;
+
+const CardTechnologies = styled.h5`
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  border-top: 1px solid #eee;
+  display: flex;
+  font-family: var(--system-fonts);
+  margin: 25px 0 0 0;
+  padding: 10px 15px;
+`;
+
+
+const CardTechnologiesInner = styled.span`
+  margin-left: 10px;
+`;
+
+const CardTechnologiesList = styled.ul`  
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 20px 23px;
+  padding: 0;
+`;
+
+const CardTechnologiesListItem = styled.li`
+  background-color: #eee;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin: 5px;
+  padding: 2px 10px;
+`;
 
 const styles = {
   maxWidth: '400px',
@@ -8,28 +109,26 @@ const styles = {
 }
 
 function ListItem(props) {
-  return <li className="projects__card__technologies__list__item">{props.value}</li>;
+  return <CardTechnologiesListItem>{props.value}</CardTechnologiesListItem>;
 }
 
 function ParagraphItem(props) {
-  return <p className="projects__card__description">{props.value}</p>;
+  return <CardDescription>{props.value}</CardDescription>;
 }
 
 const Projects = (props) => (
-
-  
-  <div className="projects__card">
+  <Card>
     <div className="projects__card__image">
       <GatsbyImage image={props.screenshot} style={styles} alt={props.title} />
     </div>
 
-    <h4 className="projects__card__heading">
+    <CardHeading>
       {props.title}
-    </h4>
+    </CardHeading>
 
-    <div className="projects__card__view">
+    <CardView>
 
-      <div className="projects__card__view__inner">
+      <CardViewInner>
         <div className="projects__card__view__inner__title">
           View:
         </div> 
@@ -38,9 +137,9 @@ const Projects = (props) => (
         </div>
 
         { !props.viewOnline && !props.viewCode ? <div className="projects__card__view__links">Internal Project</div> : "" }
-      </div>
+      </CardViewInner>
 
-    </div>
+    </CardView>
 
 
       {props.description.map((paragraph, index) =>
@@ -49,17 +148,17 @@ const Projects = (props) => (
         />
       )}
 
-    <h5 className="projects__card__technologies">
-      <span className="projects__card__technologies__inner">Technologies</span>
-    </h5>
-    <ul className="projects__card__technologies__list">
+    <CardTechnologies>
+      <CardTechnologiesInner>Technologies</CardTechnologiesInner>
+    </CardTechnologies>
+    <CardTechnologiesList>
       {props.technologies.map((technology, index) =>
         <ListItem key={index}
           value={technology} 
           />
       )}
-    </ul>
-  </div>
+    </CardTechnologiesList>
+  </Card>
 )
 
 export default Projects; 

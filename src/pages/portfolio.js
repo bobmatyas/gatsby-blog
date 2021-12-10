@@ -5,7 +5,26 @@ import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import Skills from "../components/skills"
 import Card from "../components/portfolio-card"
+import styled from "styled-components"
 
+const PortfolioHolder = styled.div`
+
+  margin: 25px auto;
+  width: 300px;
+
+  @media screen and (min-width:800px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0;
+    width: 100%;
+  }
+
+  @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+
+`;
 
 const Portfolio = ({ data }) => (
   <Layout>
@@ -27,7 +46,7 @@ const Portfolio = ({ data }) => (
       
       <p className="projects__note">For additional projects, please check out my <a href="https://github.com/bobmatyas" target="_blank" rel="noopener noreferrer">Github</a> and <a href="https://codepen.io/bobmatyas"  target="_blank" rel="noopener noreferrer">CodePen</a>.</p>
      
-      <div className="projects__holder">
+      <PortfolioHolder>
       
 
       <Card 
@@ -116,7 +135,7 @@ const Portfolio = ({ data }) => (
         technologies= {['WORDPRESS', 'HTML', 'CSS', 'PHP']}
       />
 
-      </div>
+      </PortfolioHolder>
       
     </div>
   </Layout>
