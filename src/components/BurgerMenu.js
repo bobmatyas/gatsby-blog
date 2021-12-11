@@ -25,24 +25,25 @@ const BurgerMenu = () => {
                 Home
             </a></li>
         <li>
-            <a className="menu-item" href="/about">
-        About
-      </a>
-      </li>
-      <li>
-            <a className="menu-item" href="/portfolio">
-        Portfolio
-      </a>
-      </li>
-      <li>
-            <a className="menu-item" href="/blog">
-        Blog
-      </a>
-      </li>
-      <li><a className="menu-item" href="/contact">
-        Contact
-      </a>
-      </li>
+            <Link to={`/about/`}> 
+                About
+            </Link>
+        </li>
+        <li>
+            <Link to={`/portfolio/`}> 
+                Portfolio
+            </Link>
+        </li>
+        <li>
+            <Link to={`/blog/`}> 
+                Blog
+            </Link>
+        </li>
+        <li>
+            <Link to={`/contact/`}> 
+                Contact
+            </Link>
+        </li>
       </ul>
     </Menu>
   )

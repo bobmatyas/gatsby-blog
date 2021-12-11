@@ -3,12 +3,82 @@ import { Link } from "gatsby"
 import BurgerMenu from '../components/BurgerMenu.js'
 import styled from "styled-components";
 
-const BurgerHolder = styled.div`
-  @media screen and (min-width: 920px) {
-    display: none;
+const DesktopHolder = styled.nav`
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: block;
+    padding: 15px 0 0 0;
   }
 `;
 
+const DesktopMenu = styled.ul`        
+    display: flex;
+    font-size: unset;
+    font-weight: 500;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 3% 0 0;
+    text-transform: uppercase;
+
+  a {
+    display: inline-block;
+        padding: 0 0 0.5em 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        position: relative;
+        letter-spacing: 1px;
+        text-decoration: none;
+  }
+
+  a:before,
+  a:after {
+    position: absolute;
+        -webkit-transition: all 0.07s ease;
+        transition: all 0.07s ease;
+  }
+
+  a:before {
+    bottom: 0;
+        display: block;
+        height: 3px;
+        width: 0%;
+        content: "";
+        background-color: var(--pink-color);
+  }
+  a:after {
+    left: 0;
+        top: 0;
+        padding: 0 0 0.5em 0;
+        position: absolute;
+        content: attr(data-hover);
+        color: #ffffff;
+        white-space: nowrap;
+        max-width: 0%;
+        overflow: hidden;
+  }
+
+  a:hover:before {
+    opacity: 1;
+        width: 100%;    
+  }
+  a:hover:after {
+    max-width: 100%;
+  }
+
+  li {
+    font-family: var(--system-fonts);
+    margin: 0 5px;
+    padding: 10px;
+  }
+`;
+
+const BurgerHolder = styled.div`
+  @media screen and (min-width: 799px) {
+    display: none;
+  }
+`;
 
 const Menu = () => {
 
@@ -23,8 +93,8 @@ const Menu = () => {
 
   return (
     <>
-    <div className="main__menu__right">
-        <ul className={open ? "main__menu" : "main__menu main__menu--hidden"}>
+      <DesktopHolder>
+        <DesktopMenu>
           <li>
             <Link
               to={`/about/`}
@@ -53,8 +123,9 @@ const Menu = () => {
               Contact
         </Link>
           </li>
-        </ul>
-      </div>
+        </DesktopMenu>
+      </DesktopHolder>
+
       <BurgerHolder>
         <BurgerMenu />
       </BurgerHolder>

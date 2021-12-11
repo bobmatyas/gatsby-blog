@@ -42,4 +42,12 @@
   text-align: center;
 }
 
-.bm-item a { color: #fff; }
+.bm-item li {
+  font-size: 150%;
+  margin: 35px 0;
+}
+
+.bm-item a { 
+  color: #fff; 
+  margin: 25px auto;
+}
