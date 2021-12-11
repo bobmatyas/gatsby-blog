@@ -1,25 +1,100 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import BurgerMenu from '../components/BurgerMenu.js'
+import styled from "styled-components";
+
+const DesktopHolder = styled.nav`
+  display: none;
+
+  @media screen and (min-width: 800px) {
+    display: block;
+    padding: 15px 0 0 0;
+  }
+`;
+
+const DesktopMenu = styled.ul`        
+    display: flex;
+    font-size: unset;
+    font-weight: 500;
+    justify-content: flex-end;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 3% 0 0;
+    text-transform: uppercase;
+
+  a {
+    display: inline-block;
+        padding: 0 0 0.5em 0;
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        position: relative;
+        letter-spacing: 1px;
+        text-decoration: none;
+  }
+
+  a:before,
+  a:after {
+    position: absolute;
+        -webkit-transition: all 0.07s ease;
+        transition: all 0.07s ease;
+  }
+
+  a:before {
+    bottom: 0;
+        display: block;
+        height: 3px;
+        width: 0%;
+        content: "";
+        background-color: var(--pink-color);
+  }
+  a:after {
+    left: 0;
+        top: 0;
+        padding: 0 0 0.5em 0;
+        position: absolute;
+        content: attr(data-hover);
+        color: #ffffff;
+        white-space: nowrap;
+        max-width: 0%;
+        overflow: hidden;
+  }
+
+  a:hover:before {
+    opacity: 1;
+        width: 100%;    
+  }
+  a:hover:after {
+    max-width: 100%;
+  }
+
+  li {
+    font-family: var(--system-fonts);
+    margin: 0 5px;
+    padding: 10px;
+  }
+`;
+
+const BurgerHolder = styled.div`
+  @media screen and (min-width: 799px) {
+    display: none;
+  }
+`;
 
 const Menu = () => {
 
-
   const [open, setOpen] = useState(false);
 
+  React.useEffect(() => {
+    const menuWrap = document.querySelector(".bm-menu-wrap");
+    if (menuWrap) {
+      menuWrap.setAttribute("aria-hidden", true);
+    }
+  }, []);
 
   return (
-    <div className="main__menu__right">
-    <nav className="main__menu__holder">
-      <button className="main__menu__toggle" onClick={() => setOpen(!open)}>
-        <div className="main__menu__icon">
-          <svg width="15" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bars" className="svg-inline--fa fa-bars fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path></svg>    
-          <div className="main__menu__text">menu</div>
-        </div>
-        
-      </button>
-
-      <div className={open ? "main__menu__overlay--open" : "main__menu__overlay" }>
-        <ul className={open ? "main__menu" : "main__menu main__menu--hidden"}>
+    <>
+      <DesktopHolder>
+        <DesktopMenu>
           <li>
             <Link
               to={`/about/`}
@@ -48,10 +123,13 @@ const Menu = () => {
               Contact
         </Link>
           </li>
-        </ul>
-      </div>
-    </nav>
-    </div>
+        </DesktopMenu>
+      </DesktopHolder>
+
+      <BurgerHolder>
+        <BurgerMenu />
+      </BurgerHolder>
+    </>
   )
 }
 

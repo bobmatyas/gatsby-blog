@@ -4,9 +4,75 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Gradient from "../components/gradient"
 import Social from "../components/social-links"
+import styled from "styled-components";
 
+const FormHolder = styled.div`
+    width: 65%;
+`;
 
-const Contact = ({ data }) => (
+const FormInput = styled.input`
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: -1px 3px 7px 1px rgba(102,102,102,0.2);
+  font-size: 16px;
+  color: #666666;
+  padding: 10px;
+  margin: 0 0 25px 0;
+  max-width: 500px;
+  width: 100%;
+`;
+
+const FormTextBox = styled.textarea`
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: -1px 3px 7px 1px rgba(102,102,102,0.2);
+  font-size: 16px;
+  color: #666666;
+  padding: 10px;
+  margin: 0 0 25px 0;
+  max-width: 500px;
+  width: 100%;
+`;
+
+const FormLabel = styled.label`
+  color: #666666;
+  display: block;
+  font-weight: bold;
+  padding: 0;
+  margin: 0 0 5px 0;
+`;
+
+const FormActions = styled.ul`
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li:last-of-type {
+    margin-left: 15px;
+  }
+`;
+
+const FormButton = styled.input`
+  background-color: #685757;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px 15px;
+
+  :active {
+    transform: translateY(2px);
+  }
+
+  :hover {
+    cursor: pointer;
+  }
+`;
+
+const Contact = () => (
   <Layout>
 
     <Seo
@@ -22,7 +88,7 @@ const Contact = ({ data }) => (
 
       <div className="contact__page">
 
-        <div className="contact__page__form__holder">
+        <FormHolder>
 
           <p>I'm currently available for web development projects. If you have a great idea that you are looking to implement, don't hesitate to get in touch.</p>
 
@@ -33,26 +99,27 @@ const Contact = ({ data }) => (
               <label>Don’t fill this out if you’re human: <input name="goodluck" /></label>
             </p>
 
-            <label htmlFor="name" className="contact__form__label">Name</label>
-            <input type="text" name="name" id="name" required className="contact__form__input" />
+            <FormLabel htmlFor="name">Name</FormLabel>
+            <FormInput type="text" name="name" id="name" required />
             
-            <label htmlFor="email" className="contact__form__label">Email</label>
-            <input type="email" name="email" id="email" required className="contact__form__input" />
+            <FormLabel htmlFor="email">Email</FormLabel>
+            <FormInput type="email" name="email" id="email" />
 
-            <label htmlFor="message" className="contact__form__label">Message</label>
-              <textarea name="message" id="message" rows="6" className="contact__form__input" required />
+            <FormLabel htmlFor="message">Message</FormLabel>
+              <FormTextBox name="message" id="message" rows="6" required />
 
-            <ul className="contact__form__actions">
+            <FormActions>
               <li>
-                <input type="submit" value="Send Message" className="contact__form__button" />
+                <FormButton type="submit" value="Send Message" />
               </li>
               <li>
-                <input type="reset" value="Clear" className="contact__form__button" />
+                <FormButton type="reset" value="Clear" />
               </li>
-            </ul>
+            </FormActions>
           </form>
 
-        </div>
+        </FormHolder>
+
         <div className="contact__page__social__holder">
           <h3>Connect on Social Media</h3>
 

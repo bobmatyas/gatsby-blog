@@ -1,7 +1,7 @@
 import Typography from "typography"
-import GitHubTheme from "typography-theme-github"
+import wordpress2016Theme from "typography-theme-wordpress-2016"
 const typography = new Typography(
-GitHubTheme
+    wordpress2016Theme
 )
 
 export default typography

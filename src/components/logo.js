@@ -1,13 +1,41 @@
 import React from "react"
 import { Link } from "gatsby"
+import styled from "styled-components";
 
+const LogoHolder = styled.div`
+  min-width: 275px;
+`;
+
+const LogoHeader = styled.h1`
+  align-items: center;
+  display: flex;
+  margin: 0;
+`;
+
+const LogoGraphic = styled.div`
+    color: #fbf7f7;
+    height: 55px;
+    width: 60px;
+`;
+
+const LogoText = styled.span`
+  color: #fff;
+  letter-spacing: -2px;
+  margin: 0;
+  padding-left: 10px;
+
+  @media (max-width: 550px) {
+    font-size: 75%;
+  }
+  
+`;
 
 const Logo = () => (
-  <div className="header__logo__holder">
+  <LogoHolder>
   <Link to={`/`} className="header__logo__link">
-    <h1 className="header__logo">
+    <LogoHeader>
 
-      <div className="header__logo__graphic">
+      <LogoGraphic>
         <svg  version="1.1" viewBox="0 0 146.92938 122.01543">
           <g transform="translate(-29.345 -14.498)">
             <g transform="scale(1.0455 .95652)" fill="currentColor">
@@ -15,11 +43,11 @@ const Logo = () => (
             </g>
           </g>
         </svg>
-      </div>
-      <span className="header__logo__text">Bob Matyas</span>
-  </h1>
+      </LogoGraphic>
+      <LogoText>Bob Matyas</LogoText>
+  </LogoHeader>
   </Link>
-  </div>
+  </LogoHolder>
 )
 
 export default Logo;

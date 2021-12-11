@@ -6,6 +6,22 @@ import HcardPost from "../components/hcard-post"
 import Gradient from "../components/gradient"
 import styled from "styled-components"
 
+const BlogHolder = styled.div`
+  a:link, a:visited, a:hover, a:active {
+    color: #845EC2;
+  }
+  a:link, a:visited { 
+    text-decoration: underline;
+  }
+  a:hover, a:active {
+    text-decoration: none;
+  }
+`;
+
+const BlogPostTitle = styled.h2`
+  margin-bottom: 10px;
+`;
+
 const BlogPost = ({ data }) => {
   let post = data.markdownRemark
 
@@ -16,19 +32,18 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
       />
 
-      <Gradient color="purple" />
-
-      <div className="main__content">
-        <article class="h-entry">
-          <h2 className="blog__title p-name">{post.frontmatter.title}</h2>
+        <article className="h-entry">
+          <BlogPostTitle className="p-name">{post.frontmatter.title}</BlogPostTitle>
           <HcardPost 
             slug={post.fields.slug} 
             date={post.frontmatter.date}  
           />
-          <div className="blog__holder e-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+          <BlogHolder 
+            className="e-content" 
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
 
         </article>
-      </div>
     </Layout>
   )
 }
