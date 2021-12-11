@@ -23,12 +23,13 @@ article.h-entry img {
 
 main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 75px auto;
     padding: 5%;
 }
 
 @media screen and (min-width: 1200px) {
   main {
+    margin: 75px auto;
     padding: 5% 0;
   }
 }
@@ -39,193 +40,6 @@ main {
 
 .hidden { display: none; }
 
-
-.main__menu__toggle {
-    background-color: #000;
-    border: none;
-    margin: 0 auto;
-    padding: 5px 10px;
-    text-align: center;
-  }
-  
-  .main__menu__toggle:hover {
-    cursor: pointer;
-  }
-
-  
-.main__menu--hidden {
-    display: none;
-  }
-  
-  .main__menu__icon {
-    background-color: #000;
-    color: #fff;
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .main__menu__text {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-  }
-  
-  .main__menu__overlay--open {
-    align-items: center;
-    display: flex;
-    background: #030507;
-    border-top: 4px solid #845EC2;
-    left: 0;
-    height: 92vh;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    transition: all .1s ease-in;
-    width: 100%;
-    z-index: 99;
-  }
-  
-  .main__menu__overlay {
-    transition: all .1s ease-out;
-  }
-  
-  
-  .main__menu {
-    color: #fff;
-    font-family: var(--system-fonts);
-    font-size: 2.9rem;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    transition: all .1s ease-in;
-  }
-  
-  .main__menu__overlay--open .main__menu li {
-    margin: 25px 0;
-    text-align: center;
-  }
-  
-  .main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
-    font-size: 2.2rem;
-    color: #FDF7FF;
-  }
-
-@media screen and (min-width: 720px) {
-    .main__menu__toggle {
-        display: none;
-      }
-      
-      .main__menu__holder {
-        background-color: transparent;
-        border-top: none;
-        margin: 0;
-        min-width: 400px;
-        padding: 0;
-        position: relative;
-      }
-    
-      .main__menu__right {
-        padding: 15px 0 0 0;
-      }
-    
-      .main__menu {
-        display: flex;
-        font-size: unset;
-        font-weight: 500;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin: 0;
-        padding: 0 3% 0 0;
-        text-transform: uppercase;
-      }
-      
-      .main__menu__icon, .main__menu__text {
-        display: none;
-      }
-    
-      .main__menu * {
-        box-sizing: border-box;
-      }
-      
-      .main__menu li {
-        margin: 0 5px;
-        padding: 10px;
-      }
-      
-      .main__menu a {
-        display: inline-block;
-        padding: 0 0 0.5em 0;
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 0.9rem;
-        position: relative;
-        letter-spacing: 1px;
-        text-decoration: none;
-      }
-      .main__menu a:before,
-      .main__menu a:after {
-        position: absolute;
-        -webkit-transition: all 0.25s ease;
-        transition: all 0.25s ease;
-      }
-      .main__menu a:before {
-        bottom: 0;
-        display: block;
-        height: 3px;
-        width: 0%;
-        content: "";
-        background-color: var(--pink-color);
-      }
-      .main__menu a:after {
-        left: 0;
-        top: 0;
-        padding: 0 0 0.5em 0;
-        position: absolute;
-        content: attr(data-hover);
-        color: #ffffff;
-        white-space: nowrap;
-        max-width: 0%;
-        overflow: hidden;
-      }
-      .main__menu a:hover:before,
-      .main__menu .current a:before {
-        opacity: 1;
-        width: 100%;
-      }
-      .main__menu a:hover:after,
-      .main__menu .current a:after {
-        max-width: 100%;
-      }
-    
-      .main__menu__overlay--open {
-        background-color: transparent;
-        align-items: center;
-        display: flex;
-        border-top: none;
-        left: 0;
-        height: 50px;
-        justify-content: flex-end;
-        position: static;
-        top: 0;
-        transition: all .1s ease-in;
-        width: auto;
-        z-index: 0;
-        font-weight: 500;
-        justify-content: flex-end;
-        list-style-type: none;
-        margin: 0;
-        padding: 0 3% 0 0;
-        text-transform: uppercase;
-      }
-    
-      .main__menu__overlay--open .main__menu li a:link, .main__menu__overlay--open .main__menu li a:visited {
-        display: inline-block;
-        padding: 0 0 0.5em 0;
-        color: rgba(255, 255, 255, 0.8);
-        position: relative;
-        letter-spacing: 1px;
-        text-decoration: none;
-      }
-}
 
 
 .projects__card__technologies__icon, .projects__card__view__icon {

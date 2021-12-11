@@ -7,6 +7,11 @@ const HeaderStyled = styled.header`
     background: #030507;
     border-top: 4px solid #845EC2;
     padding: 0 5%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
 `;
 
 const HeaderContainer = styled.div`
