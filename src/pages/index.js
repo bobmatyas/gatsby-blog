@@ -41,7 +41,7 @@ const Index = ({ data }) => {
 
         <HomeBox
           title="About Bob Matyas"
-          content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
+          content=""
         />
 
         <Hcard />
@@ -92,5 +92,7 @@ export const query = graphql`
     }
   }
 `
+
+
 
 export default Index;
