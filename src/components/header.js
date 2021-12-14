@@ -6,6 +6,7 @@ import styled from "styled-components"
 const HeaderStyled = styled.header`
     background: #030507;
     border-top: 4px solid #845EC2;
+    box-shadow: 3px -5px 10px 9px rgba(204,204,204,0.51);
     padding: 0 5%;
     width: 100%;
     position: fixed;

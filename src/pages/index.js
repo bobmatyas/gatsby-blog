@@ -3,10 +3,7 @@ import { graphql } from "gatsby"
 import styled from 'styled-components'
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Gradient from "../components/gradient"
-import HomeBox from "../components/home-box";
 import BlogLink from "../components/home-blog-link"
-import Social from "../components/social-links"
 import Hcard from "../components/hcard"
 
 const Box = styled.div`
@@ -35,14 +32,7 @@ const Index = ({ data }) => {
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
 
-      <Gradient color="purple" />
-
       <div className="main__content">
-
-        <HomeBox
-          title="About Bob Matyas"
-          content="I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript."
-        />
 
         <Hcard />
 
@@ -60,11 +50,6 @@ const Index = ({ data }) => {
               />
             ))}
           </PostList>
-        </Box>
-
-        <Box>
-          <h2>Connect with Me</h2>
-          <Social />
         </Box>
       </div>
     </Layout>
@@ -92,5 +77,7 @@ export const query = graphql`
     }
   }
 `
+
+
 
 export default Index;
