@@ -1,7 +1,7 @@
 import React from "react"
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image";
-import { graphql } from "gatsby"
+import HcardSocial from "./hcard-social";
 
 const Box = styled.div`
   border: 1px solid #eee;
@@ -14,7 +14,6 @@ const Box = styled.div`
   border-top: 4px solid #845EC2;
 
   p { text-align: justify }
-  img { display: none; }
 
   a:link, a:visited { 
     color: #00614F;
@@ -26,52 +25,60 @@ const Box = styled.div`
     text-decoration: none;
   }
 
+`;
+
+const Grid = styled.div`
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    padding-top: 25px;
+
+    h2 { 
+      text-align: center;
+    }
+  }
+
   @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 1fr 200px;
     grid-gap: 50px;
-
-    img { 
-      display: block; 
-    }
+    align-content: center;
+    padding-top: 0;
   }
 
+  div {
+    align-self: center;
+  }
 `;
 
-const Hcard = ( {data }) => (
+const Hcard = () => (
   <Box>
-    {console.log(data)}
-  <section className="h-card">
 
+  <Grid className="h-card">
+
+    <div>
     <h2>About <span className="p-name">Bob Matyas</span> </h2>  
 
-    <p className="p-note">I'm a web developer living in Grand Rapids, Michigan. I like to make designs come to life using a combination of HTML, CSS, and JavaScript.</p>
- 
+    <p className="p-note">I'm a web developer living in Grand Rapids, Michigan. I make designs come to life using HTML, CSS, and JavaScript.</p>
+
+    <HcardSocial />
+
+    </div>
+    <div>
     <StaticImage 
       src="../images/flower-logo.jpg" 
       alt="Flower" 
       imgClassName="u-photo"
       className="hcard__photo"
     />
+    </div>
 
-    <a className="u-url u-uid" href="https://www.bobmatyas.com">BobMatyas.com</a>
-    <a className="u-url" rel="me" href="https://github.com/bobmatyas">Bobmatyas on GitHub</a>
-    <a className="u-url" rel="me" href="https://codepen.io/bobmatyas">Bobmatyas on CodePen</a>
-    <a className="u-url" rel="me" href="https://twitter.com/bobmatyas">Bobmatyas on Twitter</a>
-    <a className="u-url" rel="me" href="https://mastodon.social/@bobmatyas">Bobmatyas on Mastodon</a>
-    <a className="u-url" rel="me" href="https://www.linkedin.com/in/bob-matyas">Bobmatyas on Linkedin</a>
-  </section>
+  
+  </Grid>
+
   </Box>
 )
 
-export const pageQuery = graphql`{
-  imageLogo: file(relativePath: {eq: "images/flower-logo.jpg"}) {
-    childImageSharp {
-      gatsbyImageData(width: 600, layout: CONSTRAINED)
-    }
-  }
-}
-`
-
 export default Hcard;
-
