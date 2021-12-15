@@ -19,7 +19,7 @@ const HeaderContainer = styled.div`
     align-items: center;
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-top: 15px;
     padding-bottom: 15px;
