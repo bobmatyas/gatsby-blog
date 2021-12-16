@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import { Link } from "gatsby"
 import BurgerMenu from '../components/BurgerMenu.js'
 import styled from "styled-components";
@@ -81,8 +81,6 @@ const BurgerHolder = styled.div`
 `;
 
 const Menu = () => {
-
-  const [open, setOpen] = useState(false);
 
   React.useEffect(() => {
     const menuWrap = document.querySelector(".bm-menu-wrap");

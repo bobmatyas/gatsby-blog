@@ -22,7 +22,7 @@ article.h-entry img {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 75px auto;
     padding: 5%;
 }
@@ -44,12 +44,17 @@ main {
 .hcard__photo img {
   object-fit: contain;
 }
+
+.hcard__photo img.u-photo {
+  border-radius: 50%;
+}
+
+
 .gatsby-highlight {
   margin-bottom: 25px;
 }
 
 .hidden { display: none; }
-
 
 
 .projects__card__technologies__icon, .projects__card__view__icon {
@@ -67,7 +72,7 @@ main {
   border: 0 !important;
 	clip: rect(1px, 1px, 1px, 1px) !important; 
 	-webkit-clip-path: inset(50%) !important;
-		clip-path: inset(50%) !important;  
+	clip-path: inset(50%) !important;  
 	height: 1px !important;
 	margin: -1px !important;
 	overflow: hidden !important;

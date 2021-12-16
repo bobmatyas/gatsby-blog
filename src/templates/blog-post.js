@@ -3,7 +3,6 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HcardPost from "../components/hcard-post"
-import Gradient from "../components/gradient"
 import styled from "styled-components"
 
 const BlogHolder = styled.div`
