@@ -82,8 +82,6 @@ const BurgerHolder = styled.div`
 
 const Menu = () => {
 
-  const [open, setOpen] = useState(false);
-
   React.useEffect(() => {
     const menuWrap = document.querySelector(".bm-menu-wrap");
     if (menuWrap) {
