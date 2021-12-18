@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Gradient from "../components/gradient"
 import Social from "../components/social-links"
 import styled from "styled-components";
 
