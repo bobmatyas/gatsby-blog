@@ -3,14 +3,12 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Post = styled.li`
-  font-size: 95%;
   margin: 0;
   padding: 0;
 
   :hover {
-    background-color: #F1F7F9;
-    border-radius: 5px;
     padding: 0;
+    text-decoration: none;
   }
 
   a { 
@@ -20,11 +18,12 @@ const Post = styled.li`
   }
 
   a:link, a:visited { 
-    color: #00614F;
+    color: var(--purple-color);
+    text-decoration: underline;
   }
 
   a:hover, a:active { 
-    color: #006653;
+    color: var(--purple-color);
     text-decoration: none;
   }
 
