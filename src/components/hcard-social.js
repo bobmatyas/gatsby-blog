@@ -2,9 +2,13 @@ import React from "react"
 import styled from 'styled-components'
 
 const SocialIconsListIcon = styled.div`
-  height: 30px;
-  width: 30px;
-  color: #3d3636;
+    color: var(--purple-color);
+    height: 30px;
+    width: 30px;
+
+    :hover, :active {
+        color: #3d3636;
+    }
 `;
 
 const SocialIconsList = styled.ul`

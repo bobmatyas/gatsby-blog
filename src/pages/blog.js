@@ -13,6 +13,9 @@ const BlogPost = styled.article`
   -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
   box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
 
+  a {
+    color: var(--purple-color);
+  }
   :hover {
     -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0, 0.5);
     -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
