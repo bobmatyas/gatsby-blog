@@ -2,12 +2,14 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Gradient from "../components/gradient"
 import Social from "../components/social-links"
 import styled from "styled-components";
 
 const FormHolder = styled.div`
-    width: 65%;
+
+    @media screen and (min-width: 1000px) {
+      width: 65%;
+    }
 `;
 
 const FormInput = styled.input`
@@ -54,21 +56,24 @@ const FormActions = styled.ul`
 `;
 
 const FormButton = styled.input`
-  background-color: #685757;
+  background-color: #000;
   border-radius: 5px;
-  border: 1px solid #eee;
-  color: #fff;
+  border: 1px solid #000;
+  background-color: #fff;
+  color: #000;
   font-family: sans-serif;
   font-size: 16px;
   font-weight: 600;
   padding: 10px 15px;
 
   :active {
-    transform: translateY(2px);
+    transform: translateY(6px);
   }
 
   :hover {
+    background-color: #000;
     cursor: pointer;
+    color: #fff;
   }
 `;
 
@@ -80,8 +85,6 @@ const Contact = () => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <Gradient color="purple" />
-
     <div className="main__content">
 
       <h2 className="main__content__header">Contact</h2>
@@ -90,7 +93,7 @@ const Contact = () => (
 
         <FormHolder>
 
-          <p>I'm currently available for web development projects. If you have a great idea that you are looking to implement, don't hesitate to get in touch.</p>
+          <p>Want to get in touch? You can use this form to send me an email.</p>
 
           <form name="contact" data-netlify="true" netlify-honeypot="goodluck" >
             
