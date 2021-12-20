@@ -6,6 +6,19 @@ import Seo from "../components/seo"
 import BlogLink from "../components/home-blog-link"
 import Hcard from "../components/hcard"
 
+interface Props {
+  data: {
+    allMarkdownRemark: any
+  }
+}
+
+interface BlogPosts {
+  node: {
+    fields: any
+    frontmatter: any
+  }
+}
+
 const Box = styled.div`
   border: 1px solid #eee;
   border-radius: 5px;
@@ -24,7 +37,7 @@ const PostList = styled.ul`
 `;
 
 
-const Index = ({ data }) => {
+const Index = ({ data } : Props ) => {
   return (
     <Layout>
       <Seo
@@ -40,7 +53,7 @@ const Index = ({ data }) => {
           <h2>Recent Blog Posts</h2>
 
           <PostList>
-            {data.allMarkdownRemark.edges.map(({ node }) => (
+            {data.allMarkdownRemark.edges.map(({ node } : BlogPosts) => (
 
               <BlogLink
                 link={node.fields.slug}

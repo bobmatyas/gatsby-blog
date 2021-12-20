@@ -192,6 +192,8 @@ module.exports = {
       options: {
         path: `${__dirname}/src/images`,
       }
-    }
+    }, 
+    `gatsby-plugin-typescript`,
+    `gatsby-plugin-typescript-checker`
   ]
 }
