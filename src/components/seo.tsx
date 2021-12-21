@@ -3,14 +3,14 @@ import { Helmet } from "react-helmet"
 import { StaticQuery, graphql } from "gatsby"
 
 interface SEOProps {
-  description?: string,
-  image?: string,
-  pathname?: string,
-  title: string,
+  description?: string
+  image?: string
+  pathname?: string
+  title: string
   article?: boolean
 }
 
-const Seo = ({ title, description, image, pathname, article } : SEOProps) => (
+const Seo = ({ title, description, image, pathname, article }: SEOProps) => (
   <StaticQuery
     query={query}
     render={({
@@ -34,12 +34,12 @@ const Seo = ({ title, description, image, pathname, article } : SEOProps) => (
 
       return (
         <>
-          <Helmet 
+          <Helmet
             htmlAttributes={{
               lang: `en`,
-            }} 
-
-            title={seo.title} titleTemplate={titleTemplate}
+            }}
+            title={seo.title}
+            titleTemplate={titleTemplate}
           >
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
@@ -61,7 +61,11 @@ const Seo = ({ title, description, image, pathname, article } : SEOProps) => (
               <meta name="twitter:description" content={seo.description} />
             )}
             {seo.image && <meta name="twitter:image" content={seo.image} />}
-            <link rel="alternate" type="application/rss+xml" href="https://www.bobmatyas.com/rss.xml" />
+            <link
+              rel="alternate"
+              type="application/rss+xml"
+              href="https://www.bobmatyas.com/rss.xml"
+            />
           </Helmet>
         </>
       )
