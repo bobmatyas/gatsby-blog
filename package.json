@@ -61,6 +61,7 @@
     "typography-theme-wordpress-2016": "^0.16.19"
   },
   "devDependencies": {
+    "@netlify/plugin-gatsby": "^2.0.0-beta",
     "prettier": "^2.5.1"
   },
   "repository": {
