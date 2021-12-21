@@ -1,9 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-
-const RSSIcon = require("../images/icons/rss.svg") as string;
-
-console.log(RSSIcon);
+import RSSIcon from "../images/icons/rss.svg";
 
 const FooterContainer = styled.footer`
     background-color: #eee;

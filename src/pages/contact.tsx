@@ -98,7 +98,7 @@ const Contact = () => (
           <form name="contact" data-netlify="true" netlify-honeypot="goodluck" >
             
             <input type="hidden" name="form-name" value="contact" />
-            <p class="hidden">
+            <p className="hidden">
               <label>Don’t fill this out if you’re human: <input name="goodluck" /></label>
             </p>
 
@@ -109,7 +109,7 @@ const Contact = () => (
             <FormInput type="email" name="email" id="email" />
 
             <FormLabel htmlFor="message">Message</FormLabel>
-              <FormTextBox name="message" id="message" rows="6" required />
+              <FormTextBox name="message" id="message" rows={6} required />
 
             <FormActions>
               <li>
