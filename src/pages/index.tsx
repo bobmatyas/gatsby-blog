@@ -14,8 +14,14 @@ interface Props {
 
 interface BlogPosts {
   node: {
-    fields: any
-    frontmatter: any
+    fields: {
+      slug: string
+    }
+    frontmatter: {
+      date: string,
+      title: string,
+      description: string
+    }
   }
 }
 
@@ -37,7 +43,7 @@ const PostList = styled.ul`
 `;
 
 
-const Index = ({ data } : Props ) => {
+const Index: React.FC<Props> = ({ data } : Props ) => {
   return (
     <Layout>
       <Seo
@@ -90,7 +96,5 @@ export const query = graphql`
     }
   }
 `
-
-
 
 export default Index;

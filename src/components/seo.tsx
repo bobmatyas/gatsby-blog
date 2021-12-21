@@ -1,9 +1,16 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 
-const Seo = ({ title, description, image, pathname, article }) => (
+interface SEOProps {
+  description?: string,
+  image?: string,
+  pathname?: string,
+  title: string,
+  article?: boolean
+}
+
+const Seo = ({ title, description, image, pathname, article } : SEOProps) => (
   <StaticQuery
     query={query}
     render={({
@@ -63,22 +70,6 @@ const Seo = ({ title, description, image, pathname, article }) => (
 )
 
 export default Seo
-
-Seo.propTypes = {
-  title: PropTypes.string,
-  description: PropTypes.string,
-  image: PropTypes.string,
-  pathname: PropTypes.string,
-  article: PropTypes.bool,
-}
-
-Seo.defaultProps = {
-  title: null,
-  description: null,
-  image: null,
-  pathname: null,
-  article: false,
-}
 
 const query = graphql`
   query SEO {

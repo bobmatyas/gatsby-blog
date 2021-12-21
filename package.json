@@ -11,11 +11,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \"",
-    "type-check": "tsc --noEmit", 
+    "type-check": "tsc --noEmit",
     "lint": "tslint --project ."
   },
   "dependencies": {
     "@types/react": "^17.0.37",
+    "@types/react-burger-menu": "^2.8.2",
     "@types/react-dom": "^17.0.11",
     "@types/react-helmet": "^6.1.4",
     "@types/styled-components": "^5.1.18",
