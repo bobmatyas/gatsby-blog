@@ -2,6 +2,12 @@ import React from "react"
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+interface Props {
+  link: string,
+  date: string,
+  title: string
+}
+
 const Post = styled.li`
   margin: 0;
   padding: 0;
@@ -26,11 +32,11 @@ const Post = styled.li`
     color: var(--purple-color);
     text-decoration: none;
   }
-
 `;
 
 
-const BlogLink = (props) => (
+
+const BlogLink:React.FC<Props> = ( props: Props) => (
       <Post>
         <Link to={props.link}>
             {props.date}: {props.title}

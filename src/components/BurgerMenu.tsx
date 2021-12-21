@@ -1,13 +1,16 @@
-
 import React from 'react'
 import { slide as Menu } from 'react-burger-menu'
 import './BurgerMenu.css'
 import { Link } from "gatsby"
 
+interface ToggleProps {
+    isOpen: boolean
+}
+
 const BurgerMenu = () => {
 
-    const toggleMenu = ({ isOpen }) => {
-        const menuWrap = document.querySelector(".bm-menu-wrap");
+    const toggleMenu = ({ isOpen }: ToggleProps) => {
+        const menuWrap: any = document.querySelector(".bm-menu-wrap");
         isOpen
           ? menuWrap.setAttribute("aria-hidden", false)
           : menuWrap.setAttribute("aria-hidden", true);

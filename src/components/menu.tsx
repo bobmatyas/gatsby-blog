@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-import BurgerMenu from '../components/BurgerMenu.js'
+import BurgerMenu from './BurgerMenu'
 import styled from "styled-components";
 
 const DesktopHolder = styled.nav`
@@ -85,7 +85,7 @@ const Menu = () => {
   React.useEffect(() => {
     const menuWrap = document.querySelector(".bm-menu-wrap");
     if (menuWrap) {
-      menuWrap.setAttribute("aria-hidden", true);
+      menuWrap.setAttribute("aria-hidden", "true");
     }
   }, []);
 

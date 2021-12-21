@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-
 const SkillsHeader = styled.h4`
   border-bottom: 1px solid #eee;
-`;
+`
 
 const SkillsList = styled.ul`
   display: flex;
@@ -13,22 +12,20 @@ const SkillsList = styled.ul`
   margin: 0 0 25px 0;
   max-width: 800px;
   padding: 0;
-`;
+`
 
 const SkillsListItem = styled.li`
   color: #1d1b1b;
-  background-color: #F3C5FF;
+  background-color: #f3c5ff;
   border-radius: 5px;
   font-size: 0.8rem;
   margin: 5px;
   padding: 5px 10px;
   text-transform: uppercase;
-`;
-
+`
 
 const Skills = () => (
   <div className="skills">
- 
     <h3 className="skills__header">Skills</h3>
 
     <SkillsHeader>Web Development</SkillsHeader>
@@ -49,11 +46,11 @@ const Skills = () => (
       <SkillsListItem>Gulp</SkillsListItem>
       <SkillsListItem>Adobe CC</SkillsListItem>
     </SkillsList>
-  
+
     <SkillsHeader>WordPress</SkillsHeader>
 
     <SkillsList>
-      <SkillsListItem>Theme design and development</SkillsListItem> 
+      <SkillsListItem>Theme design and development</SkillsListItem>
       <SkillsListItem>Custom themes</SkillsListItem>
       <SkillsListItem>Security</SkillsListItem>
       <SkillsListItem>Maintenance</SkillsListItem>
@@ -62,9 +59,9 @@ const Skills = () => (
     </SkillsList>
 
     <SkillsHeader>Content Creation</SkillsHeader>
-      
+
     <SkillsList>
-      <SkillsListItem>Copy writing</SkillsListItem> 
+      <SkillsListItem>Copy writing</SkillsListItem>
       <SkillsListItem>Copy editing</SkillsListItem>
       <SkillsListItem>Media strategy</SkillsListItem>
       <SkillsListItem>Press releases</SkillsListItem>
@@ -72,8 +69,7 @@ const Skills = () => (
       <SkillsListItem>Social media</SkillsListItem>
       <SkillsListItem>Blogging</SkillsListItem>
     </SkillsList>
-
   </div>
 )
 
-export default Skills;
+export default Skills

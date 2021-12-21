@@ -1,6 +1,6 @@
 import React from "react"
-import Logo from "../components/logo"
-import Menu from "../components/menu"
+import Logo from "./logo"
+import Menu from "./menu"
 import styled from "styled-components"
 
 const HeaderStyled = styled.header`
