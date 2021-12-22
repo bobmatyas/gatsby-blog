@@ -1,10 +1,10 @@
 import React from "react"
-import { Link } from 'gatsby'
-import styled from 'styled-components'
+import { Link } from "gatsby"
+import styled from "styled-components"
 
 interface Props {
-  link: string,
-  date: string,
+  link: string
+  date: string
   title: string
 }
 
@@ -17,31 +17,31 @@ const Post = styled.li`
     text-decoration: none;
   }
 
-  a { 
-    display: block; 
+  a {
+    display: block;
     margin: 0;
     padding: 10px;
   }
 
-  a:link, a:visited { 
+  a:link,
+  a:visited {
     color: var(--purple-color);
     text-decoration: underline;
   }
 
-  a:hover, a:active { 
+  a:hover,
+  a:active {
     color: var(--purple-color);
     text-decoration: none;
   }
-`;
+`
 
-
-
-const BlogLink:React.FC<Props> = ( props: Props) => (
-      <Post>
-        <Link to={props.link}>
-            {props.date}: {props.title}
-        </Link>
-      </Post>
+const BlogLink: React.FC<Props> = (props: Props) => (
+  <Post>
+    <Link to={props.link}>
+      {props.date}: {props.title}
+    </Link>
+  </Post>
 )
 
-export default BlogLink;
+export default BlogLink

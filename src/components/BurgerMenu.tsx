@@ -1,45 +1,37 @@
-import React from 'react'
-import { slide as Menu } from 'react-burger-menu'
-import './BurgerMenu.css'
+import React from "react"
+import { slide as Menu } from "react-burger-menu"
+import "./BurgerMenu.css"
 import { Link } from "gatsby"
 
 interface ToggleProps {
-    isOpen: boolean
+  isOpen: boolean
 }
 
 const BurgerMenu = () => {
-
-    const toggleMenu = ({ isOpen }: ToggleProps) => {
-        const menuWrap: any = document.querySelector(".bm-menu-wrap");
-        isOpen
-          ? menuWrap.setAttribute("aria-hidden", false)
-          : menuWrap.setAttribute("aria-hidden", true);
-      };
+  const toggleMenu = ({ isOpen }: ToggleProps) => {
+    const menuWrap: any = document.querySelector(".bm-menu-wrap")
+    isOpen
+      ? menuWrap.setAttribute("aria-hidden", false)
+      : menuWrap.setAttribute("aria-hidden", true)
+  }
 
   return (
-    <Menu 
-        right 
-        width={ '100%' }
-        onStateChange={toggleMenu}
-    >
-    <ul>
+    <Menu right width={"100%"} onStateChange={toggleMenu}>
+      <ul>
         <li>
-            <a className="menu-item" href="/">
-                Home
-            </a></li>
-        <li>
-            <Link to={`/about/`}> 
-                About
-            </Link>
+          <a className="menu-item" href="/">
+            Home
+          </a>
         </li>
         <li>
-            <Link to={`/blog/`}> 
-                Blog
-            </Link>
+          <Link to={`/about/`}>About</Link>
+        </li>
+        <li>
+          <Link to={`/blog/`}>Blog</Link>
         </li>
       </ul>
     </Menu>
   )
 }
 
-export default BurgerMenu;
+export default BurgerMenu

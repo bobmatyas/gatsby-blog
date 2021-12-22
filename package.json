@@ -26,6 +26,7 @@
     "gatsby-cli": "^4.4.0",
     "gatsby-image": "^3.5.0",
     "gatsby-plugin-canonical-urls": "^4.4.0",
+    "gatsby-plugin-eslint": "^4.0.2",
     "gatsby-plugin-feed": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
     "gatsby-plugin-netlify": "^4.0.0-next.0",
@@ -62,6 +63,18 @@
   },
   "devDependencies": {
     "@netlify/plugin-gatsby": "^2.0.0-beta",
+    "@typescript-eslint/eslint-plugin": "^5.8.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^5.8.0",
+    "@typescript-eslint/parser": "^5.8.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsdoc": "^37.4.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-unicorn": "^39.0.0",
     "prettier": "^2.5.1"
   },
   "repository": {
