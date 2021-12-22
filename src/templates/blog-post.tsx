@@ -6,23 +6,44 @@ import HcardPost from "../components/hcard-post"
 import styled from "styled-components"
 
 const BlogHolder = styled.div`
-  a:link, a:visited, a:hover, a:active {
-    color: #845EC2;
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+    color: #845ec2;
   }
-  a:link, a:visited { 
+  a:link,
+  a:visited {
     text-decoration: underline;
   }
-  a:hover, a:active {
+  a:hover,
+  a:active {
     text-decoration: none;
   }
-`;
+`
 
 const BlogPostTitle = styled.h2`
   margin-bottom: 10px;
-`;
+`
 
-const BlogPost = ({ data }) => {
-  let post = data.markdownRemark
+interface Post {
+  data: {
+    markdownRemark: {
+      html: any
+      frontmatter: {
+        date: string
+        title: string
+        description: string
+      }
+      fields: {
+        slug: string
+      }
+    }
+  }
+}
+
+const BlogPost = ({ data }: Post) => {
+  const post = data.markdownRemark
 
   return (
     <Layout>
@@ -31,18 +52,16 @@ const BlogPost = ({ data }) => {
         description={post.frontmatter.description}
       />
 
-        <article className="h-entry">
-          <BlogPostTitle className="p-name">{post.frontmatter.title}</BlogPostTitle>
-          <HcardPost 
-            slug={post.fields.slug} 
-            date={post.frontmatter.date}  
-          />
-          <BlogHolder 
-            className="e-content" 
-            dangerouslySetInnerHTML={{ __html: post.html }}
-          />
-
-        </article>
+      <article className="h-entry">
+        <BlogPostTitle className="p-name">
+          {post.frontmatter.title}
+        </BlogPostTitle>
+        <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
+        <BlogHolder
+          className="e-content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </article>
     </Layout>
   )
 }
@@ -63,4 +82,4 @@ export const query = graphql`
   }
 `
 
-export default BlogPost; 
+export default BlogPost
