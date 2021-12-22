@@ -6,14 +6,12 @@ interface Props {
   readonly children: React.ReactNode
 }
 
-const Layout: React.FC<Props> = ({children}) => (
+const Layout: React.FC<Props> = ({ children }) => (
   <>
     <Header />
-    <main>
-      {children}
-    </main>
+    <main>{children}</main>
     <Footer />
   </>
 )
 
-export default Layout;
+export default Layout
