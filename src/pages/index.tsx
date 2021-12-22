@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import styled from 'styled-components'
+import styled from "styled-components"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogLink from "../components/home-blog-link"
@@ -18,8 +18,8 @@ interface BlogPosts {
       slug: string
     }
     frontmatter: {
-      date: string,
-      title: string,
+      date: string
+      title: string
       description: string
     }
   }
@@ -30,20 +30,19 @@ const Box = styled.div`
   border-radius: 5px;
   margin: 25px 0 50px 0;
   padding: 10px 25px 25px 25px;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
-  box-shadow: 0px 5px 10px 0px rgba(180,180,180,0.35);
+  -webkit-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
+  -moz-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
+  box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
   border-top: 4px solid var(--pink-color);
-`;
+`
 
 const PostList = styled.ul`
   list-style-type: none;
   margin: 0;
   padding: 0;
-`;
+`
 
-
-const Index: React.FC<Props> = ({ data } : Props ) => {
+const Index: React.FC<Props> = ({ data }: Props) => {
   return (
     <Layout>
       <Seo
@@ -52,15 +51,13 @@ const Index: React.FC<Props> = ({ data } : Props ) => {
       />
 
       <div className="main__content">
-
         <Hcard />
 
         <Box>
           <h2>Recent Blog Posts</h2>
 
           <PostList>
-            {data.allMarkdownRemark.edges.map(({ node } : BlogPosts) => (
-
+            {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
               <BlogLink
                 link={node.fields.slug}
                 date={node.frontmatter.date}
@@ -77,7 +74,10 @@ const Index: React.FC<Props> = ({ data } : Props ) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(limit: 5, sort: { fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(
+      limit: 5
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       totalCount
       edges {
         node {
@@ -97,4 +97,4 @@ export const query = graphql`
   }
 `
 
-export default Index;
+export default Index
