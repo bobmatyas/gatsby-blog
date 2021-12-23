@@ -64,8 +64,8 @@ const Hcard = () => (
         </h2>
 
         <p className="p-note">
-          I'm a web developer living in Grand Rapids, Michigan. I make designs
-          come to life using HTML, CSS, and JavaScript.
+          I&apos;m a web developer living in Grand Rapids, Michigan. I make
+          designs come to life using HTML, CSS, and JavaScript.
         </p>
 
         <HcardSocial />

@@ -12,7 +12,7 @@ const Success = () => (
     <div className="main__content">
       <h2>Success!</h2>
 
-      <p>Thank you for contacting me. I'll get back to you shortly.</p>
+      <p>Thank you for contacting me. I&apos;ll get back to you shortly.</p>
     </div>
   </Layout>
 )

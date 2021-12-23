@@ -4,6 +4,19 @@
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
 
+const path = require("path")
+// Get paths of Gatsby's required rules, which as of writing is located at:
+// https://github.com/gatsbyjs/gatsby/tree/fbfe3f63dec23d279a27b54b4057dd611dce74bb/packages/
+// gatsby/src/utils/eslint-rules
+const gatsbyRequiredRules = path.join(
+  process.cwd(),
+  "node_modules",
+  "gatsby",
+  "dist",
+  "utils",
+  "eslint-rules"
+)
+
 module.exports = {
   siteMetadata: {
     title: `Bob Matyas`,
@@ -12,15 +25,15 @@ module.exports = {
     description: `Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript`,
     url: `https://www.bobmatyas.com`,
     image: `/images/social.jpg`,
-    twitterUsername: `@bobmatyas`
+    twitterUsername: `@bobmatyas`,
   },
 
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
-        options: {
-          pathToConfigModule: `src/utils/typography`,
-        },
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     `gatsby-plugin-styled-components`,
     {
@@ -48,12 +61,12 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.edges.map(edge => {
+              return allMarkdownRemark.edges.map((edge) => {
                 return Object.assign({}, edge.node.frontmatter, {
                   description: edge.node.frontmatter.excerpt,
                   date: edge.node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + edge.node.fields.slug,
-                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug
+                  guid: site.siteMetadata.siteUrl + edge.node.fields.slug,
                 })
               })
             },
@@ -88,7 +101,6 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/pages`,
-
       },
     },
     {
@@ -96,11 +108,11 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve:"@weknow/gatsby-remark-codepen",
+            resolve: "@weknow/gatsby-remark-codepen",
             options: {
               theme: "dark",
-              height: 400
-            }
+              height: 400,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
@@ -185,15 +197,28 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/images`,
-      }
-    }, 
+      },
+    },
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-typescript-checker`
-  ]
+    `gatsby-plugin-typescript-checker`,
+    {
+      resolve: "gatsby-plugin-eslint",
+      options: {
+        // Gatsby required rules directory
+        rulePaths: [gatsbyRequiredRules],
+        // Default settings that may be ommitted or customized
+        stages: ["develop"],
+        extensions: ["js", "jsx", "ts", "tsx"],
+        exclude: ["node_modules", "bower_components", ".cache", "public"],
+        // Any additional eslint-webpack-plugin options below
+        // ...
+      },
+    },
+  ],
 }
