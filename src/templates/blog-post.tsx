@@ -20,6 +20,15 @@ const BlogHolder = styled.div`
   a:active {
     text-decoration: none;
   }
+
+  blockquote {
+    margin-left: 2.5rem;
+  }
+
+  ol,
+  ul {
+    margin-left: 2.75rem;
+  }
 `
 
 const BlogPostTitle = styled.h2`
