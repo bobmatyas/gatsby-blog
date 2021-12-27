@@ -41,6 +41,11 @@ const About = () => (
         vegan food.
       </p>
 
+      <p>
+        You can find a summary of what I am up to now here on my{" "}
+        <Link to={`/now/`}>/now</Link> page and a list of tools I use on{" "}
+        <Link to={`/uses/`}>/uses</Link>.
+      </p>
       <h2>Portfolio</h2>
 
       <p>
