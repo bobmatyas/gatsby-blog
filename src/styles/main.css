@@ -34,6 +34,10 @@ main {
   }
 }
 
+.main__content a {
+  color: var(--purple-color);
+}
+
 .hcard__photo {
   width: 200px;
   height: 200px;
