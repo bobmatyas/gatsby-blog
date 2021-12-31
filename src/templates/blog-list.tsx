@@ -49,8 +49,14 @@ const BlogPostDescription = styled.p`
   color: #666;
 `
 
+const NavigationLinks = styled.p`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+`
 interface Props {
   data: any
+  pageContext: any
 }
 
 interface BlogPosts {
@@ -69,7 +75,14 @@ interface BlogPosts {
 export default class BlogList extends React.Component<Props> {
   render() {
     const posts = this.props.data.allMarkdownRemark.edges
-    console.log(posts)
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst: boolean = currentPage === 1
+    const isLast: boolean = currentPage === numPages
+    const prevPage: string =
+      currentPage - 1 === 1 ? "" : (currentPage - 1).toString()
+    const nextPage: string = (currentPage + 1).toString()
+    const prevPageLink: string = `/blog/${prevPage}`
+    const nextPageLink: string = `/blog/${nextPage}`
     return (
       <Layout>
         <Seo
@@ -97,6 +110,19 @@ export default class BlogList extends React.Component<Props> {
               </Link>
             </BlogPost>
           ))}
+
+          <NavigationLinks>
+            {!isFirst && (
+              <Link to={prevPageLink} rel="prev">
+                ← Previous Page
+              </Link>
+            )}
+            {!isLast && (
+              <Link to={nextPageLink} rel="next">
+                Next Page →
+              </Link>
+            )}
+          </NavigationLinks>
         </div>
       </Layout>
     )
@@ -118,7 +144,7 @@ export const blogListQuery = graphql`
           frontmatter {
             title
             description
-            date
+            date(formatString: "MMMM DD, YYYY")
           }
         }
       }
