@@ -103,8 +103,12 @@ const Blog: React.FC<Props> = ({ data }: Props) => {
 }
 
 export const query = graphql`
-  query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+  query ($skip: Int = 0, $pageSize: Int = 6) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $pageSize
+      skip: $skip
+    ) {
       totalCount
       edges {
         node {
