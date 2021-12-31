@@ -43,6 +43,7 @@ interface Post {
         date: string
         title: string
         description: string
+        meta: any
       }
       fields: {
         slug: string
@@ -59,6 +60,7 @@ const BlogPost = ({ data }: Post) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        image={post.frontmatter.meta.childrenImageSharp[0].original.src}
       />
 
       <article className="h-entry">
@@ -83,6 +85,13 @@ export const query = graphql`
         title
         description
         date
+        meta {
+          childrenImageSharp {
+            original {
+              src
+            }
+          }
+        }
       }
       fields {
         slug
