@@ -43,16 +43,21 @@ interface Post {
         date: string
         title: string
         description: string
-        meta: any
+        meta?: any
       }
       fields: {
         slug: string
       }
     }
+    site: {
+      siteMetadata: {
+        defaultImage: string
+      }
+    }
   }
 }
 
-const BlogPost = ({ data }: Post) => {
+const BlogPost: React.FC<Post> = ({ data }) => {
   const post = data.markdownRemark
 
   return (
@@ -60,7 +65,11 @@ const BlogPost = ({ data }: Post) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
-        image={post.frontmatter.meta.childrenImageSharp[0].original.src}
+        image={
+          post.frontmatter.meta
+            ? post.frontmatter.meta.childrenImageSharp[0].original.src
+            : data.site.siteMetadata.defaultImage
+        }
       />
 
       <article className="h-entry">
@@ -95,6 +104,11 @@ export const query = graphql`
       }
       fields {
         slug
+      }
+    }
+    site {
+      siteMetadata {
+        defaultImage: image
       }
     }
   }
