@@ -6,21 +6,35 @@ import Layout from "../../components/layout"
 import Seo from "../../components/seo"
 import { Helmet } from "react-helmet"
 import { Link, graphql } from "gatsby"
-const TagsPage = ({
+
+interface Props {
+  data: {
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+    allMarkdownRemark: {
+      group: any
+    }
+  }
+}
+
+const TagsPage: React.FC<Props> = ({
   data: {
     allMarkdownRemark: { group },
     site: {
       siteMetadata: { title },
     },
   },
-}: any) => (
-  <>
-    <Seo title="Tags" description="Blog posts organized by topic." />
-    <Layout>
+}: Props) => (
+  <Layout>
+    <div className="main__content">
+      <h2 className="main__content__header">Tags</h2>{" "}
+      <Seo title="Tags" description="Blog posts organized by topic." />
       <div>
         <Helmet title={title} />
         <div>
-          <h1>Tags</h1>
           <ul>
             {group.map((tag: any) => (
               <li key={tag.fieldValue}>
@@ -32,8 +46,8 @@ const TagsPage = ({
           </ul>
         </div>
       </div>
-    </Layout>
-  </>
+    </div>
+  </Layout>
 )
 
 export default TagsPage

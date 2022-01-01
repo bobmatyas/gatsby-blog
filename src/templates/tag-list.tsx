@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Link, graphql } from "gatsby"
 
-const Tags = ({ pageContext, data }: any) => {
+const Tags: React.FC = ({ pageContext, data }: any) => {
   const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
@@ -15,32 +15,30 @@ const Tags = ({ pageContext, data }: any) => {
   const pageTitle = `Tag: ${tag}`
   const pageDescription = `Blog posts tagged with ${tag}.`
   return (
-    <>
+    <Layout>
       <Seo title={pageTitle} description={pageDescription} />
-      <Layout>
-        <div>
-          <h2>{tagHeader}</h2>
-          <ul>
-            {edges.map(({ node }: any) => {
-              const { slug } = node.fields
-              const { title } = node.frontmatter
-              return (
-                <li key={slug}>
-                  <Link to={slug}>{title}</Link>
-                </li>
-              )
-            })}
-          </ul>
-          {/*
+      <div className="main__content">
+        <h2 className="main__content__header">{tagHeader}</h2>
+        <ul>
+          {edges.map(({ node }: any) => {
+            const { slug } = node.fields
+            const { title } = node.frontmatter
+            return (
+              <li key={slug}>
+                <Link to={slug}>{title}</Link>
+              </li>
+            )
+          })}
+        </ul>
+        {/*
               This links to a page that does not yet exist.
               You'll come back to it!
             */}
-          <p>
-            <Link to="/blog/tags">All tags</Link>
-          </p>
-        </div>
-      </Layout>
-    </>
+        <p>
+          <Link to="/blog/tags">All tags</Link>
+        </p>
+      </div>
+    </Layout>
   )
 }
 export default Tags
