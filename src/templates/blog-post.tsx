@@ -3,9 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HcardPost from "../components/hcard-post"
+import PostTags from "../components/post-tags"
 import styled from "styled-components"
 
 const BlogHolder = styled.div`
+  margin-top: 25px;
+
   a:link,
   a:visited,
   a:hover,
@@ -43,15 +46,22 @@ interface Post {
         date: string
         title: string
         description: string
+        meta?: any
+        tag?: any
       }
       fields: {
         slug: string
       }
     }
+    site: {
+      siteMetadata: {
+        defaultImage: string
+      }
+    }
   }
 }
 
-const BlogPost = ({ data }: Post) => {
+const BlogPost: React.FC<Post> = ({ data }) => {
   const post = data.markdownRemark
 
   return (
@@ -59,6 +69,11 @@ const BlogPost = ({ data }: Post) => {
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        image={
+          post.frontmatter.meta
+            ? post.frontmatter.meta.childrenImageSharp[0].original.src
+            : data.site.siteMetadata.defaultImage
+        }
       />
 
       <article className="h-entry">
@@ -66,6 +81,7 @@ const BlogPost = ({ data }: Post) => {
           {post.frontmatter.title}
         </BlogPostTitle>
         <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
+        {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
         <BlogHolder
           className="e-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -83,9 +99,22 @@ export const query = graphql`
         title
         description
         date
+        meta {
+          childrenImageSharp {
+            original {
+              src
+            }
+          }
+        }
+        tag
       }
       fields {
         slug
+      }
+    }
+    site {
+      siteMetadata {
+        defaultImage: image
       }
     }
   }

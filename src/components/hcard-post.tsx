@@ -6,7 +6,7 @@ const Meta = styled.p`
   font-family: var(--system-fonts);
   font-size: 90%;
   font-weight: 400;
-  margin: 0 0 25px;
+  margin: 0;
   padding: 0;
 
   a {

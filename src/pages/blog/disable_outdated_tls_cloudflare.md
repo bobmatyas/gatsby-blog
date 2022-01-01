@@ -10,7 +10,7 @@ If your website uses Cloudflare and you run it through an SSL certificate test s
 
 > This server supports TLS 1.0 and TLS 1.1. Grade capped to B
 
-The solution is to disable support for TLS v1.0 and TLS v1.1. These protocols are deprecated (https://datatracker.ietf.org/doc/rfc8996/) and should not be used in production:
+The solution is to disable support for TLS v1.0 and TLS v1.1. These [protocols are deprecated](https://datatracker.ietf.org/doc/rfc8996/) and should not be used in production:
 
 > These versions lack support for current and recommended cryptographic algorithms and mechanisms, and various government and industry profiles of applications using TLS now mandate avoiding these old TLS versions. TLS version 1.2 became the recommended version for IETF protocols in 2008 (subsequently being obsoleted by TLS version 1.3 in 2018), providing sufficient time to transition away from older versions. Removing support for older versions from implementations reduces the attack surface, reduces opportunity for misconfiguration, and streamlines library and product maintenance.
 
