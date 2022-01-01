@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const _ = require("lodash")
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -27,7 +28,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               fields {
                 slug
               }
+              frontmatter {
+                tag
+              }
             }
+          }
+        }
+        tagsGroup: allMarkdownRemark(limit: 2000) {
+          group(field: frontmatter___tag) {
+            fieldValue
           }
         }
       }
@@ -50,6 +59,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         skip: i * postsPerPage,
         numPages,
         currentPage: i + 1,
+      },
+    })
+  })
+
+  //create tag pages
+  const tagTemplate = path.resolve("src/templates/tag-list.tsx")
+  // handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+
+  // Extract tag data from query
+  const tags = result.data.tagsGroup.group
+  // Make tag pages
+  tags.forEach((tag) => {
+    createPage({
+      path: `/blog/tags/${_.kebabCase(tag.fieldValue)}/`,
+      component: tagTemplate,
+      context: {
+        tag: tag.fieldValue,
       },
     })
   })

@@ -3,6 +3,9 @@ title:  "Earning Ad Revenue with Brave Rewards"
 date:   "2021-09-29"
 description: "A short guide to enabling Brave Rewards on a website for privacy friendly ad revenue."
 meta: "./../../images/brave-browser.jpg"
+tag: 
+    - tutorial
+    - ads
 ---
 
 ![Brave logo](./../../images/brave-browser.jpg)
