@@ -3,9 +3,12 @@ import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import HcardPost from "../components/hcard-post"
+import PostTags from "../components/post-tags"
 import styled from "styled-components"
 
 const BlogHolder = styled.div`
+  margin-top: 25px;
+
   a:link,
   a:visited,
   a:hover,
@@ -44,6 +47,7 @@ interface Post {
         title: string
         description: string
         meta?: any
+        tag?: any
       }
       fields: {
         slug: string
@@ -77,6 +81,7 @@ const BlogPost: React.FC<Post> = ({ data }) => {
           {post.frontmatter.title}
         </BlogPostTitle>
         <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
+        {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
         <BlogHolder
           className="e-content"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -101,6 +106,7 @@ export const query = graphql`
             }
           }
         }
+        tag
       }
       fields {
         slug
