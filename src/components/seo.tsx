@@ -66,6 +66,14 @@ const Seo = ({ title, description, image, pathname, article }: SEOProps) => (
               type="application/rss+xml"
               href="https://www.bobmatyas.com/rss.xml"
             />
+            <link
+              rel="webmention"
+              href="https://webmention.io/www.bobmatyas.com/webmention"
+            />
+            <link
+              rel="pingback"
+              href="https://webmention.io/www.bobmatyas.com/xmlrpc"
+            />
           </Helmet>
         </>
       )

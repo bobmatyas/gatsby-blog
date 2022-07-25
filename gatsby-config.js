@@ -205,6 +205,14 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+    {
+      resolve: "gatsby-source-webmentions",
+      options: {
+        DOMAIN: "example.com", // without https and any slashes
+        TOKEN: process.env.WEBMENTIONS_TOKEN, // token from webmention.io
+        perPage: 100, // optional
+      },
+    },
     `gatsby-plugin-typescript`,
     `gatsby-plugin-typescript-checker`,
     {
