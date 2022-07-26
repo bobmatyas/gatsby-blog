@@ -37,9 +37,10 @@ const Post = styled.li`
 `
 
 const BlogLink: React.FC<Props> = (props: Props) => (
-  <Post>
-    <Link to={props.link}>
-      {props.date}: {props.title}
+  <Post className="h-entry">
+    <Link to={props.link} className="u-uid u-url">
+      <span className="dt-published">{props.date}</span>:{" "}
+      <span className="p-name">{props.title}</span>
     </Link>
   </Post>
 )
