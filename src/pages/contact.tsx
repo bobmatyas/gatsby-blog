@@ -92,6 +92,7 @@ const Contact = () => (
             Want to get in touch? You can use this form to send me an email.
           </p>
 
+          {/* eslint-disable-next-line react/no-unknown-property */}
           <form name="contact" data-netlify="true" netlify-honeypot="goodluck">
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">

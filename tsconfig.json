@@ -24,8 +24,10 @@
       "noFallthroughCasesInSwitch": true /* Report errors for fallthrough cases in switch statement. */,
   
       /* Module Resolution Options */
-      "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */
-  
+      "allowSyntheticDefaultImports": true /* Allow default imports from modules with no default export. This does not affect code emit, just typechecking. */,
+
+      /* this is a fix for issues with Gatsby and GraphQL v15+ */
+      "skipLibCheck": true  
     },
     "include": ["./src/**/*", "./custom.d.ts"]
 }
