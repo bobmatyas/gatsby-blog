@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import BlogLink from "../components/home-post-link"
@@ -32,8 +32,8 @@ const Index: React.FC<Props> = ({ data }: Props) => {
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
 
-      <div className="main__content">
-        <ul className="my-10">
+      <div className="container m-auto pt-20 mt-10">
+        <ul className="my-10 pb-10 home__post__list">
           {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
             <BlogLink
               link={node.fields.slug}
@@ -43,6 +43,10 @@ const Index: React.FC<Props> = ({ data }: Props) => {
             />
           ))}
         </ul>
+
+        <Link to="/blog/2/" className="button my-10">
+          Next{" "}
+        </Link>
       </div>
     </Layout>
   )

@@ -8,8 +8,6 @@
     width: 150px;
 }
 
-/* temporary override during migration */
-
 .hcard__photo {
     width: 150px !important;
     height: 150px !important;
@@ -27,4 +25,12 @@
 
 .header__nav__item {
     @apply bg-green-50 border border-green-200 text-xs font-sans text-gray-600 font-bold hover:bg-green-400 hover:text-white
+}
+
+.home__post__list li:last-of-type {
+    @apply border-b-2 border-gray-100
+}
+
+.button {
+    @apply p-4 text-white font-bold bg-purple-500
 }
