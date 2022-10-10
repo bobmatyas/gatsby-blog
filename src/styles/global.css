@@ -26,5 +26,5 @@
 }
 
 .header__nav__item {
-    @apply bg-green-50 border border-green-200 text-sm font-sans text-gray-600 font-bold hover:bg-green-400 hover:text-white
+    @apply bg-green-50 border border-green-200 text-xs font-sans text-gray-600 font-bold hover:bg-green-400 hover:text-white
 }

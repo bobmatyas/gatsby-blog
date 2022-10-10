@@ -1,26 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import RSSIcon from "../images/icons/rss.svg"
-
-const FooterContainer = styled.footer`
-  background-color: #eee;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-`
-
-const FooterInner = styled.div`
-  max-width: 1000px;
-  margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  p {
-    font-family: var(--system-fonts);
-    margin: 25px 0;
-    text-align: center;
-  }
-`
+import HcardSocial from "./hcard-social"
 
 const RSSLink = styled.a`
   color: var(--body-text-color);
@@ -36,34 +17,33 @@ const RSSLink = styled.a`
   }
 `
 
-const AboutRSS = styled.a`
-  color: var(--body-text-color);
-  font-size: 75%;
-  text-decoration: underline;
-
-  :hover,
-  :active {
-    border-bottom: 1px dashed var(--body-text-color);
-    text-decoration: none;
-  }
-`
-
 const Footer = () => (
-  <FooterContainer>
-    <FooterInner>
-      <p>
+  <footer className="pt-10 pb-10">
+    <div className="container m-auto text-center">
+      <hr className="text-gray-200 bg-gray-100 my-5 w-2/3 m-auto h-1" />
+      <div className="h-card">
+        <p className="font-sans text-sm text-gray-600 font-bold">
+          <span className="p-name">Bob Matyas</span> is{" "}
+          <span className="p-note">
+            a web developer in Grand Rapids, Michigan.{" "}
+          </span>
+        </p>
+        <HcardSocial />
+      </div>
+      <p className="font-sans">
         <RSSLink href="https://www.bobmatyas.com/rss.xml">RSS Feed </RSSLink>
         <br />
-        <AboutRSS
+        <a
           href="https://aboutfeeds.com/"
           target="_blank"
           rel="noopener noreferrer"
+          className="text-xs underline hover:no-underline"
         >
           Learn More About RSS Feeds
-        </AboutRSS>
+        </a>
       </p>
-    </FooterInner>
-  </FooterContainer>
+    </div>
+  </footer>
 )
 
 export default Footer
