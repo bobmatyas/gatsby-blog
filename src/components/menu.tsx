@@ -1,13 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import BurgerMenu from "./BurgerMenu"
-import styled from "styled-components"
-
-const BurgerHolder = styled.div`
-  @media screen and (min-width: 799px) {
-    display: none;
-  }
-`
 
 const Menu = () => {
   React.useEffect(() => {
@@ -39,9 +32,9 @@ const Menu = () => {
         </ul>
       </nav>
 
-      <BurgerHolder>
+      <div className="burger">
         <BurgerMenu />
-      </BurgerHolder>
+      </div>
     </>
   )
 }
