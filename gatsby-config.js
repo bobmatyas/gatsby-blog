@@ -29,6 +29,7 @@ module.exports = {
   },
 
   plugins: [
+    `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-typography`,
       options: {

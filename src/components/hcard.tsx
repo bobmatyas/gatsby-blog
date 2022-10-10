@@ -60,7 +60,7 @@ const Hcard = () => (
     <Grid className="h-card">
       <div>
         <h2>
-          About <span className="p-name">Bob Matyas</span>{" "}
+          About <span className="p-name underline mt-10">Bob Matyas</span>{" "}
         </h2>
 
         <p className="p-note">
