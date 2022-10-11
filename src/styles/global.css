@@ -47,3 +47,11 @@ a {
 .burger__menu__item {
     @apply font-sans text-white font-bold text-2xl underline decoration-slate-300 underline-offset-8
 }
+
+.main {
+    @apply container m-auto my-0  pt-20 mt-10
+}
+
+.main__header {
+    @apply font-bold text-2xl mb-5
+}

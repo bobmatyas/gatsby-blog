@@ -2,7 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Social from "../components/social-links"
 import styled from "styled-components"
 
 const FormHolder = styled.div`
@@ -83,8 +82,8 @@ const Contact = () => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <div className="main__content">
-      <h2 className="main__content__header">Contact</h2>
+    <div className="main">
+      <h2 className="main__header">Contact</h2>
 
       <div className="contact__page">
         <FormHolder>
@@ -120,12 +119,6 @@ const Contact = () => (
             </FormActions>
           </form>
         </FormHolder>
-
-        <div className="contact__page__social__holder">
-          <h3>Connect on Social Media</h3>
-
-          <Social />
-        </div>
       </div>
     </div>
   </Layout>

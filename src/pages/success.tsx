@@ -9,8 +9,8 @@ const Success = () => (
       description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <div className="main__content">
-      <h2>Success!</h2>
+    <div className="main">
+      <h2 className="main__header">Success!</h2>
 
       <p>Thank you for contacting me. I&apos;ll get back to you shortly.</p>
     </div>

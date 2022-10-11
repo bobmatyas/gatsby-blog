@@ -2,12 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import { StaticImage } from "gatsby-plugin-image"
-import styled from "styled-components"
 
-const OpeningParagraph = styled.p`
-  margin-top: 50px;
-`
 function Uses(): JSX.Element {
   return (
     <Layout>
@@ -16,19 +11,14 @@ function Uses(): JSX.Element {
         description="A list of things I use for web development."
       />
 
-      <div className="main__content">
-        <h2 className="main__content__header">Uses</h2>
+      <div className="main">
+        <h2 className="main__header">Uses</h2>
 
-        <StaticImage
-          src="../images/uses-page-header.jpg"
-          alt="close up of computer code"
-        />
-
-        <OpeningParagraph>
+        <p className="text-lg">
           Inspired by the interesting lists of uses in Wes Bos&apos;
           <a href="https://uses.tech/">uses.tech</a>, I am sharing a list of
           devices and tools I use.
-        </OpeningParagraph>
+        </p>
 
         <h3>Software</h3>
 

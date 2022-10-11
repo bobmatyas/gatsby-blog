@@ -8,8 +8,8 @@ function Now(): JSX.Element {
     <Layout>
       <Seo title="Now" description="What I'm up to now" />
 
-      <div className="main__content">
-        <h2 className="main__content__header">What I&apos;m Doing Now</h2>
+      <div className="main">
+        <h2 className="main__header">What I&apos;m Doing Now</h2>
 
         <p>
           This is a now page, and if you have your own site, you should{" "}

@@ -76,17 +76,19 @@ const BlogPost: React.FC<Post> = ({ data }) => {
         }
       />
 
-      <article className="h-entry">
-        <BlogPostTitle className="p-name">
-          {post.frontmatter.title}
-        </BlogPostTitle>
-        <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
-        {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
-        <BlogHolder
-          className="e-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </article>
+      <div className="main">
+        <article className="h-entry">
+          <BlogPostTitle className="p-name">
+            {post.frontmatter.title}
+          </BlogPostTitle>
+          <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
+          {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
+          <BlogHolder
+            className="e-content"
+            dangerouslySetInnerHTML={{ __html: post.html }}
+          />
+        </article>
+      </div>
     </Layout>
   )
 }

@@ -90,8 +90,8 @@ export default class BlogList extends React.Component<Props> {
           description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
         />
 
-        <div className="main__content">
-          <h2 className="main__content__header">Blog</h2>
+        <div className="main">
+          <h2 className="main__header">Blog</h2>
 
           {posts.map(({ node }: BlogPosts) => (
             <BlogPost className="h-entry" key={node.fields.slug}>

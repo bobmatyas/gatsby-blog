@@ -2,13 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Social from "../components/social-links"
-import styled from "styled-components"
-
-const WelcomeLine = styled.p`
-  font-size: 1.1rem;
-  font-weight: 600;
-`
 
 const About = () => (
   <Layout>
@@ -17,13 +10,13 @@ const About = () => (
       description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <div className="main__content">
-      <h2 className="main__content__header">About Bob Matyas</h2>
+    <div className="main">
+      <h2 className="main__header">About Bob Matyas</h2>
 
-      <WelcomeLine>
+      <p>
         👋 Howdy! I’m Bob Matyas, a web developer living in Grand Rapids,
         Michigan. I like moving pixels around using HTML, CSS, and JavaScript.{" "}
-      </WelcomeLine>
+      </p>
 
       <p>I work at Automattic where I help make the web a better place.</p>
 
@@ -58,9 +51,6 @@ const About = () => (
         If you want to get in touch, you can use{" "}
         <Link to={`/contact/`}>this form</Link>.
       </p>
-      <h2>Follow Bob Matyas on Social Media</h2>
-
-      <Social />
     </div>
   </Layout>
 )

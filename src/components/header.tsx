@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <header className="border-t-purple-400 border-t-8" style={headerBg}>
+    <header className="border-t-purple-400 border-t-8 " style={headerBg}>
       <div className="container m-auto flex flex-col items-center justify-center">
         <StaticImage
           src="../images/flower-logo.jpg"

@@ -32,7 +32,7 @@ const Index: React.FC<Props> = ({ data }: Props) => {
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
 
-      <div className="container m-auto pt-20 mt-10">
+      <div className="main">
         <ul className="my-10 pb-10 home__post__list">
           {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
             <BlogLink
