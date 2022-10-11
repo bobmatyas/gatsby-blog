@@ -51,7 +51,7 @@ const BlogPost: React.FC<Post> = ({ data }) => {
           <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
           {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
           <div
-            className="prose lg:prose-xl e-content"
+            className="prose lg:prose-xl"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
