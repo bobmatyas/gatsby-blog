@@ -154,7 +154,7 @@ a {
 
 form input,
 form textarea {
-    @apply border border-slate-300 w-2/3 mt-0 mb-4 p-2 font-sans text-slate-600
+    @apply sm:w-full md:w-2/3 border border-slate-300 w-2/3 mt-0 mb-4 p-2 font-sans text-slate-600
 }
 
 form input::placeholder,
@@ -163,5 +163,5 @@ form textarea::placeholder {
 }
 
 form input[type=submit] {
-    @apply border-none text-white cursor-pointer w-1/4
+    @apply border-none text-white cursor-pointer sm:w-full md:w-1/4
 }

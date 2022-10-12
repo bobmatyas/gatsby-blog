@@ -71,18 +71,18 @@ export default class BlogList extends React.Component<Props> {
             ))}
           </div>
 
-          <ul className="flex justify-between flex-row gap-5">
+          <ul className="md:flex md:justify-between md:flex-row">
             {!isFirst && (
               <li className="my-10 pt-5">
                 <Link to={prevPageLink} rel="prev" className="button">
-                  ← Previous Page
+                  ← Previous
                 </Link>
               </li>
             )}
             {!isLast && (
               <li className="my-10 pt-5">
                 <Link to={nextPageLink} rel="next" className="button">
-                  Next Page →
+                  Next →
                 </Link>
               </li>
             )}
