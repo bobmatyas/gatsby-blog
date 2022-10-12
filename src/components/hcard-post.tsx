@@ -15,7 +15,7 @@ const HcardPost: React.FC<Props> = (props: Props) => {
   }
 
   return (
-    <p className="text-lg text-gray-500 mt-5 mb-5 font-sans">
+    <p className="text-lg text-gray-500 mt-2 mb-5 font-sans">
       Posted on &nbsp;
       <a className="u-url underline" href={permaLink}>
         <time className="dt-published" dateTime={props.date}>
