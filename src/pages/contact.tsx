@@ -2,78 +2,6 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import styled from "styled-components"
-
-const FormHolder = styled.div`
-  @media screen and (min-width: 1000px) {
-    width: 65%;
-  }
-`
-
-const FormInput = styled.input`
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: -1px 3px 7px 1px rgba(102, 102, 102, 0.2);
-  font-size: 16px;
-  color: #666666;
-  padding: 10px;
-  margin: 0 0 25px 0;
-  max-width: 500px;
-  width: 100%;
-`
-
-const FormTextBox = styled.textarea`
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: -1px 3px 7px 1px rgba(102, 102, 102, 0.2);
-  font-size: 16px;
-  color: #666666;
-  padding: 10px;
-  margin: 0 0 25px 0;
-  max-width: 500px;
-  width: 100%;
-`
-
-const FormLabel = styled.label`
-  color: #666666;
-  display: block;
-  font-weight: bold;
-  padding: 0;
-  margin: 0 0 5px 0;
-`
-
-const FormActions = styled.ul`
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-
-  li:last-of-type {
-    margin-left: 15px;
-  }
-`
-
-const FormButton = styled.input`
-  background-color: #000;
-  border-radius: 5px;
-  border: 1px solid #000;
-  background-color: #fff;
-  color: #000;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  padding: 10px 15px;
-
-  :active {
-    transform: translateY(6px);
-  }
-
-  :hover {
-    background-color: #000;
-    cursor: pointer;
-    color: #fff;
-  }
-`
 
 const Contact = () => (
   <Layout>
@@ -85,40 +13,63 @@ const Contact = () => (
     <div className="main">
       <h2 className="main__header">Contact</h2>
 
-      <div className="contact__page">
-        <FormHolder>
+      <div className="page">
+        <div className="contact__page">
           <p>
             Want to get in touch? You can use this form to send me an email.
           </p>
 
           {/* eslint-disable-next-line react/no-unknown-property */}
-          <form name="contact" data-netlify="true" netlify-honeypot="goodluck">
+          <form
+            name="contact"
+            data-netlify="true"
+            // eslint-disable-next-line react/no-unknown-property
+            netlify-honeypot="goodluck"
+          >
             <input type="hidden" name="form-name" value="contact" />
             <p className="hidden">
               <label>
-                Don’t fill this out if you’re human: <input name="goodluck" />
+                Don’t fill this out if you’re human:{" "}
+                <input name="goodluck" type="text" />
               </label>
             </p>
 
-            <FormLabel htmlFor="name">Name</FormLabel>
-            <FormInput type="text" name="name" id="name" required={true} />
-
-            <FormLabel htmlFor="email">Email</FormLabel>
-            <FormInput type="email" name="email" id="email" />
-
-            <FormLabel htmlFor="message">Message</FormLabel>
-            <FormTextBox name="message" id="message" rows={6} required={true} />
-
-            <FormActions>
+            <p>
+              <label htmlFor="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                required={true}
+                placeholder="Enter your email address."
+              />
+            </p>
+            <p>
+              <label htmlFor="email">Email</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email address."
+              />
+            </p>
+            <p>
+              <label htmlFor="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows={6}
+                required={true}
+                placeholder="Your message."
+              />
+            </p>
+            <ul>
               <li>
-                <FormButton type="submit" value="Send Message" />
+                <input type="submit" value="Send Message" className="button" />
               </li>
-              <li>
-                <FormButton type="reset" value="Clear" />
-              </li>
-            </FormActions>
+            </ul>
           </form>
-        </FormHolder>
+        </div>
       </div>
     </div>
   </Layout>

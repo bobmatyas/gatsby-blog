@@ -16,7 +16,7 @@ function Uses(): JSX.Element {
 
         <div className="page">
           <p className="text-lg">
-            Inspired by the interesting lists of uses in Wes Bos&apos;
+            Inspired by the interesting lists of uses in Wes Bos&apos;{" "}
             <a href="https://uses.tech/">uses.tech</a>, I am sharing a list of
             devices and tools I use.
           </p>

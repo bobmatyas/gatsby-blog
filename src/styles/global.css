@@ -89,11 +89,17 @@ a {
     @apply font-serif leading-8 text-lg;
 }
 
-.page *  {
-    @apply mb-7
+.page a {
+    @apply underline underline-offset-4 decoration-4 decoration-purple-400 hover:no-underline hover:text-purple-600
 }
 
-.page li {
+.page *  {
+    @apply mb-7 text-lg  text-slate-800
+}
+
+.page li,
+.page label,
+.page input {
     margin-bottom: unset;
 }
 
@@ -101,4 +107,43 @@ a {
     background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,247,237,1) 75%), url(../images/bg-mountain.jpg);
     background-size: cover;
     background-position: 5% center;
+}
+
+.skills__item {
+    @apply text-white bg-slate-500 text-xs p-1 uppercase rounded-sm
+}
+
+.prose a {
+    @apply underline underline-offset-4 decoration-4 decoration-purple-400 hover:no-underline hover:text-purple-600
+}
+
+.page h2 {
+    @apply text-3xl mt-5 font-bold
+}
+
+.page h3 {
+    @apply text-2xl mt-5 font-bold
+}
+
+.page h4 {
+    @apply text-xl mt-5 font-bold
+}
+
+.page form label {
+    @apply font-bold font-sans m-0 p-0 block mb-2
+}
+
+
+form input,
+form textarea {
+    @apply border border-slate-300 w-2/3 mt-0 mb-4 p-2 font-sans text-slate-600
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    @apply text-sm
+}
+
+form input[type=submit] {
+    @apply border-none text-white cursor-pointer w-1/4
 }
