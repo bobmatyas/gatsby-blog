@@ -41,6 +41,16 @@ const Seo = ({ title, description, image, pathname, article }: SEOProps) => (
             title={seo.title}
             titleTemplate={titleTemplate}
           >
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link
+              rel="preconnect"
+              href="https://fonts.gstatic.com"
+              crossOrigin="crossOrigin"
+            />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Libre+Barcode+39+Text&family=Miniver&family=Permanent+Marker&family=Rubik+Dirt&family=Sansita+Swashed:wght@500&family=Special+Elite&display=swap"
+              rel="stylesheet"
+            />
             <meta name="description" content={seo.description} />
             <meta name="image" content={seo.image} />
             {seo.url && <meta property="og:url" content={seo.url} />}

@@ -13,7 +13,7 @@ const Menu = () => {
   return (
     <>
       <nav className="header__nav">
-        <ul className="flex flex-row gap-4 py-5">
+        <ul className="flex flex-row gap-4 pt-2 pb-5">
           <li className="header__nav__item">
             <Link to={`/`} className="block p-2">
               Home
