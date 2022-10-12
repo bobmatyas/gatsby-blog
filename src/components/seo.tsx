@@ -48,7 +48,7 @@ const Seo = ({ title, description, image, pathname, article }: SEOProps) => (
               crossOrigin="crossOrigin"
             />
             <link
-              href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Libre+Barcode+39+Text&family=Miniver&family=Permanent+Marker&family=Rubik+Dirt&family=Sansita+Swashed:wght@500&family=Special+Elite&display=swap"
+              href="https://fonts.googleapis.com/css2?family=Contrail+One&family=Gentium+Book+Basic:ital@1&family=Permanent+Marker&display=swap"
               rel="stylesheet"
             />
             <meta name="description" content={seo.description} />

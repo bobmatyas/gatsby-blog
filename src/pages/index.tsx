@@ -33,7 +33,7 @@ const Index: React.FC<Props> = ({ data }: Props) => {
       />
 
       <div className="main">
-        <ul className="my-10 pb-10 home__post__list">
+        <div className="my-10 pb-10 blog__post__list">
           {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
             <BlogLink
               link={node.fields.slug}
@@ -42,10 +42,10 @@ const Index: React.FC<Props> = ({ data }: Props) => {
               key={node.frontmatter.date}
             />
           ))}
-        </ul>
+        </div>
 
         <Link to="/blog/2/" className="button my-10">
-          Next{" "}
+          Next Page →
         </Link>
       </div>
     </Layout>

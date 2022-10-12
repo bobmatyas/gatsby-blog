@@ -14,6 +14,12 @@ const About = () => (
       <h2 className="main__header">About Bob Matyas</h2>
 
       <div className="page">
+        <div className="widget p-2 rounded-md text-sm font-sans shadow-sm border border-red-100">
+          <h3 className="text-md font-sans text-bold uppercase mt-2 px-2 font-bold text-slate-700">
+            Skills
+          </h3>
+          <p className="px-2">Test</p>
+        </div>
         <p>
           👋 Howdy! I’m Bob Matyas, a web developer living in Grand Rapids,
           Michigan. I like moving pixels around using HTML, CSS, and JavaScript.{" "}

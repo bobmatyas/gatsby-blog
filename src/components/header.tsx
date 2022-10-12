@@ -10,10 +10,10 @@ const Header = () => {
           src="../images/flower-logo.jpg"
           alt="Flower"
           imgClassName="u-photo"
-          className=" hcard__photo m-auto header__logo mx-10 py-6 px-5 rounded-full bg-white mt-10  border-gray-100 border-4"
+          className=" hcard__photo m-auto header__logo py-6 px-5 rounded-full bg-white mt-2  border-gray-100 border-4"
           style={{ width: "100px" }}
         />
-        <h2 className="font-bold text-2xl md:text-4xl text-slate-800 header__text mt-6">
+        <h2 className="font-bold text-2xl md:text-4xl text-slate-800 header__text mt-4">
           Bob Matyas
         </h2>
         <Menu />

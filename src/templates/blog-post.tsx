@@ -46,9 +46,9 @@ const BlogPost: React.FC<Post> = ({ data }) => {
       <div className="main py-2">
         <article className="h-entry mt-10">
           {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
-          <h2 className="p-name text-slate-800 font-extrabold text-2xl md:text-6xl mt-5">
+          <h1 className="p-name text-slate-800 font-extrabold text-2xl md:text-6xl mt-5">
             {post.frontmatter.title}
-          </h2>
+          </h1>
           <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
           <div
             className=" mt-10 prose md:prose-lg lg:prose-xl prose-slate font-serif"

@@ -42,43 +42,45 @@ export default class BlogList extends React.Component<Props> {
         <div className="main">
           <h2 className="main__header">Blog</h2>
 
-          {posts.map(({ node }: BlogPosts) => (
-            <article
-              className="h-entry py-10 border-t-2 border-gray-100 m-0 shadow-none h-entry leading-loose"
-              key={node.fields.slug}
-            >
-              <h3>
-                <Link
-                  to={node.fields.slug}
-                  className="u-uid u-url text-purple-500 no-underline hover:underline decoration-4 underline-offset-8 "
-                >
-                  <span className="dt-published font-sans text-lg font-bold">
-                    {node.frontmatter.date}
-                  </span>
-                  <span className="text-lg font-bold font-sans">:</span>
-                  <br />
-                  <span className="p-name font-sans text-3xl font-extrabold">
-                    {node.frontmatter.title}{" "}
-                  </span>
-                </Link>
-              </h3>
+          <div className="blog__post__list">
+            {posts.map(({ node }: BlogPosts) => (
+              <article
+                className="h-entry py-10 border-t-2 border-stone-300 m-0 shadow-none h-entry leading-loose"
+                key={node.fields.slug}
+              >
+                <h3>
+                  <Link
+                    to={node.fields.slug}
+                    className="u-uid u-url text-purple-500 no-underline hover:underline decoration-4 underline-offset-8 "
+                  >
+                    <span className="dt-published font-sans text-lg font-bold">
+                      {node.frontmatter.date}
+                    </span>
+                    <span className="text-lg font-bold font-sans">:</span>
+                    <br />
+                    <span className="p-name font-sans text-3xl font-extrabold">
+                      {node.frontmatter.title}{" "}
+                    </span>
+                  </Link>
+                </h3>
 
-              <p className="text-lg p-summary no-underline text-gray-600 mt-5">
-                {node.frontmatter.description}
-              </p>
-            </article>
-          ))}
+                <p className="text-lg p-summary no-underline text-gray-600 mt-5">
+                  {node.frontmatter.description}
+                </p>
+              </article>
+            ))}
+          </div>
 
           <ul className="flex justify-between flex-row gap-5">
             {!isFirst && (
-              <li className="mt-5 pt-5">
+              <li className="my-10 pt-5">
                 <Link to={prevPageLink} rel="prev" className="button">
                   ← Previous Page
                 </Link>
               </li>
             )}
             {!isLast && (
-              <li className="mt-5 pt-5">
+              <li className="my-10 pt-5">
                 <Link to={nextPageLink} rel="next" className="button">
                   Next Page →
                 </Link>
