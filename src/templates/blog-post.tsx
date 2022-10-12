@@ -45,13 +45,13 @@ const BlogPost: React.FC<Post> = ({ data }) => {
 
       <div className="main py-2">
         <article className="h-entry">
-          <h2 className="p-name text-slate-500 font-extrabold text-3xl mt-10">
+          <h2 className="p-name text-slate-500 font-extrabold text-2xl md:text-6xl my-10">
             {post.frontmatter.title}
           </h2>
           <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
           {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
           <div
-            className="prose lg:prose-xl"
+            className=" mt-10 prose md:prose-lg lg:prose-xl prose-slate font-serif"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>

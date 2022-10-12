@@ -2,58 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import styled from "styled-components"
 
-const BlogPost = styled.article`
-  border: 1px solid #eee;
-  border-radius: 5px;
-  margin: 0 0 25px 0;
-  padding: 25px;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-  box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-
-  a {
-    color: var(--purple-color);
-  }
-  :hover {
-    -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
-    cursor: pointer;
-  }
-
-  :hover h3 {
-    text-decoration: underline;
-  }
-`
-
-const BlogPostDate = styled.p`
-  color: #666;
-  font-family: var(--system-fonts);
-  border-bottom: 1px solid #ccc;
-  font-variant: small-caps;
-  font-weight: bold;
-  font-size: 75%;
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase;
-`
-
-const BlogPostHeader = styled.h3`
-  margin: 12.5px 0 12.5px 0;
-  padding: 5px 0;
-`
-
-const BlogPostDescription = styled.p`
-  color: #666;
-`
-
-const NavigationLinks = styled.p`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-`
 interface Props {
   data: any
   pageContext: any
@@ -94,35 +43,48 @@ export default class BlogList extends React.Component<Props> {
           <h2 className="main__header">Blog</h2>
 
           {posts.map(({ node }: BlogPosts) => (
-            <BlogPost className="h-entry" key={node.fields.slug}>
-              <Link to={node.fields.slug} className="u-uid u-url">
-                <BlogPostDate className="dt-published">
-                  {node.frontmatter.date}
-                </BlogPostDate>
+            <article
+              className="h-entry py-10 border-t-2 border-gray-100 m-0 shadow-none h-entry leading-loose"
+              key={node.fields.slug}
+            >
+              <h3>
+                <Link
+                  to={node.fields.slug}
+                  className="u-uid u-url text-purple-500 no-underline hover:underline decoration-4 underline-offset-8 "
+                >
+                  <span className="dt-published font-sans text-lg font-bold">
+                    {node.frontmatter.date}
+                  </span>
+                  <span className="text-lg font-bold font-sans">:</span>
+                  <br />
+                  <span className="p-name font-sans text-3xl font-extrabold">
+                    {node.frontmatter.title}{" "}
+                  </span>
+                </Link>
+              </h3>
 
-                <BlogPostHeader className="p-name">
-                  {node.frontmatter.title}{" "}
-                </BlogPostHeader>
-
-                <BlogPostDescription className="p-summary">
-                  {node.frontmatter.description}
-                </BlogPostDescription>
-              </Link>
-            </BlogPost>
+              <p className="text-lg p-summary no-underline text-gray-600 mt-5">
+                {node.frontmatter.description}
+              </p>
+            </article>
           ))}
 
-          <NavigationLinks>
+          <ul className="flex justify-between flex-row gap-5">
             {!isFirst && (
-              <Link to={prevPageLink} rel="prev">
-                ← Previous Page
-              </Link>
+              <li className="mt-5 pt-5">
+                <Link to={prevPageLink} rel="prev" className="button">
+                  ← Previous Page
+                </Link>
+              </li>
             )}
             {!isLast && (
-              <Link to={nextPageLink} rel="next">
-                Next Page →
-              </Link>
+              <li className="mt-5 pt-5">
+                <Link to={nextPageLink} rel="next" className="button">
+                  Next Page →
+                </Link>
+              </li>
             )}
-          </NavigationLinks>
+          </ul>
         </div>
       </Layout>
     )
@@ -144,7 +106,7 @@ export const blogListQuery = graphql`
           frontmatter {
             title
             description
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "MM/DD/YY")
           }
         }
       }

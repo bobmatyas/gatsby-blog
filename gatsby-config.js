@@ -29,7 +29,6 @@ module.exports = {
   },
 
   plugins: [
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -215,5 +214,6 @@ module.exports = {
         // ...
       },
     },
+    `gatsby-plugin-postcss`,
   ],
 }
