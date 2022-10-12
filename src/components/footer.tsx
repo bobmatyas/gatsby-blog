@@ -18,11 +18,11 @@ const RSSLink = styled.a`
 `
 
 const Footer = () => (
-  <footer className="pt-10 pb-10">
+  <footer className="mt-10 pt-10 pb-10">
     <div className="container m-auto text-center">
-      <hr className="text-gray-200 bg-gray-100 my-5 w-2/3 m-auto h-1" />
+      <hr className="bg-gray-600 my-5 w-2/3 m-auto h-2" />
       <div className="h-card">
-        <p className="font-sans text-sm text-gray-600 font-bold">
+        <p className="font-sans mt-5 mb-2 text-sm text-slate-600 text--small--caps">
           <span className="p-name">Bob Matyas</span> is{" "}
           <span className="p-note">
             a web developer in Grand Rapids, Michigan.{" "}
@@ -30,7 +30,7 @@ const Footer = () => (
         </p>
         <HcardSocial />
       </div>
-      <p className="font-sans">
+      <p className="font-sans mt-5">
         <RSSLink href="https://www.bobmatyas.com/rss.xml">RSS Feed </RSSLink>
         <br />
         <a
