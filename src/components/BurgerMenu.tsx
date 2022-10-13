@@ -16,18 +16,27 @@ const BurgerMenu = () => {
   }
 
   return (
-    <Menu right width={"100%"} onStateChange={toggleMenu}>
-      <ul>
+    <Menu
+      right
+      width={"100%"}
+      onStateChange={toggleMenu}
+      className="bg-slate-600"
+    >
+      <ul className="flex flex-col items-center justify-center gap-5 pt-10">
         <li>
-          <a className="menu-item" href="/">
+          <Link className="burger__menu__item" to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <Link to={`/about/`}>About</Link>
+          <Link to={`/about/`} className="burger__menu__item">
+            About
+          </Link>
         </li>
         <li>
-          <Link to={`/blog/`}>Blog</Link>
+          <Link to={`/blog/`} className="burger__menu__item">
+            Blog
+          </Link>
         </li>
       </ul>
     </Menu>

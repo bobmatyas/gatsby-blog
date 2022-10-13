@@ -30,8 +30,8 @@ const Portfolio = ({ data }: any) => (
       description="The web development portfolio of Bob Matyas, a web developer in Grand Rapids, Michigan"
     />
 
-    <div className="main__content">
-      <h2 className="main__content__header">Portfolio</h2>
+    <div className="main">
+      <h2 className="main__header">Portfolio</h2>
 
       <Skills />
 

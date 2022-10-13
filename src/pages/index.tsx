@@ -1,10 +1,8 @@
 import React from "react"
-import { graphql } from "gatsby"
-import styled from "styled-components"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import BlogLink from "../components/home-blog-link"
-import Hcard from "../components/hcard"
+import BlogLink from "../components/home-post-link"
 
 interface Props {
   data: {
@@ -22,25 +20,9 @@ interface BlogPosts {
       title: string
       description: string
     }
+    excerpt: string
   }
 }
-
-const Box = styled.div`
-  border: 1px solid #eee;
-  border-radius: 5px;
-  margin: 25px 0 50px 0;
-  padding: 10px 25px 25px 25px;
-  -webkit-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-  -moz-box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-  box-shadow: 0px 5px 10px 0px rgba(180, 180, 180, 0.35);
-  border-top: 4px solid var(--pink-color);
-`
-
-const PostList = styled.ul`
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-`
 
 const Index: React.FC<Props> = ({ data }: Props) => {
   return (
@@ -50,23 +32,21 @@ const Index: React.FC<Props> = ({ data }: Props) => {
         description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
       />
 
-      <div className="main__content">
-        <Hcard />
+      <div className="main">
+        <div className="my-10 pb-10 blog__post__list">
+          {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
+            <BlogLink
+              link={node.fields.slug}
+              date={node.frontmatter.date}
+              title={node.frontmatter.title}
+              key={node.frontmatter.date}
+            />
+          ))}
+        </div>
 
-        <Box>
-          <h2>Recent Blog Posts</h2>
-
-          <PostList>
-            {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
-              <BlogLink
-                link={node.fields.slug}
-                date={node.frontmatter.date}
-                title={node.frontmatter.title}
-                key={node.frontmatter.date}
-              />
-            ))}
-          </PostList>
-        </Box>
+        <Link to="/blog/2/" className="button my-10">
+          Next Page →
+        </Link>
       </div>
     </Layout>
   )

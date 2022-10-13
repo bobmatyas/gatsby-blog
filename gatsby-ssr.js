@@ -1,8 +1,27 @@
 import React from "react"
 import { Partytown } from "@builder.io/partytown/react"
 
-export function onRenderBody({ setPostBodyComponents }) {
-  ;(<Partytown key="partytown" debug={true} forward={["dataLayer.push"]} />),
+const HeadComponents = [
+  <Partytown key="partytown" debug={true} forward={["dataLayer.push"]} />,
+  <link
+    rel="preload"
+    href="GentiumBookBasic-BoldItalic.woff"
+    as="font"
+    type="font/woff2"
+    crossOrigin="anonymous"
+    key="gentiumFont"
+  />,
+  <link
+    rel="preload"
+    href="PermanentMarker-Regular.woff"
+    as="font"
+    type="font/woff2"
+    crossOrigin="anonymous"
+    key="permanentFont"
+  />,
+]
+export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
+  setHeadComponents(HeadComponents),
     setPostBodyComponents([
       React.createElement(`div`, {
         key: `cloudflare-analytics`,

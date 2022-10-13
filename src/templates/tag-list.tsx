@@ -12,13 +12,13 @@ const Tags: React.FC = ({ pageContext, data }: any) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
 
-  const pageTitle = `Tag: ${tag}`
-  const pageDescription = `Blog posts tagged with ${tag}.`
+  const pageTitle = `Blog Posts on: ${tag}`
+  const pageDescription = `Blog posts on ${tag}`
   return (
     <Layout>
       <Seo title={pageTitle} description={pageDescription} />
-      <div className="main__content">
-        <h2 className="main__content__header">{tagHeader}</h2>
+      <div className="main">
+        <h2 className="main__header">{tagHeader}</h2>
         <ul>
           {edges.map(({ node }: any) => {
             const { slug } = node.fields

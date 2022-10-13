@@ -1,84 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 import BurgerMenu from "./BurgerMenu"
-import styled from "styled-components"
-
-const DesktopHolder = styled.nav`
-  display: none;
-
-  @media screen and (min-width: 800px) {
-    display: block;
-    padding: 15px 0 0 0;
-  }
-`
-
-const DesktopMenu = styled.ul`
-  display: flex;
-  font-size: unset;
-  font-weight: 500;
-  justify-content: flex-end;
-  list-style-type: none;
-  margin: 0;
-  padding: 0 3% 0 0;
-  text-transform: uppercase;
-
-  a {
-    display: inline-block;
-    padding: 0 0 0.5em 0;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 0.9rem;
-    position: relative;
-    letter-spacing: 1px;
-    text-decoration: none;
-  }
-
-  a:before,
-  a:after {
-    position: absolute;
-    -webkit-transition: all 0.07s ease;
-    transition: all 0.07s ease;
-  }
-
-  a:before {
-    bottom: 0;
-    display: block;
-    height: 3px;
-    width: 0%;
-    content: "";
-    background-color: var(--pink-color);
-  }
-  a:after {
-    left: 0;
-    top: 0;
-    padding: 0 0 0.5em 0;
-    position: absolute;
-    content: attr(data-hover);
-    color: #ffffff;
-    white-space: nowrap;
-    max-width: 0%;
-    overflow: hidden;
-  }
-
-  a:hover:before {
-    opacity: 1;
-    width: 100%;
-  }
-  a:hover:after {
-    max-width: 100%;
-  }
-
-  li {
-    font-family: var(--system-fonts);
-    margin: 0 5px;
-    padding: 10px;
-  }
-`
-
-const BurgerHolder = styled.div`
-  @media screen and (min-width: 799px) {
-    display: none;
-  }
-`
 
 const Menu = () => {
   React.useEffect(() => {
@@ -90,20 +12,29 @@ const Menu = () => {
 
   return (
     <>
-      <DesktopHolder>
-        <DesktopMenu>
-          <li>
-            <Link to={`/about/`}>About</Link>
+      <nav className="header__nav">
+        <ul className="flex flex-row gap-4 pt-2 pb-5">
+          <li className="header__nav__item">
+            <Link to={`/`} className="block p-2">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link to={`/blog/`}>Blog</Link>
+          <li className="header__nav__item">
+            <Link to={`/about/`} className="block p-2">
+              About
+            </Link>
           </li>
-        </DesktopMenu>
-      </DesktopHolder>
+          <li className="header__nav__item">
+            <Link to={`/blog/`} className="block py-2 px-4">
+              Blog
+            </Link>
+          </li>
+        </ul>
+      </nav>
 
-      <BurgerHolder>
+      <div className="burger">
         <BurgerMenu />
-      </BurgerHolder>
+      </div>
     </>
   )
 }
