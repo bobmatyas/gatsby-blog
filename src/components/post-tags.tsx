@@ -11,7 +11,7 @@ export default function PostTags({ tags }: Props) {
     <li key={index}>
       <Link
         to={`/blog/tags/${kebabCase(tag)}/`}
-        className="bg-slate-600 text-white p-2 uppercase hover:underline text-sm"
+        className="p-category bg-slate-600 text-white p-2 uppercase hover:underline text-sm"
       >
         {tag}
       </Link>

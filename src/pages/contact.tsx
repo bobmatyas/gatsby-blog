@@ -41,7 +41,7 @@ const Contact = () => (
                 name="name"
                 id="name"
                 required={true}
-                placeholder="Enter your email address."
+                placeholder="Enter your name."
               />
             </p>
             <p>
@@ -60,7 +60,7 @@ const Contact = () => (
                 id="message"
                 rows={6}
                 required={true}
-                placeholder="Your message."
+                placeholder="Enter your message."
               />
             </p>
             <ul>

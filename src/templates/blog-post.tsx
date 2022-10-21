@@ -51,7 +51,7 @@ const BlogPost: React.FC<Post> = ({ data }) => {
           </h1>
           <HcardPost slug={post.fields.slug} date={post.frontmatter.date} />
           <div
-            className=" mt-10 prose md:prose-lg lg:prose-xl prose-slate font-serif"
+            className="e-content mt-10 prose md:prose-lg lg:prose-xl prose-slate font-serif"
             dangerouslySetInnerHTML={{ __html: post.html }}
           />
         </article>
