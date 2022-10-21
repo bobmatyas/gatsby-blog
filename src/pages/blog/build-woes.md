@@ -1,7 +1,7 @@
 ---
 title:  "Build Woes"
 date:   "2022-09-26"
-description: "A short guide to configuring TypeScript in GatsbyJS."
+description: "Random GatsbyJS build errors and thinking about moving to Astro.build."
 meta: "./../../images/092622-build_woes.jpg"
 tag: 
     - javascript

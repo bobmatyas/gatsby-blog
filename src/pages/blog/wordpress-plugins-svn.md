@@ -9,7 +9,7 @@ tag:
 
 ![logo for subversion](./../../images/102122-svn_banner.jpg)
 
-I recently created and published [a small WordPress plugin](https://wordpress.org/plugins/details-show-and-hide) on [the WordPress.org Plugin Directory](https://wordpress.org/plugins/). In order to release the plugin, you need to use Subversion (SVN). It had been years since I used Subversion and had to reacquaint myself with the process. When a plugin is approved, WordPress sends [a guide to using Subversion(https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/), but I found it to be a little confusing. What follows are my notes on setting up Subversion.
+I recently created and published [a small WordPress plugin](https://wordpress.org/plugins/details-show-and-hide) on [the WordPress.org Plugin Directory](https://wordpress.org/plugins/). In order to release the plugin, you need to use Subversion (SVN). It had been years since I used Subversion and had to reacquaint myself with the process. When a plugin is approved, WordPress sends [a guide to using Subversion](https://developer.wordpress.org/plugins/wordpress-org/how-to-use-subversion/), but I found it to be a little confusing. What follows are my notes on setting up Subversion.
 
 ## Installing Subversion
 
