@@ -165,3 +165,8 @@ form textarea::placeholder {
 form input[type=submit] {
     @apply border-none text-white cursor-pointer sm:w-full md:w-1/4
 }
+
+.prose :where(code):not(:where([class~="not-prose"] *))::before,
+.prose :where(code):not(:where([class~="not-prose"] *))::after {
+    content: "";
+}
