@@ -18,25 +18,22 @@ const Tags: React.FC = ({ pageContext, data }: any) => {
     <Layout>
       <Seo title={pageTitle} description={pageDescription} />
       <div className="main">
-        <h2 className="main__header">{tagHeader}</h2>
-        <ul>
+        <h1 className="main__header">{tagHeader}</h1>
+        <ul className="list-disc mx-5">
           {edges.map(({ node }: any) => {
             const { slug } = node.fields
             const { title } = node.frontmatter
             return (
-              <li key={slug}>
+              <li className="py-2" key={slug}>
                 <Link to={slug}>{title}</Link>
               </li>
             )
           })}
+          <li className="py-2">
+            {" "}
+            <Link to="/blog/tags">Browse all tags</Link>
+          </li>
         </ul>
-        {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
-        <p>
-          <Link to="/blog/tags">All tags</Link>
-        </p>
       </div>
     </Layout>
   )
@@ -47,7 +44,7 @@ export const pageQuery = graphql`
   query ($tag: String) {
     allMarkdownRemark(
       limit: 2000
-      sort: { fields: [frontmatter___date], order: DESC }
+      sort: { frontmatter: { date: DESC } }
       filter: { frontmatter: { tag: { in: [$tag] } } }
     ) {
       totalCount

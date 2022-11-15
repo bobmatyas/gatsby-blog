@@ -54,10 +54,7 @@ const Index: React.FC<Props> = ({ data }: Props) => {
 
 export const query = graphql`
   query {
-    allMarkdownRemark(
-      limit: 5
-      sort: { fields: [frontmatter___date], order: DESC }
-    ) {
+    allMarkdownRemark(limit: 5, sort: { frontmatter: { date: DESC } }) {
       totalCount
       edges {
         node {
