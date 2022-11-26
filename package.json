@@ -71,6 +71,9 @@
   "overrides": {
     "gatsby-plugin-netlify": {
       "gatsby": "^5.0.0"
+    },
+    "@netlify/plugin-gatsby": {
+      "@gatsbyjs/reach-router": "^2.0.0-v2.0"
     }
   },
   "repository": {
