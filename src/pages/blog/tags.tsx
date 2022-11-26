@@ -30,14 +30,14 @@ const TagsPage: React.FC<Props> = ({
 }: Props) => (
   <Layout>
     <div className="main__content">
-      <h2 className="main__content__header">Tags</h2>{" "}
       <Seo title="Tags" description="Blog posts organized by topic." />
       <div>
         <Helmet title={title} />
-        <div>
-          <ul>
+        <div className="main">
+          <h1 className="main__header">Tags</h1>{" "}
+          <ul className="list-disc mx-5">
             {group.map((tag: any) => (
-              <li key={tag.fieldValue}>
+              <li className="py-2" key={tag.fieldValue}>
                 <Link to={`/blog/tags/${kebabCase(tag.fieldValue)}/`}>
                   {tag.fieldValue} ({tag.totalCount})
                 </Link>
@@ -59,7 +59,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(limit: 2000) {
-      group(field: frontmatter___tag) {
+      group(field: { frontmatter: { tag: SELECT } }) {
         fieldValue
         totalCount
       }
