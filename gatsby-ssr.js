@@ -5,7 +5,7 @@ const HeadComponents = [
   <Partytown key="partytown" debug={true} forward={["dataLayer.push"]} />,
   <link
     rel="preload"
-    href="./fonts/GentiumBookBasic-BoldItalic.woff"
+    href="https://www.bobmatyas.com/fonts/GentiumBookBasic-BoldItalic.woff"
     as="font"
     type="font/woff2"
     crossOrigin="anonymous"
@@ -13,7 +13,7 @@ const HeadComponents = [
   />,
   <link
     rel="preload"
-    href="./fonts/PermanentMarker-Regular.woff"
+    href="https://www.bobmatyas.com/fonts/PermanentMarker-Regular.woff"
     as="font"
     type="font/woff2"
     crossOrigin="anonymous"
