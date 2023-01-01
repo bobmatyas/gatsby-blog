@@ -42,6 +42,15 @@ const Footer = () => (
           Learn More About RSS Feeds
         </a>
       </p>
+      <p className="font-sans mt-5">
+        <a href="https://xn--sr8hvo.ws/%E2%A4%B4%EF%B8%8F%C2%AE%EF%B8%8F%F0%9F%98%83/previous">
+          ←
+        </a>
+        An <a href="https://xn--sr8hvo.ws">IndieWeb Webring</a> 🕸💍
+        <a href="https://xn--sr8hvo.ws/%E2%A4%B4%EF%B8%8F%C2%AE%EF%B8%8F%F0%9F%98%83/next">
+          →
+        </a>
+      </p>
     </div>
   </footer>
 )
