@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 interface Props {
   data: any
@@ -34,11 +34,6 @@ export default class BlogList extends React.Component<Props> {
     const nextPageLink: string = `/blog/${nextPage}`
     return (
       <Layout>
-        <Seo
-          title="Blog"
-          description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
-        />
-
         <div className="main">
           <h2 className="main__header">Blog</h2>
 
@@ -115,3 +110,10 @@ export const blogListQuery = graphql`
     }
   }
 `
+
+export const Head = () => (
+  <SEO
+    title="Blog"
+    description="Blog posts from Bob Matyas, a web developer in Grand Rapids, Michigan"
+  />
+)

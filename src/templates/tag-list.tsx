@@ -2,7 +2,7 @@ import React from "react"
 
 // Components
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import { Link, graphql } from "gatsby"
 
 const Tags: React.FC = ({ pageContext, data }: any) => {
@@ -12,11 +12,8 @@ const Tags: React.FC = ({ pageContext, data }: any) => {
     totalCount === 1 ? "" : "s"
   } tagged with "${tag}"`
 
-  const pageTitle = `Blog Posts on: ${tag}`
-  const pageDescription = `Blog posts on ${tag}`
   return (
     <Layout>
-      <Seo title={pageTitle} description={pageDescription} />
       <div className="main">
         <h1 className="main__header">{tagHeader}</h1>
         <ul className="list-disc mx-5">
@@ -61,3 +58,10 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export function Head({ pageContext }: any) {
+  const pageTitle = `Blog Posts on: ${pageContext.tag}`
+  const pageDescription = `Blog posts on ${pageContext.tag}}`
+
+  return <SEO title={pageTitle} description={pageDescription} />
+}

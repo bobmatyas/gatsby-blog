@@ -1,14 +1,9 @@
 import React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 const Success = () => (
   <Layout>
-    <Seo
-      title="Contact"
-      description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
-    />
-
     <div className="main">
       <h2 className="main__header">Success!</h2>
 
@@ -18,3 +13,10 @@ const Success = () => (
 )
 
 export default Success
+
+export const Head = () => (
+  <SEO
+    title="Contact"
+    description="Contact Bob Matyas, a web developer in Grand Rapids, Michigan"
+  />
+)

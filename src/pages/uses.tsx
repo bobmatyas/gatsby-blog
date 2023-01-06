@@ -1,16 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 function Uses(): JSX.Element {
   return (
     <Layout>
-      <Seo
-        title="Uses"
-        description="A list of things I use for web development."
-      />
-
       <div className="main">
         <h2 className="main__header">Uses</h2>
 
@@ -152,3 +147,7 @@ export const query = graphql`
 `
 
 export default Uses
+
+export const Head = () => (
+  <SEO title="Uses" description="A list of things I use for web development." />
+)
