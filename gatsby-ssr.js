@@ -20,7 +20,12 @@ const HeadComponents = [
     key="permanentFont"
   />,
 ]
-export function onRenderBody({ setHeadComponents, setPostBodyComponents }) {
+export function onRenderBody({
+  setHeadComponents,
+  setHtmlAttributes,
+  setPostBodyComponents,
+}) {
+  setHtmlAttributes({ lang: "en" })
   setHeadComponents(HeadComponents),
     setPostBodyComponents([
       React.createElement(`div`, {

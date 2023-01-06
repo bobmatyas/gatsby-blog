@@ -1,7 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import BlogLink from "../components/home-post-link"
 
 interface Props {
@@ -27,11 +27,6 @@ interface BlogPosts {
 const Index: React.FC<Props> = ({ data }: Props) => {
   return (
     <Layout>
-      <Seo
-        title="Web Developer"
-        description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
-      />
-
       <div className="main">
         <div className="my-10 pb-10 blog__post__list">
           {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
@@ -75,3 +70,10 @@ export const query = graphql`
 `
 
 export default Index
+
+export const Head = () => (
+  <SEO
+    title="Web Developer | Bob Matyas"
+    description="Bob Matyas is a web developer in Grand Rapids, Michigan. He likes making designs come alive using HTML, CSS, and JavaScript"
+  />
+)

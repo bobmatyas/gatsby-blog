@@ -188,7 +188,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-sitemap`,
-    `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,

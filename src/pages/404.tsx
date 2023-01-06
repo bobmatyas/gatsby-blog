@@ -1,12 +1,10 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 const PageNotFound = () => (
   <Layout>
-    <Seo title="404 - Page Not Found" description="Page not found" />
-
     <div className="main">
       <h2 className="main__header">Page Not Found</h2>
 
@@ -32,3 +30,7 @@ export const query = graphql`
 `
 
 export default PageNotFound
+
+export const Head = () => (
+  <SEO title="404 - Page Not Found" description="Page not found" />
+)

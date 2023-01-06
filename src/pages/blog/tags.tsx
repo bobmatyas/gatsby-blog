@@ -3,8 +3,7 @@ import React from "react"
 import kebabCase from "lodash/kebabCase"
 // Components
 import Layout from "../../components/layout"
-import Seo from "../../components/seo"
-import { Helmet } from "react-helmet"
+import SEO from "../../components/seo"
 import { Link, graphql } from "gatsby"
 
 interface Props {
@@ -23,16 +22,11 @@ interface Props {
 const TagsPage: React.FC<Props> = ({
   data: {
     allMarkdownRemark: { group },
-    site: {
-      siteMetadata: { title },
-    },
   },
 }: Props) => (
   <Layout>
     <div className="main__content">
-      <Seo title="Tags" description="Blog posts organized by topic." />
       <div>
-        <Helmet title={title} />
         <div className="main">
           <h1 className="main__header">Tags</h1>{" "}
           <ul className="list-disc mx-5">
@@ -66,3 +60,7 @@ export const pageQuery = graphql`
     }
   }
 `
+
+export function Head() {
+  return <SEO title="Tags" />
+}

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import HcardPost from "../components/hcard-post"
 import PostTags from "../components/post-tags"
 
@@ -33,16 +33,6 @@ const BlogPost: React.FC<Post> = ({ data }) => {
 
   return (
     <Layout>
-      <Seo
-        title={post.frontmatter.title}
-        description={post.frontmatter.description}
-        image={
-          post.frontmatter.meta
-            ? post.frontmatter.meta.childrenImageSharp[0].original.src
-            : data.site.siteMetadata.defaultImage
-        }
-      />
-
       <div className="main py-2">
         <article className="h-entry mt-10">
           {post.frontmatter.tag ? <PostTags tags={post.frontmatter.tag} /> : ""}
@@ -90,3 +80,16 @@ export const query = graphql`
 `
 
 export default BlogPost
+
+export const Head: React.FC<Post> = ({ data }) => (
+  <SEO
+    title={data.markdownRemark.frontmatter.title}
+    description={data.markdownRemark.frontmatter.description}
+    image={
+      data.markdownRemark.frontmatter.meta
+        ? data.markdownRemark.frontmatter.meta.childrenImageSharp[0].original
+            .src
+        : data.site.siteMetadata.defaultImage
+    }
+  />
+)

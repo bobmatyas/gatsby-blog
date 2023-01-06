@@ -1,15 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 
 const About = () => (
   <Layout>
-    <Seo
-      title="About Bob Matyas"
-      description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
-    />
-
     <div className="main">
       <h1 className="main__header">About Bob Matyas</h1>
 
@@ -84,3 +79,10 @@ export const query = graphql`
 `
 
 export default About
+
+export const Head = () => (
+  <SEO
+    title="About Bob Matyas"
+    description="All about Bob Matyas, a web developer in Grand Rapids, Michigan"
+  />
+)
