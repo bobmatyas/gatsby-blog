@@ -30,12 +30,15 @@ const Index: React.FC<Props> = ({ data }: Props) => {
       <div className="main">
         <div className="my-10 pb-10 blog__post__list">
           {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
-            <BlogLink
-              link={node.fields.slug}
-              date={node.frontmatter.date}
-              title={node.frontmatter.title}
-              key={node.frontmatter.date}
-            />
+            <>
+              <BlogLink
+                link={node.fields.slug}
+                date={node.frontmatter.date}
+                title={node.frontmatter.title}
+                key={node.frontmatter.date}
+                description={node.frontmatter.description}
+              />
+            </>
           ))}
         </div>
 

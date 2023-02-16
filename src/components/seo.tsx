@@ -35,8 +35,6 @@ export const SEO = ({
     socialImage = image
   }
 
-  console.log(socialImage)
-
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
