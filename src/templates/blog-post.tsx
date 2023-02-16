@@ -31,6 +31,7 @@ interface Post {
 const BlogPost: React.FC<Post> = ({ data }) => {
   const post = data.markdownRemark
 
+  console.log(data.markdownRemark.frontmatter.meta.childrenImageSharp)
   return (
     <Layout>
       <div className="main py-2">
@@ -85,11 +86,8 @@ export const Head: React.FC<Post> = ({ data }) => (
   <SEO
     title={data.markdownRemark.frontmatter.title}
     description={data.markdownRemark.frontmatter.description}
-    image={
-      data.markdownRemark.frontmatter.meta
-        ? data.markdownRemark.frontmatter.meta.childrenImageSharp[0].original
-            .src
-        : data.site.siteMetadata.defaultImage
+    seoImage={
+      data.markdownRemark.frontmatter.meta.childrenImageSharp[0].original.src
     }
   />
 )

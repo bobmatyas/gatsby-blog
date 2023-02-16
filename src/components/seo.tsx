@@ -4,6 +4,7 @@ import { useSiteMetadata } from "../hooks/use-site-metadata"
 interface SEOProps {
   description?: string
   image?: string
+  seoImage?: string
   pathname?: string
   title: string
   article?: boolean
@@ -15,6 +16,7 @@ export const SEO = ({
   description,
   pathname,
   article,
+  seoImage,
   children,
 }: SEOProps) => {
   const {
@@ -25,10 +27,20 @@ export const SEO = ({
     twitterUsername,
   } = useSiteMetadata()
 
+  console.log(seoImage)
+  let socialImage: string
+  if (seoImage) {
+    socialImage = `${siteUrl}${seoImage}`
+  } else {
+    socialImage = image
+  }
+
+  console.log(socialImage)
+
   const seo = {
     title: title || defaultTitle,
     description: description || defaultDescription,
-    image: `${siteUrl}${image}`,
+    image: `${socialImage}`,
     url: `${siteUrl}${pathname || ``}`,
     twitterUsername,
   }
