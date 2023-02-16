@@ -27,7 +27,6 @@ export const SEO = ({
     twitterUsername,
   } = useSiteMetadata()
 
-  console.log(seoImage)
   let socialImage: string
   if (seoImage) {
     socialImage = `${siteUrl}${seoImage}`
