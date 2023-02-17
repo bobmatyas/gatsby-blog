@@ -29,17 +29,19 @@ const Index: React.FC<Props> = ({ data }: Props) => {
     <Layout>
       <div className="main">
         <div className="my-10 pb-10 blog__post__list">
-          {data.allMarkdownRemark.edges.map(({ node }: BlogPosts) => (
-            <>
-              <BlogLink
-                link={node.fields.slug}
-                date={node.frontmatter.date}
-                title={node.frontmatter.title}
-                key={node.frontmatter.date}
-                description={node.frontmatter.description}
-              />
-            </>
-          ))}
+          {data.allMarkdownRemark.edges.map(
+            ({ node }: BlogPosts, index: string) => (
+              <>
+                <BlogLink
+                  link={node.fields.slug}
+                  date={node.frontmatter.date}
+                  title={node.frontmatter.title}
+                  key={index}
+                  description={node.frontmatter.description}
+                />
+              </>
+            )
+          )}
         </div>
 
         <Link to="/blog/2/" className="button my-10">

@@ -31,7 +31,6 @@ interface Post {
 const BlogPost: React.FC<Post> = ({ data }) => {
   const post = data.markdownRemark
 
-  console.log(data.markdownRemark.frontmatter.meta.childrenImageSharp)
   return (
     <Layout>
       <div className="main py-2">
