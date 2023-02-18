@@ -2,7 +2,7 @@
 title:  "WordPress Block Theme Resources"
 date:   "2022-07-22"
 description: "A collection of resources for creating block themes in WordPress."
-meta: "./../../images/gutenberg-featured.png"
+twitterImage: "./../../images/gutenberg-featured.png"
 tag: 
     - wordpress
 ---
