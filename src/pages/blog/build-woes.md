@@ -2,7 +2,7 @@
 title:  "Build Woes"
 date:   "2022-09-26"
 description: "Random GatsbyJS build errors and thinking about moving to Astro.build."
-meta: "./../../images/092622-build_woes.jpg"
+twitterImage: "./../../images/092622-build_woes.jpg"
 tag: 
     - javascript
 ---

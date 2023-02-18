@@ -2,7 +2,7 @@
 title:  "Using the Gatsby Head API"
 date:   "2023-01-06"
 description: "Replacing React Helmet with Gatsby Head API"
-meta: "./../../images/gatsbyjs.png"
+twitterImage: "./../../images/gatsbyjs.png"
 tag: 
     - gatsbyjs
 ---

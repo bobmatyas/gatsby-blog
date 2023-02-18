@@ -13,7 +13,7 @@ interface Post {
         date: string
         title: string
         description: string
-        meta?: any
+        twitterImage?: any
         tag?: any
       }
       fields: {
@@ -58,7 +58,7 @@ export const query = graphql`
         title
         description
         date
-        meta {
+        twitterImage {
           childrenImageSharp {
             original {
               src
@@ -81,12 +81,21 @@ export const query = graphql`
 
 export default BlogPost
 
-export const Head: React.FC<Post> = ({ data }) => (
-  <SEO
-    title={data.markdownRemark.frontmatter.title}
-    description={data.markdownRemark.frontmatter.description}
-    seoImage={
-      data.markdownRemark.frontmatter.meta.childrenImageSharp[0].original.src
-    }
-  />
-)
+export const Head: React.FC<Post> = ({ data }) => {
+  let socialImage: string
+  if (data.markdownRemark.frontmatter.twitterImage) {
+    socialImage =
+      data.markdownRemark.frontmatter.twitterImage.childrenImageSharp[0]
+        .original.src
+  } else {
+    socialImage = ""
+  }
+
+  return (
+    <SEO
+      title={data.markdownRemark.frontmatter.title}
+      description={data.markdownRemark.frontmatter.description}
+      seoImage={socialImage}
+    />
+  )
+}

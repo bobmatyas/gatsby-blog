@@ -2,7 +2,7 @@
 title:  "Adding TypeScript to GatsbyJS"
 date:   "2022-01-10"
 description: "A short guide to configuring TypeScript in GatsbyJS."
-meta: "./../../images/gatsbyjs-typescript.jpg"
+twitterImage: "./../../images/gatsbyjs-typescript.jpg"
 tag: 
     - tutorials
     - javascript

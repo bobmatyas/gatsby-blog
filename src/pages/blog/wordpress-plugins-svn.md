@@ -2,7 +2,7 @@
 title:  "Using Subversion to Release a Plugin on WordPress.org"
 date:   "2022-10-21"
 description: "A guide to installing SVN on macOS and using it to release a plugin on WordPress.org"
-meta: "./../../images/102122-svn_banner.jpg"
+twitterImage: "./../../images/102122-svn_banner.jpg"
 tag: 
     - wordpress
 ---
