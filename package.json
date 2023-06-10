@@ -22,7 +22,7 @@
     "@weknow/gatsby-remark-codepen": "^0.1.0",
     "babel-plugin-styled-components": "^2.0.2",
     "eslint-webpack-plugin": "^3.2.0",
-    "gatsby": "^5.0.1",
+    "gatsby": "^5.9.1",
     "gatsby-cli": "^5.1.0",
     "gatsby-plugin-canonical-urls": "^5.0.0",
     "gatsby-plugin-feed": "^5.0.0",
