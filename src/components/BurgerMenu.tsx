@@ -34,6 +34,11 @@ const BurgerMenu = () => {
           </Link>
         </li>
         <li>
+          <Link to={`/projects/`} className="burger__menu__item">
+            Projects
+          </Link>
+        </li>
+        <li>
           <Link to={`/blog/`} className="burger__menu__item">
             Blog
           </Link>
