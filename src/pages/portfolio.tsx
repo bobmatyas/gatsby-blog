@@ -2,26 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Skills from "../components/skills"
 import Card from "../components/portfolio-card"
-import styled from "styled-components"
-
-const PortfolioHolder = styled.div`
-  margin: 25px auto;
-  width: 300px;
-
-  @media screen and (min-width: 800px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 0;
-    width: 100%;
-  }
-
-  @media screen and (min-width: 1000px) {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 50px;
-  }
-`
 
 const Portfolio = ({ data }: any) => (
   <Layout>
@@ -33,31 +14,7 @@ const Portfolio = ({ data }: any) => (
     <div className="main">
       <h2 className="main__header">Portfolio</h2>
 
-      <Skills />
-
-      <h3 className="projects__header">Projects</h3>
-
-      <p className="projects__note">
-        For additional projects, please check out my{" "}
-        <a
-          href="https://github.com/bobmatyas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Github
-        </a>{" "}
-        and{" "}
-        <a
-          href="https://codepen.io/bobmatyas"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CodePen
-        </a>
-        .
-      </p>
-
-      <PortfolioHolder>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <Card
           screenshot={data.imagePicturePalette.childImageSharp.gatsbyImageData}
           title="PicturePalette"
@@ -179,7 +136,7 @@ const Portfolio = ({ data }: any) => (
           ]}
           technologies={["WORDPRESS", "HTML", "CSS", "PHP"]}
         />
-      </PortfolioHolder>
+      </div>
     </div>
   </Layout>
 )
