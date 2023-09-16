@@ -14,7 +14,7 @@ const Portfolio = ({ data }: any) => (
     <div className="main">
       <h2 className="main__header">Portfolio</h2>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <Card
           screenshot={data.imagePicturePalette.childImageSharp.gatsbyImageData}
           title="PicturePalette"

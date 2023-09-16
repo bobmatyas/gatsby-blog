@@ -1,14 +1,5 @@
 import React from "react"
 import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import styled from "styled-components"
-
-const CardTechnologiesListItem = styled.li`
-  background-color: #eee;
-  border-radius: 5px;
-  font-size: 0.8rem;
-  margin: 5px;
-  padding: 2px 10px;
-`
 
 interface Props {
   screenshot: IGatsbyImageData
@@ -19,16 +10,8 @@ interface Props {
   technologies: string[]
 }
 
-interface Technologies {
-  value: string
-}
-
 interface Description {
   value: string
-}
-
-function ListItem(props: Technologies) {
-  return <CardTechnologiesListItem>{props.value}</CardTechnologiesListItem>
 }
 
 function ParagraphItem(props: Description) {
@@ -45,7 +28,7 @@ const Projects: React.FC<Props> = (props: Props) => (
       />
     </div>
 
-    <h4 className="font-sans font-bold text-slate-700 text-lg m-5">
+    <h4 className="font-sans font-bold text-slate-700 text-lg mt-5 ml-5 mb-0">
       {props.title}
     </h4>
 
@@ -92,7 +75,12 @@ const Projects: React.FC<Props> = (props: Props) => (
     <h5 className="mx-5 font-bold text-slate-700">Technologies</h5>
     <ul className="flex flex-wrap m-5">
       {props.technologies.map((technology, index) => (
-        <ListItem key={index} value={technology} />
+        <li
+          key={index}
+          className="text-xs bg-slate-200 p-2 mr-2 rounded-sm mb-2"
+        >
+          {technology}
+        </li>
       ))}
     </ul>
   </div>
