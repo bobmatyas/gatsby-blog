@@ -28,6 +28,13 @@ const Projects = () => (
           />
 
           <ProjectCard
+            name="Helper for Cloudflare Web Analytics"
+            description="A WordPress plugin to add Cloudflare Analytics to WordPress."
+            link="https://github.com/bobmatyas/bm-wp-details-block"
+            linkTitle="View on GitHub"
+          />
+
+          <ProjectCard
             name="Details: Show and Hide WordPress Plugin"
             description="A WordPress plugin that allows you to hide content using the DETAILS
           HTML element."
