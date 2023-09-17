@@ -28,47 +28,51 @@ const Skills = () => (
   <div className="skills">
     <h3 className="skills__header">Skills</h3>
 
-    <SkillsHeader>Web Development</SkillsHeader>
+    <details>
+      <summary>View Skills</summary>
 
-    <SkillsList>
-      <SkillsListItem>HTML</SkillsListItem>
-      <SkillsListItem>CSS</SkillsListItem>
-      <SkillsListItem>JavaScript / ES6</SkillsListItem>
-      <SkillsListItem>jQuery</SkillsListItem>
-      <SkillsListItem>AngularJS</SkillsListItem>
-      <SkillsListItem>ReactJS</SkillsListItem>
-      <SkillsListItem>SASS</SkillsListItem>
-      <SkillsListItem>Git</SkillsListItem>
-      <SkillsListItem>MySQL</SkillsListItem>
-      <SkillsListItem>PostgreSQL</SkillsListItem>
-      <SkillsListItem>PHP</SkillsListItem>
-      <SkillsListItem>NodeJS</SkillsListItem>
-      <SkillsListItem>Gulp</SkillsListItem>
-      <SkillsListItem>Adobe CC</SkillsListItem>
-    </SkillsList>
+      <SkillsHeader>Web Development</SkillsHeader>
 
-    <SkillsHeader>WordPress</SkillsHeader>
+      <SkillsList>
+        <SkillsListItem>HTML</SkillsListItem>
+        <SkillsListItem>CSS</SkillsListItem>
+        <SkillsListItem>JavaScript / ES6</SkillsListItem>
+        <SkillsListItem>jQuery</SkillsListItem>
+        <SkillsListItem>AngularJS</SkillsListItem>
+        <SkillsListItem>ReactJS</SkillsListItem>
+        <SkillsListItem>SASS</SkillsListItem>
+        <SkillsListItem>Git</SkillsListItem>
+        <SkillsListItem>MySQL</SkillsListItem>
+        <SkillsListItem>PostgreSQL</SkillsListItem>
+        <SkillsListItem>PHP</SkillsListItem>
+        <SkillsListItem>NodeJS</SkillsListItem>
+        <SkillsListItem>Gulp</SkillsListItem>
+        <SkillsListItem>Adobe CC</SkillsListItem>
+      </SkillsList>
 
-    <SkillsList>
-      <SkillsListItem>Theme design and development</SkillsListItem>
-      <SkillsListItem>Custom themes</SkillsListItem>
-      <SkillsListItem>Security</SkillsListItem>
-      <SkillsListItem>Maintenance</SkillsListItem>
-      <SkillsListItem>Deployment</SkillsListItem>
-      <SkillsListItem>Optimization</SkillsListItem>
-    </SkillsList>
+      <SkillsHeader>WordPress</SkillsHeader>
 
-    <SkillsHeader>Content Creation</SkillsHeader>
+      <SkillsList>
+        <SkillsListItem>Theme design and development</SkillsListItem>
+        <SkillsListItem>Custom themes</SkillsListItem>
+        <SkillsListItem>Security</SkillsListItem>
+        <SkillsListItem>Maintenance</SkillsListItem>
+        <SkillsListItem>Deployment</SkillsListItem>
+        <SkillsListItem>Optimization</SkillsListItem>
+      </SkillsList>
 
-    <SkillsList>
-      <SkillsListItem>Copy writing</SkillsListItem>
-      <SkillsListItem>Copy editing</SkillsListItem>
-      <SkillsListItem>Media strategy</SkillsListItem>
-      <SkillsListItem>Press releases</SkillsListItem>
-      <SkillsListItem>SEO (Search Engine Optimization)</SkillsListItem>
-      <SkillsListItem>Social media</SkillsListItem>
-      <SkillsListItem>Blogging</SkillsListItem>
-    </SkillsList>
+      <SkillsHeader>Content Creation</SkillsHeader>
+
+      <SkillsList>
+        <SkillsListItem>Copy writing</SkillsListItem>
+        <SkillsListItem>Copy editing</SkillsListItem>
+        <SkillsListItem>Media strategy</SkillsListItem>
+        <SkillsListItem>Press releases</SkillsListItem>
+        <SkillsListItem>SEO (Search Engine Optimization)</SkillsListItem>
+        <SkillsListItem>Social media</SkillsListItem>
+        <SkillsListItem>Blogging</SkillsListItem>
+      </SkillsList>
+    </details>
   </div>
 )
 

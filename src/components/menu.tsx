@@ -25,6 +25,11 @@ const Menu = () => {
             </Link>
           </li>
           <li className="header__nav__item">
+            <Link to={`/projects/`} className="block py-2 px-4">
+              Projects
+            </Link>
+          </li>
+          <li className="header__nav__item">
             <Link to={`/blog/`} className="block py-2 px-4">
               Blog
             </Link>

@@ -3,95 +3,94 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: 'Gentium Book Basic';
-    font-weight: 100 900;
-    font-display: swap;
-    font-style: normal;
-    font-named-instance: 'Regular';
-    src: url(/fonts/GentiumBookBasic-BoldItalic.woff) format("woff2");
- }
-
-@font-face {
-    font-family: 'Permanent Marker';
-    font-weight: 100 900;
-    font-display: swap;
-    font-style: normal;
-    font-named-instance: 'Regular';
-    src: url(/fonts/PermanentMarker-Regular.woff) format("woff2");
+  font-family: "Gentium Book Basic";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/GentiumBookBasic-BoldItalic.woff) format("woff2");
 }
 
-body { 
-    @apply bg-orange-50
+@font-face {
+  font-family: "Permanent Marker";
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: "Regular";
+  src: url(/fonts/PermanentMarker-Regular.woff) format("woff2");
+}
+
+body {
+  @apply bg-orange-50;
 }
 
 a {
-    @apply shadow-none
+  @apply shadow-none;
 }
 
 @media screen and (min-width: 799px) {
-    .burger {
-        display: none;
+  .burger {
+    display: none;
   }
 }
 
 .header__logo {
-    height: 150px;
-    width: 150px;
+  height: 150px;
+  width: 150px;
 }
 
 .header__text {
-    font-family: 'Gentium Book Basic', serif;
-    font-style: italic;
-    text-transform: lowercase;
+  font-family: "Gentium Book Basic", serif;
+  font-style: italic;
+  text-transform: lowercase;
 }
 
-
 .text--small--caps {
-    font-variant: small-caps;
-    text-transform: lowercase
+  font-variant: small-caps;
+  text-transform: lowercase;
 }
 
 .hcard__photo {
-    width: 150px !important;
-    height: 150px !important;
+  width: 150px !important;
+  height: 150px !important;
 }
 
 .header__nav {
-    display: none;
+  display: none;
 }
 
 @media screen and (min-width: 800px) {
-    .header__nav {
-        display: block;
-    }
+  .header__nav {
+    display: block;
+  }
 }
 
 .header__nav__item {
-    font-family: 'Permanent Marker', cursive;
+  font-family: "Permanent Marker", cursive;
 }
 
 .header__nav__item {
-    @apply  text-slate-700 text-xl underline hover:underline hover:decoration-solid decoration-emerald-300 decoration-1 underline-offset-4 decoration-wavy;
+  @apply text-slate-700 text-xl underline hover:underline hover:decoration-solid decoration-emerald-300 decoration-1 underline-offset-4 decoration-wavy;
 }
 
 .blog__post__list article:last-of-type {
-    @apply border-b-2 border-stone-300
+  @apply border-b-2 border-stone-300;
 }
 
 .button {
-    @apply p-4 text-white font-bold bg-purple-500
+  @apply p-4 text-white font-bold bg-purple-500;
 }
 
 .burger__menu__item {
-    @apply font-sans text-white font-bold text-2xl underline decoration-slate-300 underline-offset-8
+  @apply font-sans text-white font-bold text-2xl underline decoration-slate-300 underline-offset-8;
 }
 
 .main {
-    @apply container m-auto px-10
+  @apply container m-auto px-10;
 }
 
 .main__header {
-    @apply text-slate-800 font-extrabold text-2xl md:text-4xl mt-5 mb-10
+  @apply text-slate-800 font-extrabold text-2xl md:text-4xl mt-5 mb-10;
 }
 
 .prose h1,
@@ -100,73 +99,85 @@ a {
 .prose h4,
 .prose h5,
 .prose h6 {
-    @apply font-sans;
-} 
+  @apply font-sans;
+}
 
 .page p {
-    @apply font-serif leading-8 text-lg;
+  @apply font-serif leading-8 text-lg;
 }
 
 .page a {
-    @apply underline underline-offset-2 decoration-2 decoration-purple-400 hover:no-underline hover:text-purple-600
+  @apply underline underline-offset-2 decoration-2 decoration-purple-400 hover:no-underline hover:text-purple-600;
 }
 
-.page *  {
-    @apply mb-7 text-lg  text-slate-800
+.page * {
+  @apply mb-7 text-lg  text-slate-800;
 }
 
 .page li,
 .page label,
 .page input {
-    margin-bottom: unset;
+  margin-bottom: unset;
 }
 
 .header {
-    background-image: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, rgba(255,247,237,1) 75%), url(../images/bg-mountain.webp);
-    background-size: cover;
-    background-position: 5% center;
+  background-image: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.3) 0%,
+      rgba(255, 247, 237, 1) 75%
+    ),
+    url(../images/bg-mountain.webp);
+  background-size: cover;
+  background-position: 5% center;
 }
 
 .skills__item {
-    @apply text-white bg-slate-500 text-xs p-1 uppercase rounded-sm
+  @apply text-white bg-slate-500 text-xs p-1 uppercase rounded-sm;
 }
 
 .prose a {
-    @apply underline underline-offset-2 decoration-2 decoration-purple-400 hover:no-underline hover:text-purple-600
+  @apply underline underline-offset-2 decoration-2 decoration-purple-400 hover:no-underline hover:text-purple-600;
 }
 
 .page h2 {
-    @apply text-3xl mt-5 font-bold
+  @apply text-3xl mt-5 font-bold;
 }
 
 .page h3 {
-    @apply text-2xl mt-5 font-bold
+  @apply text-2xl mt-5 font-bold;
 }
 
 .page h4 {
-    @apply text-xl mt-5 font-bold
+  @apply text-xl mt-5 font-bold;
 }
 
 .page form label {
-    @apply font-bold font-sans m-0 p-0 block mb-2
+  @apply font-bold font-sans m-0 p-0 block mb-2;
 }
-
 
 form input,
 form textarea {
-    @apply sm:w-full md:w-2/3 border border-slate-300 w-2/3 mt-0 mb-4 p-2 font-sans text-slate-600
+  @apply sm:w-full md:w-2/3 border border-slate-300 w-2/3 mt-0 mb-4 p-2 font-sans text-slate-600;
 }
 
 form input::placeholder,
 form textarea::placeholder {
-    @apply text-sm
+  @apply text-sm;
 }
 
-form input[type=submit] {
-    @apply border-none text-white cursor-pointer sm:w-full md:w-1/4
+form input[type="submit"] {
+  @apply border-none text-white cursor-pointer sm:w-full md:w-1/4;
 }
 
 .prose :where(code):not(:where([class~="not-prose"] *))::before,
 .prose :where(code):not(:where([class~="not-prose"] *))::after {
-    content: "";
+  content: "";
+}
+
+a.projects__card__button {
+  @apply text-white text-xs font-sans no-underline;
+}
+
+a.projects__card__button:hover {
+  @apply text-white text-xs underline decoration-white decoration-1;
 }
