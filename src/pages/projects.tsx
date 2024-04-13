@@ -23,23 +23,23 @@ const Projects = () => (
             name="Block AI Crawlers WordPress Plugin"
             description="A plugin designed that adds `robots.txt` entries and Meta Tags to
           WordPress to block AI crawlers."
-            link="https://github.com/bobmatyas/wp-block-ai-crawlers"
-            linkTitle="View on GitHub"
+            link="https://wordpress.org/plugins/block-ai-crawlers/"
+            linkTitle="View on WordPress.org"
           />
 
           <ProjectCard
             name="Helper for Cloudflare Web Analytics"
             description="A WordPress plugin to add Cloudflare Analytics to WordPress."
-            link="https://github.com/bobmatyas/bm-wp-details-block"
-            linkTitle="View on GitHub"
+            link="https://wordpress.org/plugins/helper-for-cloudflare-web-analytics/"
+            linkTitle="View on WordPress.org"
           />
 
           <ProjectCard
             name="Details: Show and Hide WordPress Plugin"
             description="A WordPress plugin that allows you to hide content using the DETAILS
           HTML element."
-            link="https://github.com/bobmatyas/bm-wp-details-block"
-            linkTitle="View on GitHub"
+            link="https://wordpress.org/plugins/details-show-and-hide/"
+            linkTitle="View on WordPress.org"
           />
         </div>
       </div>
