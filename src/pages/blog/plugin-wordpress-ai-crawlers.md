@@ -14,4 +14,4 @@ The big caveat is of course that it is up to the AI crawlers to respect these ru
 
 You can grab [the plugin on WordPress.org](https://wordpress.org/plugins/block-ai-crawlers/). I’m going to do my best to add new crawlers as I learn about them. You can always add suggestions for crawlers to block on [the plugin's GitHub repository](https://github.com/bobmatyas/wp-block-ai-crawlers).
 
-_* `robots.txt` is a file that provides directions to search engines and other bots. It is a standardizing way of interacting with crawlers of all kinds._
+_* `robots.txt` is a file that provides directions to search engines and other bots. It's a standardized way of interacting with crawlers of all kinds._
