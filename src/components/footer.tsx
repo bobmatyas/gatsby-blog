@@ -1,21 +1,5 @@
 import React from "react"
-import styled from "styled-components"
-import RSSIcon from "../images/icons/rss.svg"
 import HcardSocial from "./hcard-social"
-
-const RSSLink = styled.a`
-  color: var(--body-text-color);
-  background: url(${RSSIcon}) no-repeat left center;
-  background-size: 15px 15px;
-  font-size: 90%;
-  padding-left: 19px;
-  text-decoration: underline;
-
-  :hover,
-  :active {
-    text-decoration: none;
-  }
-`
 
 const Footer = () => (
   <footer className="mt-10 pt-10 pb-10">
@@ -31,7 +15,12 @@ const Footer = () => (
         <HcardSocial />
       </div>
       <p className="font-sans mt-5">
-        <RSSLink href="https://www.bobmatyas.com/rss.xml">RSS Feed </RSSLink>
+        <a
+          className="text-xs underline hover:no-underline"
+          href="https://www.bobmatyas.com/rss.xml"
+        >
+          RSS Feed{" "}
+        </a>
         <br />
         <a
           href="https://aboutfeeds.com/"
@@ -39,6 +28,7 @@ const Footer = () => (
           rel="noopener noreferrer"
           className="text-xs underline hover:no-underline"
         >
+          {" "}
           Learn More About RSS Feeds
         </a>
       </p>
